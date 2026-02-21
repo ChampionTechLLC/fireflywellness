@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: ButtonVariant;
   href?: string;
   type?: "button" | "submit" | "reset";
+  className?: string;
 };
 
 const variantClass = {
@@ -19,17 +20,18 @@ export function Button({
   variant = "primary",
   href,
   type = "button",
+  className = "",
 }: ButtonProps) {
-  const className = `${button.base} ${variantClass[variant]}`;
+  const classNames = `${button.base} ${variantClass[variant]} ${className}`.trim();
   if (href) {
     return (
-      <a href={href} className={className}>
+      <a href={href} className={classNames}>
         {children}
       </a>
     );
   }
   return (
-    <button type={type} className={className}>
+    <button type={type} className={classNames}>
       {children}
     </button>
   );

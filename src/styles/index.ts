@@ -10,6 +10,7 @@ export const typography = {
   h4: "text-lg md:text-xl font-medium text-muted",
   text: "text-base text-body leading-relaxed",
   subtitle: "text-sm md:text-base font-light text-body",
+  button: "text-xs md:text-sm font-bold text-body",
   link: "text-sm md:text-base text-body hover:text-heading underline underline-offset-2 transition-colors",
 } as const;
 
@@ -20,16 +21,16 @@ export const section = {
   inner:
     "mx-auto box-border w-full max-w-[72rem] px-6 py-12 md:px-8 md:py-16",
   innerGreen:
-    "mx-auto box-border w-full max-w-[72rem] px-8 py-16 md:px-12 md:py-24",
+    "mx-auto box-border w-full max-w-[72rem] px-[4.5rem] py-[2.8rem] md:px-[10.5rem] md:py-[4.2rem]",
 } as const;
 
 export const button = {
   base:
-    "inline-flex items-center justify-center self-start rounded-lg px-5 py-2.5 text-base font-medium uppercase tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2",
+    `inline-flex items-center justify-center self-start rounded-lg px-4 py-1.5 ${typography.button} uppercase tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2`,
   primary:
-    "bg-section-green text-heading hover:opacity-90",
+    "bg-section-green hover:opacity-90",
   secondary:
-    "bg-white border-2 border-black text-black hover:bg-gray-100",
+    "bg-white hover:bg-gray-100",
 } as const;
 
 export const divider = {

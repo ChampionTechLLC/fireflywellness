@@ -13,7 +13,7 @@ const variantClass = {
 };
 
 const innerClass = {
-  white: section.inner,
+  white: section.innerGreen,
   green: section.innerGreen,
 };
 

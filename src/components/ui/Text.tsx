@@ -9,6 +9,7 @@ const tagMap: Record<TextVariant, "h1" | "h2" | "h3" | "h4" | "p" | "span"> = {
   h4: "h4",
   text: "p",
   subtitle: "p",
+  button: "span",
   link: "span",
 };
 

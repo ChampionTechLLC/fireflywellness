@@ -7,3 +7,4 @@ export { BulletList } from "./BulletList";
 export { SocialIcon, type SocialPlatform } from "./SocialIcon";
 export { Image } from "./Image";
 export { Navbar } from "./Navbar";
+export { TherapistCard } from "./TherapistCard";
