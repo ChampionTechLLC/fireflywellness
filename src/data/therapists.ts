@@ -8,6 +8,8 @@ export type Therapist = {
   name: string;
   credentials: string;
   subtitle?: string;
+  email: string;
+  phone: string;
   imageUrl: string;
   aboutMe: string[];
   aboutMeBullets?: string[];
@@ -20,6 +22,8 @@ export const therapists: Therapist[] = [
     name: "Jordan Blake",
     credentials: "PMHNP",
     subtitle: "Psychiatric-Mental Health Nurse Practitioner",
+    email: "jordan.blake@example.com",
+    phone: "(555) 123-4567",
     imageUrl: "",
     aboutMe: [
       "Jordan is a board-certified Psychiatric-Mental Health Nurse Practitioner with over eight years of experience supporting adults and adolescents through anxiety, depression, and life transitions.",
@@ -37,6 +41,8 @@ export const therapists: Therapist[] = [
     name: "Sam Rivera",
     credentials: "LCSW",
     subtitle: "Licensed Clinical Social Worker",
+    email: "sam.rivera@example.com",
+    phone: "(555) 234-5678",
     imageUrl: "",
     aboutMe: [
       "Sam brings a warm, person-centered approach to therapy with a focus on trauma-informed care and attachment. They have worked in outpatient and community settings for over six years.",
@@ -54,6 +60,8 @@ export const therapists: Therapist[] = [
     name: "Morgan Chen",
     credentials: "PhD, LP",
     subtitle: "Licensed Psychologist",
+    email: "morgan.chen@example.com",
+    phone: "(555) 345-6789",
     imageUrl: "",
     aboutMe: [
       "Morgan is a licensed psychologist specializing in cognitive behavioral therapy (CBT) and mindfulness-based interventions for anxiety, depression, and chronic stress.",

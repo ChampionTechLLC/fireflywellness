@@ -3,30 +3,24 @@ import {
   Text,
   Button,
   Divider,
-  Link,
   BulletList,
-  SocialIcon,
   Image,
   TherapistCard,
 } from "@/components/ui";
+import { StorybookDisplay } from "@/components/StorybookDisplay";
 import { HERO_LOGO_URL } from "@/constants";
 import { therapists } from "@/data/therapists";
-import { bulletList } from "@/styles";
+import { insurances } from "@/data/insurances";
+import { locationData } from "@/data/location";
+import { services } from "@/data/services";
+import { socialLinks } from "@/data/social";
+import { treatmentModalities } from "@/data/treatmentModalities";
+import { bulletList, socialIcon } from "@/styles";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Section variant="white">
-        <div className="flex flex-col items-center gap-8">
-          <Image
-            src={HERO_LOGO_URL}
-            alt="Firefly Wellness logo"
-          />
-          <Text variant="h4">
-            Light for Your Journey
-          </Text>
-        </div>
-      </Section>
+      <Image src={HERO_LOGO_URL} alt="Firefly Wellness logo" className="p-[1.65rem] max-w-[80%] [&_img]:max-w-full" />
       <Section variant="green">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-left">
           <Text variant="h1" className="text-center">Welcome to Firefly Wellness</Text>
@@ -128,36 +122,133 @@ export default function Home() {
       </Section>
 
       <Section variant="white">
-        <div className="flex flex-col gap-8">
-          <Text variant="h1">H1 header</Text>
-          <Text variant="h2">H2 header</Text>
-          <Text variant="h4">H4 header</Text>
-          <Text variant="text">
-            Lorem ipsum text dolor sit amet, consectetur adipiscing elit.
+        <div className="mx-auto flex max-w-2xl flex-col gap-8">
+          <Text variant="h2" className="text-center">
+            Insurance We Accept
           </Text>
-          <Link href="#">Link/Nav</Link>
-          <Divider />
-          <Button>Button primary</Button>
-          <Button variant="secondary">Button secondary</Button>
-          <BulletList
-            items={[
-              "Bullet list item one",
-              "Bullet list item two",
-              "Bullet list item three",
-            ]}
-          />
-          <div className="flex flex-wrap gap-3">
-            <SocialIcon platform="instagram" href="https://instagram.com" />
-            <SocialIcon platform="facebook" href="https://facebook.com" />
-            <SocialIcon platform="twitter" href="https://twitter.com" />
-            <SocialIcon platform="linkedin" href="https://linkedin.com" />
+          <div className="flex flex-wrap justify-center gap-8">
+            {insurances.map((insurance) => (
+              <div key={insurance.name} className="flex h-16 w-32 items-center justify-center rounded bg-body/20">
+                <Image
+                  src={insurance.image}
+                  alt={insurance.name}
+                  className="max-h-full max-w-full [&_img]:object-contain"
+                />
+              </div>
+            ))}
           </div>
-          <Image
-            src="https://placehold.co/400x300/png?text=Sample+Image"
-            alt="Sample image for components"
-          />
+          <Divider />
+          <Text variant="text" className="text-center">
+            We also accept cash pay and out-of-network insurances.
+          </Text>
         </div>
       </Section>
+
+      <Section variant="green">
+        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
+          <Text variant="h2">Services (available in English and Spanish)</Text>
+          <Text variant="text">
+            We are happy to offer a wide array of services and multiple modalities to best fit your needs.
+          </Text>
+          <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
+            <BulletList items={services} />
+          </div>
+
+          <Text variant="h2">Treatment Modalities</Text>
+          <Text variant="text">
+            There are many ways to approach a problem. Here are a few we like to use:
+          </Text>
+          <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
+            <BulletList items={treatmentModalities} />
+          </div>
+        </div>
+      </Section>
+
+      <Section variant="white">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
+          <Text variant="h2" className="text-center">Let's Talk.</Text>
+          <Text variant="subtitle" className="text-center">Schedule your appointment today!</Text>
+          <div className="flex w-full flex-wrap justify-center gap-8 text-left">
+            {therapists.map((therapist) => (
+              <div key={therapist.id} className="flex min-w-0 flex-col gap-2">
+                <Text variant="h4">{therapist.name}, {therapist.credentials}</Text>
+                <Text variant="text">{therapist.email}</Text>
+                <Text variant="text">{therapist.phone}</Text>
+                <Button href={therapist.scheduleUrl ?? "#"} variant="primary" className="mt-1">
+                  Schedule with {therapist.name.split(" ")[0]}
+                </Button>
+              </div>
+            ))}
+          </div>
+          <div className="w-full">
+            <Divider />
+          </div>
+          {locationData.length > 0 && (
+            <div className="flex w-full flex-col items-center gap-2 text-center">
+              <Text variant="h4">Address</Text>
+              {locationData.map((address, i) => (
+                <address key={i} className="not-italic">
+                  <Text variant="text" className="text-center">{address.address1}</Text>
+                  {address.address2 && (
+                    <Text variant="text" className="text-center">{address.address2}</Text>
+                  )}
+                  <Text variant="text" className="text-center">
+                    {address.city}, {address.state} {address.zip}
+                  </Text>
+                  {address.fax && (
+                    <Text variant="text" className="text-center">
+                      Fax: {address.fax}
+                    </Text>
+                  )}
+                </address>
+              ))}
+            </div>
+          )}
+        </div>
+      </Section>
+
+      {locationData[0]?.mapEmbedUrl && (
+        <>
+          <div className="relative w-full aspect-video">
+            <iframe
+              title="Office location"
+              src={locationData[0].mapEmbedUrl}
+              className="absolute inset-0 h-full w-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="mx-auto max-w-[72rem] px-[4.5rem] md:px-[10.5rem]">
+            <div className="flex flex-col items-center gap-6 py-8">
+            <Text variant="h4" className="lowercase">
+              follow firefly
+            </Text>
+            <div className="flex flex-wrap justify-center gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.url}
+                  className={socialIcon.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={link.icon}
+                    alt=""
+                    className={socialIcon.size}
+                    width={24}
+                    height={24}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+          </div>
+        </>
+      )}
     </main>
   );
 }
