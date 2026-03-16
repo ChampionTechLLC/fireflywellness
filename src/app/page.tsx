@@ -20,6 +20,14 @@ import { bulletList, socialIcon } from "@/styles";
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <div className="flex w-full justify-center pb-2 pt-4 md:hidden">
+        <Button
+          href="https://google.com"
+          variant="primary"
+        >
+          Schedule an Appointment
+        </Button>
+      </div>
       <Image src={HERO_LOGO_URL} alt="Firefly Wellness logo" className="p-[1.65rem] max-w-[80%] [&_img]:max-w-full" />
       <Section variant="green">
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-left">
@@ -128,10 +136,12 @@ export default function Home() {
           </Text>
           <div className="flex flex-wrap justify-center gap-8">
             {insurances.map((insurance) => (
-              <div key={insurance.name} className="flex h-16 w-32 items-center justify-center rounded bg-body/20">
+              <div key={insurance.name} className="flex h-16 w-32 items-center justify-center rounded bg-section-white">
                 <Image
                   src={insurance.image}
                   alt={insurance.name}
+                  width={128}
+                  height={64}
                   className="max-h-full max-w-full [&_img]:object-contain"
                 />
               </div>
@@ -168,13 +178,13 @@ export default function Home() {
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
           <Text variant="h2" className="text-center">Let's Talk.</Text>
           <Text variant="subtitle" className="text-center">Schedule your appointment today!</Text>
-          <div className="flex w-full flex-wrap justify-center gap-8 text-left">
+          <div className="flex w-full flex-wrap justify-center gap-8 text-center md:text-left">
             {therapists.map((therapist) => (
-              <div key={therapist.id} className="flex min-w-0 flex-col gap-2">
+              <div key={therapist.id} className="flex w-full min-w-0 basis-full flex-col items-center gap-2 md:basis-auto md:w-auto md:items-start">
                 <Text variant="h4">{therapist.name}, {therapist.credentials}</Text>
                 <Text variant="text">{therapist.email}</Text>
                 <Text variant="text">{therapist.phone}</Text>
-                <Button href={therapist.scheduleUrl ?? "#"} variant="primary" className="mt-1">
+                <Button href={therapist.scheduleUrl ?? "#"} variant="primary" className="mt-1 w-full md:w-auto md:self-start">
                   Schedule with {therapist.name.split(" ")[0]}
                 </Button>
               </div>
@@ -208,46 +218,47 @@ export default function Home() {
       </Section>
 
       {locationData[0]?.mapEmbedUrl && (
-        <>
-          <div className="relative w-full aspect-video">
-            <iframe
-              title="Office location"
-              src={locationData[0].mapEmbedUrl}
-              className="absolute inset-0 h-full w-full border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-          <div className="mx-auto max-w-[72rem] px-[4.5rem] md:px-[10.5rem]">
-            <div className="flex flex-col items-center gap-6 py-8">
-            <Text variant="h4" className="lowercase">
-              follow firefly
-            </Text>
-            <div className="flex flex-wrap justify-center gap-3">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.url}
-                  className={socialIcon.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={link.icon}
-                    alt=""
-                    className={socialIcon.size}
-                    width={24}
-                    height={24}
-                  />
-                </a>
-              ))}
+        <Section variant="white">
+          <div className="-mt-10 flex flex-col gap-10 md:-mt-16">
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+              <iframe
+                title="Office location"
+                src={locationData[0].mapEmbedUrl}
+                className="absolute inset-0 h-full w-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <div className="flex flex-col items-center gap-6">
+              <Text variant="h4" className="lowercase">
+                follow firefly
+              </Text>
+              <div className="flex flex-wrap justify-center gap-3">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.url}
+                    className={socialIcon.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={link.icon}
+                      alt=""
+                      className={socialIcon.size}
+                      width={24}
+                      height={24}
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-          </div>
-        </>
+        </Section>
       )}
     </main>
   );

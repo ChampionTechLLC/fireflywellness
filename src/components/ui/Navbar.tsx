@@ -1,12 +1,13 @@
-"use client";
-
-import { useState } from "react";
-import { nav } from "@/styles";
-
-const NAV_ITEMS = [
-  { label: "Client Services", href: "https://google.com" },
-  { label: "Schedule an Appointment", href: "https://google.com" },
-] as const;
+ "use client";
+ 
+ import { useState } from "react";
+ import { nav } from "@/styles";
+ import { Button } from "@/components/ui";
+ 
+ const NAV_ITEMS = [
+   { label: "Schedule an Appointment", href: "https://google.com" },
+   { label: "Client Services", href: "https://google.com" },
+ ] as const;
 
 function HamburgerIcon({ open }: { open: boolean }) {
   return (
@@ -38,20 +39,31 @@ export function Navbar() {
           Firefly Wellness, PLLC
         </a>
 
-        {/* Desktop nav */}
-        <nav className={nav.links} aria-label="Main">
-          {NAV_ITEMS.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              className={nav.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
+         {/* Desktop nav */}
+         <nav className={nav.links} aria-label="Main">
+           {NAV_ITEMS.map(({ label, href }) =>
+             label === "Schedule an Appointment" ? (
+               <Button
+                 key={label}
+                 href={href}
+                 variant="primary"
+                 className="mt-0.5"
+               >
+                 {label}
+               </Button>
+             ) : (
+               <a
+                 key={label}
+                 href={href}
+                 className={nav.link}
+                 target="_blank"
+                 rel="noopener noreferrer"
+               >
+                 {label}
+               </a>
+             ),
+           )}
+         </nav>
 
         {/* Mobile hamburger */}
         <button
