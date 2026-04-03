@@ -12,10 +12,10 @@ import { HERO_LOGO_URL } from "@/constants";
 import { therapists } from "@/data/therapists";
 import { insurances } from "@/data/insurances";
 import { locationData } from "@/data/location";
+import { comingServiceGroups } from "@/data/comingServices";
 import { services } from "@/data/services";
 import { socialLinks } from "@/data/social";
-import { treatmentModalities } from "@/data/treatmentModalities";
-import { bulletList, socialIcon } from "@/styles";
+import { bulletList, link, socialIcon } from "@/styles";
 
 export default function Home() {
   return (
@@ -30,21 +30,33 @@ export default function Home() {
       </div>
       <Image src={HERO_LOGO_URL} alt="Firefly Wellness logo" className="p-[1.65rem] max-w-[80%] [&_img]:max-w-full" />
       <Section variant="green">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-left">
-          <Text variant="h1" className="text-center">Welcome to Firefly Wellness</Text>
-          <Text variant="subtitle" className="-mt-[10px] text-center">(Formerly Firefly Counseling)</Text>
-          <Text variant="text" className="mt-2">
+        <div className="mx-auto flex w-full max-w-2xl flex-col items-start gap-4 text-left">
+          <Text variant="h1" className="w-full text-center">
+            Welcome to Firefly Wellness
+          </Text>
+          <Text variant="subtitle" className="-mt-[10px] w-full text-center">
+            (Formerly Firefly Counseling)
+          </Text>
+          <Text variant="text" className="mt-2 w-full">
             In 2017, Firefly Counseling was founded to help people find their light during challenging seasons.
           </Text>
-          <Text variant="text">
-            In 2026, Firefly Counseling has grown into Firefly Wellness, reflecting our expanded approach to care. Alongside therapy, we now offer:
+          <Text variant="text" className="w-full">
+            In 2026, Firefly Counseling has grown into Firefly Wellness, reflecting our expanded approach to care.
           </Text>
-          <ul className={bulletList.listSection}>
-            <li>Clinical Cognitive Assessments for ADHD and dementia (coming March 2026)</li>
-            <li>Medication Management (coming Summer 2026)</li>
+          <Text variant="text" className="w-full">
+            Starting May 2026, we will be offering:
+          </Text>
+          <ul className={`${bulletList.listSection} w-full pl-4`}>
+            <li>Clinical Cognitive Assessments for ADHD and dementia</li>
+            <li>Medication Management</li>
           </ul>
-          <Text variant="text">
+          <Text variant="text" className="w-full">
             Our mission remains the same: provide thoughtful, evidence-based, and compassionate care—now with even more ways to support your well-being.
+          </Text>
+          <Text variant="text" className="w-full">
+            <a href="#comprehensive-wellness" className={link.root}>
+              Learn more
+            </a>
           </Text>
         </div>
       </Section>
@@ -77,25 +89,26 @@ export default function Home() {
       </Section>
 
       <Section variant="green">
-        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
+        <div
+          id="comprehensive-wellness"
+          className="mx-auto flex max-w-2xl scroll-mt-24 flex-col gap-8 text-left"
+        >
           <Text variant="h2">A More Comprehensive Approach to Wellness</Text>
-          <Text variant="h3">Clinical Cognitive Assessments (Coming March 2026)</Text>
-          <Text variant="text">
-            Structured evaluations for:
-          </Text>
-          <ul className={bulletList.listSection}>
-            <li>ADHD</li>
-            <li>Executive functioning concerns</li>
-            <li>Cognitive changes and dementia screening</li>
-          </ul>
-          <Text variant="text">
-            These assessments provide clarity, direction, and actionable next steps — whether for school accommodations, treatment planning, or peace of mind.
-          </Text>
-
-          <Text variant="h3">Medication Management (Coming Summer 2026)</Text>
-          <Text variant="text">
-            For individuals who may benefit from psychiatric medication, we provide thoughtful, collaborative prescribing. Our approach is never “medication first” — it is always personalized and integrated with therapeutic care when appropriate.
-          </Text>
+          {comingServiceGroups.map((group) => (
+            <div key={group.heading} className="flex flex-col gap-6">
+              <Text variant="h3">{group.heading}</Text>
+              {group.items.map((item) => (
+                <div key={item.id} className="flex flex-col gap-3">
+                  <Text variant="h4">{item.title}</Text>
+                  {item.paragraphs.map((paragraph, i) => (
+                    <Text key={i} variant="text">
+                      {paragraph}
+                    </Text>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </Section>
 
@@ -117,9 +130,12 @@ export default function Home() {
       </Section>
 
       <Section variant="green">
-        <div className="mx-auto flex max-w-[72rem] flex-col gap-8">
+        <div
+          id="clinicians"
+          className="mx-auto flex max-w-[72rem] scroll-mt-24 flex-col gap-8"
+        >
           <Text variant="h2" className="text-center">
-            Meet Your Therapists
+            Meet Your Clinicians
           </Text>
           <div className="flex flex-wrap justify-center gap-10">
             {therapists.map((therapist) => (
@@ -155,21 +171,16 @@ export default function Home() {
       </Section>
 
       <Section variant="green">
-        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
+        <div
+          id="services"
+          className="mx-auto flex max-w-2xl scroll-mt-24 flex-col gap-8 text-left"
+        >
           <Text variant="h2">Services (available in English and Spanish)</Text>
           <Text variant="text">
             We are happy to offer a wide array of services and multiple modalities to best fit your needs.
           </Text>
           <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
             <BulletList items={services} />
-          </div>
-
-          <Text variant="h2">Treatment Modalities</Text>
-          <Text variant="text">
-            There are many ways to approach a problem. Here are a few we like to use:
-          </Text>
-          <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
-            <BulletList items={treatmentModalities} />
           </div>
         </div>
       </Section>
@@ -178,7 +189,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 text-center">
           <Text variant="h2" className="text-center">Let's Talk.</Text>
           <Text variant="subtitle" className="text-center">Schedule your appointment today!</Text>
-          <div className="flex w-full flex-wrap justify-center gap-8 text-center md:text-left">
+          <div className="flex w-full flex-wrap justify-center gap-x-14 gap-y-16 text-center md:gap-x-16 md:gap-y-20 md:text-left">
             {therapists.map((therapist) => (
               <div key={therapist.id} className="flex w-full min-w-0 basis-full flex-col items-center gap-2 md:basis-auto md:w-auto md:items-start">
                 <Text variant="h4">{therapist.name}, {therapist.credentials}</Text>
@@ -219,7 +230,10 @@ export default function Home() {
 
       {locationData[0]?.mapEmbedUrl && (
         <Section variant="white">
-          <div className="-mt-10 flex flex-col gap-10 md:-mt-16">
+          <div
+            id="location"
+            className="-mt-10 flex scroll-mt-24 flex-col gap-10 md:-mt-16"
+          >
             <div className="relative aspect-video w-full overflow-hidden rounded-xl">
               <iframe
                 title="Office location"

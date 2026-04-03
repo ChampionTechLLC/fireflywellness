@@ -63,7 +63,7 @@ export const nav = {
     "text-xl font-extralight uppercase tracking-[0.2em] text-heading no-underline",
   inner:
     "mx-auto flex h-14 max-w-[72rem] items-center justify-between px-6 md:px-8",
-  links: "hidden md:flex md:items-center md:gap-8",
+  links: "hidden md:flex md:items-center md:gap-6",
   link:
     "uppercase text-body hover:text-heading font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2 rounded no-underline",
   hamburger:

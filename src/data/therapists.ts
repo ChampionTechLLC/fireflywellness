@@ -1,5 +1,5 @@
 /**
- * Therapist profiles for the Meet Your Therapists section.
+ * Therapist profiles for the Meet Your Clinicians section.
  * Update imageUrl, aboutMe, and aboutMeBullets with real content.
  */
 

@@ -1,13 +1,47 @@
- "use client";
- 
- import { useState } from "react";
- import { nav } from "@/styles";
- import { Button } from "@/components/ui";
- 
- const NAV_ITEMS = [
-   { label: "Schedule an Appointment", href: "https://google.com" },
-   { label: "Client Services", href: "https://google.com" },
- ] as const;
+"use client";
+
+import { useState } from "react";
+import { nav } from "@/styles";
+import { Button } from "@/components/ui";
+
+type NavItem =
+  | { label: string; href: string; kind: "hash" }
+  | { label: string; href: string; kind: "external"; variant?: "button" };
+
+const SCHEDULE_ITEM: NavItem = {
+  label: "Schedule an Appointment",
+  href: "https://google.com",
+  kind: "external",
+  variant: "button",
+};
+
+const NAV_LINK_ITEMS: NavItem[] = [
+  { label: "Clinicians", href: "#clinicians", kind: "hash" },
+  { label: "Services", href: "#services", kind: "hash" },
+  { label: "Location", href: "#location", kind: "hash" },
+  {
+    label: "Client Portal",
+    href: "https://practice.mbpractice.com/ClientPortal/ClientLogin",
+    kind: "external",
+  },
+];
+
+/** Mobile menu: schedule first, then the rest in the same order as the text links on desktop. */
+const MOBILE_NAV_ITEMS: NavItem[] = [SCHEDULE_ITEM, ...NAV_LINK_ITEMS];
+
+function NavLink({ item }: { item: NavItem }) {
+  return (
+    <a
+      href={item.href}
+      className={nav.link}
+      {...(item.kind === "external"
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
+    >
+      {item.label}
+    </a>
+  );
+}
 
 function HamburgerIcon({ open }: { open: boolean }) {
   return (
@@ -39,33 +73,24 @@ export function Navbar() {
           Firefly Wellness, PLLC
         </a>
 
-         {/* Desktop nav */}
-         <nav className={nav.links} aria-label="Main">
-           {NAV_ITEMS.map(({ label, href }) =>
-             label === "Schedule an Appointment" ? (
-               <Button
-                 key={label}
-                 href={href}
-                 variant="primary"
-                 className="mt-0.5"
-               >
-                 {label}
-               </Button>
-             ) : (
-               <a
-                 key={label}
-                 href={href}
-                 className={nav.link}
-                 target="_blank"
-                 rel="noopener noreferrer"
-               >
-                 {label}
-               </a>
-             ),
-           )}
-         </nav>
+        <div className="hidden flex-1 items-center md:ml-8 md:flex lg:ml-10">
+          <Button
+            href={SCHEDULE_ITEM.href}
+            variant="primary"
+            className="mt-0.5 shrink-0 mr-6"
+          >
+            {SCHEDULE_ITEM.label}
+          </Button>
+          <nav
+            className="ml-auto flex items-center gap-6"
+            aria-label="Main"
+          >
+            {NAV_LINK_ITEMS.map((item) => (
+              <NavLink key={item.label} item={item} />
+            ))}
+          </nav>
+        </div>
 
-        {/* Mobile hamburger */}
         <button
           type="button"
           className={nav.hamburger}
@@ -78,25 +103,37 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         id="mobile-nav"
         className={`${nav.mobileMenu} ${!mobileOpen ? "hidden" : ""}`}
         aria-hidden={!mobileOpen}
       >
         <div className={nav.mobileMenuInner}>
-          {NAV_ITEMS.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              className={nav.mobileLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileOpen(false)}
-            >
-              {label}
-            </a>
-          ))}
+          {MOBILE_NAV_ITEMS.map((item) =>
+            item.kind === "external" && item.variant === "button" ? (
+              <Button
+                key={item.label}
+                href={item.href}
+                variant="primary"
+                className="w-full"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </Button>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className={nav.mobileLink}
+                {...(item.kind === "external"
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </a>
+            ),
+          )}
         </div>
       </div>
     </header>
