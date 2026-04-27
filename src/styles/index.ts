@@ -74,3 +74,12 @@ export const nav = {
   mobileLink:
     "block rounded-lg px-4 py-3 uppercase text-body hover:bg-body/10 hover:text-heading font-medium no-underline",
 } as const;
+
+export const languageToggle = {
+  root:
+    "inline-flex items-center rounded-lg border border-body/25 bg-background p-0.5 text-xs font-bold uppercase tracking-wide text-body transition-colors focus-within:ring-2 focus-within:ring-heading focus-within:ring-offset-2",
+  option:
+    "rounded-md px-2.5 py-1 transition-colors hover:text-heading focus:outline-none",
+  active: "bg-section-green text-heading",
+  inactive: "text-body",
+} as const;

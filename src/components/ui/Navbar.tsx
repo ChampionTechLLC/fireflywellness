@@ -1,33 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import NextLink from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
 import { nav } from "@/styles";
-import { Button } from "@/components/ui";
+import { Button, LanguageToggle } from "@/components/ui";
 
 type NavItem =
   | { label: string; href: string; kind: "hash" }
   | { label: string; href: string; kind: "external"; variant?: "button" };
 
-const SCHEDULE_ITEM: NavItem = {
-  label: "Schedule an Appointment",
-  href: "https://google.com",
-  kind: "external",
-  variant: "button",
-};
-
-const NAV_LINK_ITEMS: NavItem[] = [
-  { label: "Clinicians", href: "#clinicians", kind: "hash" },
-  { label: "Services", href: "#services", kind: "hash" },
-  { label: "Location", href: "#location", kind: "hash" },
-  {
-    label: "Client Portal",
-    href: "https://practice.mbpractice.com/ClientPortal/ClientLogin",
-    kind: "external",
-  },
-];
-
-/** Mobile menu: schedule first, then the rest in the same order as the text links on desktop. */
-const MOBILE_NAV_ITEMS: NavItem[] = [SCHEDULE_ITEM, ...NAV_LINK_ITEMS];
+const SCHEDULE_URL = "https://google.com";
+const CLIENT_PORTAL_URL =
+  "https://practice.mbpractice.com/ClientPortal/ClientLogin";
 
 function NavLink({ item }: { item: NavItem }) {
   return (
@@ -65,30 +50,50 @@ function HamburgerIcon({ open }: { open: boolean }) {
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { content } = useLanguage();
+  const scheduleItem: NavItem = {
+    label: content.nav.schedule,
+    href: SCHEDULE_URL,
+    kind: "external",
+    variant: "button",
+  };
+  const navLinkItems: NavItem[] = [
+    { label: content.nav.clinicians, href: "#clinicians", kind: "hash" },
+    { label: content.nav.services, href: "#services", kind: "hash" },
+    { label: content.nav.location, href: "#location", kind: "hash" },
+    {
+      label: content.nav.clientPortal,
+      href: CLIENT_PORTAL_URL,
+      kind: "external",
+    },
+  ];
+  /** Mobile menu: schedule first, then the rest in the same order as the text links on desktop. */
+  const mobileNavItems: NavItem[] = [scheduleItem, ...navLinkItems];
 
   return (
     <header className={nav.bar}>
       <div className={nav.inner}>
-        <a href="/" className={nav.brand}>
-          Firefly Wellness, PLLC
-        </a>
+        <NextLink href="/" className={nav.brand}>
+          {content.nav.brand}
+        </NextLink>
 
         <div className="hidden flex-1 items-center md:ml-8 md:flex lg:ml-10">
           <Button
-            href={SCHEDULE_ITEM.href}
+            href={scheduleItem.href}
             variant="primary"
             className="mt-0.5 shrink-0 mr-6"
           >
-            {SCHEDULE_ITEM.label}
+            {scheduleItem.label}
           </Button>
           <nav
             className="ml-auto flex items-center gap-6"
-            aria-label="Main"
+            aria-label={content.nav.mainLabel}
           >
-            {NAV_LINK_ITEMS.map((item) => (
+            {navLinkItems.map((item) => (
               <NavLink key={item.label} item={item} />
             ))}
           </nav>
+          <LanguageToggle className="ml-6" />
         </div>
 
         <button
@@ -97,7 +102,7 @@ export function Navbar() {
           onClick={() => setMobileOpen((o) => !o)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileOpen ? content.nav.closeMenu : content.nav.openMenu}
         >
           <HamburgerIcon open={mobileOpen} />
         </button>
@@ -109,7 +114,8 @@ export function Navbar() {
         aria-hidden={!mobileOpen}
       >
         <div className={nav.mobileMenuInner}>
-          {MOBILE_NAV_ITEMS.map((item) =>
+          <LanguageToggle className="mb-3 self-start" />
+          {mobileNavItems.map((item) =>
             item.kind === "external" && item.variant === "button" ? (
               <Button
                 key={item.label}

@@ -1,14 +1,23 @@
 import { Button, Expandable, Text } from "@/components/ui";
 import { bulletList } from "@/styles";
 import type { Therapist } from "@/data/therapists";
+import type { TherapistContent } from "@/data/siteContent";
 
 type TherapistCardProps = {
   therapist: Therapist;
+  content: TherapistContent;
+  labels: {
+    aboutTitle: string;
+    seeMore: string;
+    seeLess: string;
+    scheduleWith: (firstName: string) => string;
+  };
 };
 
-export function TherapistCard({ therapist }: TherapistCardProps) {
-  const { name, credentials, subtitle, imageUrl, aboutMe, aboutMeBullets, scheduleUrl } =
+export function TherapistCard({ therapist, content, labels }: TherapistCardProps) {
+  const { name, credentials, imageUrl, scheduleUrl } =
     therapist;
+  const { subtitle, aboutMe, aboutMeBullets } = content;
 
   const summary = aboutMe[0];
   const remaining = aboutMe.slice(1);
@@ -29,7 +38,7 @@ export function TherapistCard({ therapist }: TherapistCardProps) {
           variant="secondary"
           className="mt-0.5 self-start"
         >
-          Schedule with {name.split(" ")[0]}
+          {labels.scheduleWith(name.split(" ")[0])}
         </Button>
       </div>
 
@@ -50,13 +59,17 @@ export function TherapistCard({ therapist }: TherapistCardProps) {
       </div>
 
       <div className="mt-4 flex flex-col gap-3">
-        <Text variant="h4">About me</Text>
+        <Text variant="h4">{labels.aboutTitle}</Text>
         {summary && !hasMore && (
           <Text variant="text">{summary}</Text>
         )}
 
         {summary && hasMore && (
-          <Expandable collapsed={<Text variant="text">{summary}</Text>}>
+          <Expandable
+            collapsed={<Text variant="text">{summary}</Text>}
+            moreLabel={labels.seeMore}
+            lessLabel={labels.seeLess}
+          >
             {remaining.length > 0 && (
               <div className="flex flex-col gap-2">
                 {remaining.map((paragraph, i) => (
