@@ -28,7 +28,7 @@ export default function Home() {
           Schedule an Appointment
         </Button>
       </div>
-      <Image src={HERO_LOGO_URL} alt="Firefly Wellness logo" className="p-[1.65rem] max-w-[80%] [&_img]:max-w-full" />
+      <Image src={HERO_LOGO_URL} alt="Firefly Wellness logo" className="p-[1.65rem] max-w-[48%] [&_img]:max-w-full" />
       <Section variant="green">
         <div className="mx-auto flex w-full max-w-2xl flex-col items-start gap-4 text-left">
           <Text variant="h1" className="w-full text-center">
@@ -38,17 +38,18 @@ export default function Home() {
             (Formerly Firefly Counseling)
           </Text>
           <Text variant="text" className="mt-2 w-full">
-            In 2017, Firefly Counseling was founded to help people find their light during challenging seasons.
+          In 2017, Firefly Counseling was founded to help people find their light during challenging seasons and reconnect with their sense of direction and well-being
           </Text>
           <Text variant="text" className="w-full">
             In 2026, Firefly Counseling has grown into Firefly Wellness, reflecting our expanded approach to care.
           </Text>
           <Text variant="text" className="w-full">
-            Starting May 2026, we will be offering:
+            As of May 2026, we now offer:
           </Text>
           <ul className={`${bulletList.listSection} w-full pl-4`}>
-            <li>Clinical Cognitive Assessments for ADHD and dementia</li>
-            <li>Medication Management</li>
+            <li>Medication management with a prescribing clinician</li>
+            <li>T.O.V.A. testing to assess attention and impulse control</li>
+            <li>BrainCheck assessments to track memory and cognitive function</li>
           </ul>
           <Text variant="text" className="w-full">
             Our mission remains the same: provide thoughtful, evidence-based, and compassionate care—now with even more ways to support your well-being.

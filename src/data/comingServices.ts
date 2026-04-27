@@ -1,5 +1,5 @@
 /**
- * Upcoming offerings detailed under Services on the home page.
+ * Offerings detailed under Services on the home page.
  */
 
 export type ComingService = {
@@ -18,7 +18,7 @@ export type ComingServiceGroup = {
 
 export const comingServiceGroups: ComingServiceGroup[] = [
   {
-    heading: "Coming May 2026",
+    heading: "Additional services we offer:",
     items: [
       {
         id: "medication",
@@ -31,14 +31,14 @@ export const comingServiceGroups: ComingServiceGroup[] = [
         id: "braincheck",
         title: "Memory and thinking checks using BrainCheck",
         paragraphs: [
-          "We use BrainCheck to help track your memory over time. Someone on our team will go over your results with you. They will answer your questions and help you plan what to do next. We will offer a first visit and yearly check-ins.",
+          "We use BrainCheck to monitor your memory over time. After your first (baseline) assessment, your clinician will go over the results with you, answer your questions, and help you decide what comes next. We offer an initial visit and yearly check-ins to track changes over time.",
         ],
       },
       {
         id: "tova",
         title: "Attention and focus test (T.O.V.A.)",
         paragraphs: [
-          "T.O.V.A. is a computer test that measures attention and impulse control. It helps when you are not sure about focus, finishing tasks, or slowing down when you need to. Your clinician uses the results as one part of your evaluation—not the whole story. We will offer T.O.V.A. assessments for clients who need them.",
+          "T.O.V.A. (Test of Variables of Attention) is a simple, computer-based test that uses a special device to look at attention and impulse control. It’s one of the tools we may use when evaluating concerns like ADHD and other attention related issues. Your clinician will go over the results with you and use them as part of a larger picture so you can better understand your focus and next steps.",
         ],
       },
     ],
