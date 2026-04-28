@@ -72,6 +72,11 @@ export function Navbar() {
 
   return (
     <header className={nav.bar}>
+      <div className="border-b border-body/10">
+        <div className="mx-auto flex h-9 max-w-[72rem] items-center justify-end px-6 md:px-8">
+          <LanguageToggle />
+        </div>
+      </div>
       <div className={nav.inner}>
         <NextLink href="/" className={nav.brand}>
           {content.nav.brand}
@@ -93,7 +98,6 @@ export function Navbar() {
               <NavLink key={item.label} item={item} />
             ))}
           </nav>
-          <LanguageToggle className="ml-6" />
         </div>
 
         <button
@@ -114,7 +118,6 @@ export function Navbar() {
         aria-hidden={!mobileOpen}
       >
         <div className={nav.mobileMenuInner}>
-          <LanguageToggle className="mb-3 self-start" />
           {mobileNavItems.map((item) =>
             item.kind === "external" && item.variant === "button" ? (
               <Button

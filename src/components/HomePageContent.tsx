@@ -33,7 +33,7 @@ export function HomePageContent() {
       <Image
         src={HERO_LOGO_URL}
         alt={home.heroLogoAlt}
-        className="p-[1.65rem] max-w-[48%] [&_img]:max-w-full"
+        className="p-[1.65rem] max-w-[80%] md:max-w-[48%] [&_img]:max-w-full"
       />
       <Section variant="green">
         <div className="mx-auto flex w-full max-w-2xl flex-col items-start gap-4 text-left">
