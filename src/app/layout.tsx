@@ -13,6 +13,13 @@ const fontPrimary = Nunito({
 export const metadata: Metadata = {
   title: "Firefly Wellness",
   description: "Marketing site for Firefly Wellness",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({
