@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import {
   Section,
   Text,
@@ -20,16 +21,73 @@ import { bulletList, link, socialIcon } from "@/styles";
 export function HomePageContent() {
   const { content } = useLanguage();
   const home = content.home;
+  const [isScheduleCompact, setIsScheduleCompact] = useState(false);
+  const scheduleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScheduleCompact(true);
+
+      if (scheduleTimerRef.current) {
+        clearTimeout(scheduleTimerRef.current);
+      }
+
+      scheduleTimerRef.current = setTimeout(() => {
+        setIsScheduleCompact(false);
+      }, 2000);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+
+      if (scheduleTimerRef.current) {
+        clearTimeout(scheduleTimerRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <main className="min-h-screen pt-16 md:pt-0">
-      <div className="fixed left-1/2 top-24 z-40 -translate-x-1/2 md:hidden">
+    <main className="min-h-screen pt-20 md:pt-0">
+      <div
+        className={`fixed top-28 z-40 transition-all duration-300 ease-out md:hidden ${
+          isScheduleCompact
+            ? "left-6 translate-x-0"
+            : "left-1/2 -translate-x-1/2"
+        }`}
+      >
         <Button
           href={SCHEDULE_URL}
           variant="primary"
-          className="whitespace-nowrap shadow-lg"
+          className={`shadow-lg transition-all duration-300 ease-out ${
+            isScheduleCompact
+              ? "h-11 w-11 !rounded-full !p-0"
+              : "whitespace-nowrap"
+          }`}
         >
-          {home.mobileSchedule}
+          {isScheduleCompact ? (
+            <>
+              <span className="sr-only">{home.mobileSchedule}</span>
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+              >
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <path d="M3 10h18" />
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+              </svg>
+            </>
+          ) : (
+            home.mobileSchedule
+          )}
         </Button>
       </div>
       <Image

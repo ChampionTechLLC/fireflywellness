@@ -119,13 +119,13 @@ export const siteContent: Record<Locale, SiteContent> = {
         title: "Welcome to Firefly Wellness",
         subtitle: "(Formerly Firefly Counseling)",
         paragraphs: [
-          "In 2017, Firefly Counseling was founded to help people find their light during challenging seasons and reconnect with their sense of direction and well-being",
+          "In 2017, Firefly Counseling was founded to help people find their light during challenging seasons and reconnect with their sense of direction and well-being.",
           "In 2026, Firefly Counseling has grown into Firefly Wellness, reflecting our expanded approach to care.",
         ],
         offerLead: "As of May 2026, we now offer:",
         offers: [
           "Medication management with a prescribing clinician",
-          "T.O.V.A. testing to assess attention and impulse control",
+          "T.O.V.A. testing to assess attention and impulse control related to ADHD.",
           "BrainCheck assessments to track memory and cognitive function",
         ],
         mission:
