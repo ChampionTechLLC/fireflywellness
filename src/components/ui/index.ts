@@ -10,3 +10,4 @@ export { Navbar } from "./Navbar";
 export { TherapistCard } from "./TherapistCard";
 export { Expandable } from "./Expandable";
 export { LanguageToggle } from "./LanguageToggle";
+export { LinkedText } from "./LinkedText";

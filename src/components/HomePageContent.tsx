@@ -9,6 +9,7 @@ import {
   BulletList,
   Image,
   TherapistCard,
+  LinkedText,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
 import { HERO_LOGO_URL, SCHEDULE_URL } from "@/constants";
@@ -117,7 +118,9 @@ export function HomePageContent() {
           </Text>
           <ul className={`${bulletList.listSection} w-full pl-4`}>
             {home.intro.offers.map((offer) => (
-              <li key={offer}>{offer}</li>
+              <li key={offer}>
+                <LinkedText>{offer}</LinkedText>
+              </li>
             ))}
           </ul>
           <Text variant="text" className="w-full">
@@ -161,10 +164,12 @@ export function HomePageContent() {
               <Text variant="h3">{group.heading}</Text>
               {group.items.map((item) => (
                 <div key={item.id} className="flex flex-col gap-3">
-                  <Text variant="h4">{item.title}</Text>
+                  <Text variant="h4">
+                    <LinkedText>{item.title}</LinkedText>
+                  </Text>
                   {item.paragraphs.map((paragraph) => (
                     <Text key={paragraph} variant="text">
-                      {paragraph}
+                      <LinkedText>{paragraph}</LinkedText>
                     </Text>
                   ))}
                 </div>

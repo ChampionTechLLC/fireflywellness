@@ -5,3 +5,5 @@
 export const HERO_LOGO_URL = "/hero/Logo%20A6_Logo%20B7.png";
 export const SCHEDULE_URL =
   "https://practice.mbpractice.com/OnlineBooking/Index?subdomainName=firefly-counseling";
+export const TOVA_URL = "https://tovatest.com";
+export const BRAINCHECK_URL = "https://braincheck.com/";
