@@ -10,23 +10,25 @@ import {
   TherapistCard,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
-import { HERO_LOGO_URL } from "@/constants";
+import { HERO_LOGO_URL, SCHEDULE_URL } from "@/constants";
 import { therapists } from "@/data/therapists";
 import { insurances } from "@/data/insurances";
 import { locationData } from "@/data/location";
 import { socialLinks } from "@/data/social";
 import { bulletList, link, socialIcon } from "@/styles";
 
-const SCHEDULE_URL = "https://google.com";
-
 export function HomePageContent() {
   const { content } = useLanguage();
   const home = content.home;
 
   return (
-    <main className="min-h-screen">
-      <div className="flex w-full justify-center pb-2 pt-4 md:hidden">
-        <Button href={SCHEDULE_URL} variant="primary">
+    <main className="min-h-screen pt-16 md:pt-0">
+      <div className="fixed left-1/2 top-24 z-40 -translate-x-1/2 md:hidden">
+        <Button
+          href={SCHEDULE_URL}
+          variant="primary"
+          className="whitespace-nowrap shadow-lg"
+        >
           {home.mobileSchedule}
         </Button>
       </div>

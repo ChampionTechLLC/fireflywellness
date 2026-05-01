@@ -3,6 +3,7 @@
 import { useState } from "react";
 import NextLink from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
+import { SCHEDULE_URL } from "@/constants";
 import { nav } from "@/styles";
 import { Button, LanguageToggle } from "@/components/ui";
 
@@ -10,7 +11,6 @@ type NavItem =
   | { label: string; href: string; kind: "hash" }
   | { label: string; href: string; kind: "external"; variant?: "button" };
 
-const SCHEDULE_URL = "https://google.com";
 const CLIENT_PORTAL_URL =
   "https://practice.mbpractice.com/ClientPortal/ClientLogin";
 
