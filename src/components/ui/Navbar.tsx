@@ -86,7 +86,7 @@ export function Navbar() {
           <Button
             href={scheduleItem.href}
             variant="primary"
-            className="mt-0.5 shrink-0 mr-6"
+            className="mr-6 shrink-0 !self-center"
           >
             {scheduleItem.label}
           </Button>
