@@ -11,8 +11,16 @@ export type SocialLink = {
 };
 
 export const socialLinks: SocialLink[] = [
-  { id: "instagram", url: "https://instagram.com", icon: "/social/instagram.svg", label: "Instagram" },
-  { id: "facebook", url: "https://facebook.com", icon: "/social/facebook.svg", label: "Facebook" },
-  { id: "twitter", url: "https://twitter.com", icon: "/social/twitter.svg", label: "Twitter" },
-  { id: "linkedin", url: "https://linkedin.com", icon: "/social/linkedin.svg", label: "LinkedIn" },
+  {
+    id: "instagram",
+    url: "https://www.instagram.com/fireflywellnesspllc/",
+    icon: "/social/instagram.svg",
+    label: "Instagram",
+  },
+  {
+    id: "facebook",
+    url: "https://www.facebook.com/fireflycounselingLLC/",
+    icon: "/social/facebook.svg",
+    label: "Facebook",
+  },
 ];
