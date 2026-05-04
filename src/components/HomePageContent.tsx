@@ -63,7 +63,7 @@ export function HomePageContent() {
           variant="primary"
           className={`shadow-lg transition-all duration-300 ease-out ${
             isScheduleCompact
-              ? "h-11 w-11 !rounded-full !p-0"
+              ? "h-11 w-11 !rounded-full !p-0 border border-heading/35"
               : "whitespace-nowrap"
           }`}
         >

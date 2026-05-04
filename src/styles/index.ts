@@ -7,10 +7,10 @@ export const typography = {
   h1: "text-3xl md:text-4xl font-semibold text-heading tracking-tight",
   h2: "text-2xl md:text-3xl font-medium text-heading tracking-tight",
   h3: "text-xl md:text-2xl font-medium text-heading",
-  h4: "text-lg md:text-xl font-medium text-muted",
+  h4: "text-lg md:text-xl font-medium text-heading",
   text: "text-base text-body leading-relaxed",
-  subtitle: "text-sm md:text-base font-light text-body",
-  button: "text-xs md:text-sm font-bold text-body",
+  subtitle: "text-sm md:text-base font-normal text-body",
+  button: "text-xs md:text-sm font-semibold text-heading",
   link: "text-sm md:text-base text-body hover:text-heading underline underline-offset-2 transition-colors",
 } as const;
 
@@ -28,9 +28,9 @@ export const button = {
   base:
     `inline-flex items-center justify-center self-start rounded-lg px-4 py-1.5 ${typography.button} uppercase tracking-wide transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2`,
   primary:
-    "bg-section-green hover:opacity-90",
+    "bg-section-green hover:bg-[#b7fbb5]",
   secondary:
-    "bg-white hover:bg-gray-100",
+    "bg-white hover:bg-gray-50",
 } as const;
 
 export const divider = {
@@ -38,7 +38,7 @@ export const divider = {
 } as const;
 
 export const link = {
-  root: "text-body hover:text-heading underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2 rounded",
+  root: "text-heading/90 hover:text-heading underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2 rounded",
 } as const;
 
 export const bulletList = {

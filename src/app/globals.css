@@ -2,11 +2,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  /* Typography: heading = darker, body = lighter */
-  --heading: #374151;
-  --body: #6b7280;
-  --muted: #9ca3af;
+  --foreground: #111827;
+  /* Typography tokens tuned for contrast on both white and green sections */
+  --heading: #0f172a;
+  --body: #334155;
+  --muted: #475569;
   /* Section theme */
   --section-bg-white: #ffffff;
   --section-bg-green: #c3ffc1;

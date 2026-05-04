@@ -7,7 +7,7 @@ const linkedLabels = {
 
 const linkedTextPattern = /(BrainCheck|T\.O\.V\.A\.)/g;
 const linkClassName =
-  "rounded underline underline-offset-2 transition-colors hover:text-heading focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2";
+  "text-inherit rounded underline underline-offset-2 transition-colors hover:text-heading focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2";
 
 type LinkedTextProps = {
   children: string;

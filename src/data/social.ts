@@ -13,7 +13,7 @@ export type SocialLink = {
 export const socialLinks: SocialLink[] = [
   {
     id: "instagram",
-    url: "https://www.instagram.com/fireflywellnesspllc/",
+    url: "https://www.instagram.com/firefly_wellness_pllc/",
     icon: "/social/instagram.svg",
     label: "Instagram",
   },
