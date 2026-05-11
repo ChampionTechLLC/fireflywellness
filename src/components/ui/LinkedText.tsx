@@ -1,11 +1,12 @@
-import { BRAINCHECK_URL, TOVA_URL } from "@/constants";
+import { BRAINCHECK_URL, TEMPUS_URL, TOVA_URL } from "@/constants";
 
 const linkedLabels = {
   BrainCheck: BRAINCHECK_URL,
   "T.O.V.A.": TOVA_URL,
+  Tempus: TEMPUS_URL,
 } as const;
 
-const linkedTextPattern = /(BrainCheck|T\.O\.V\.A\.)/g;
+const linkedTextPattern = /(BrainCheck|T\.O\.V\.A\.|Tempus)/g;
 const linkClassName =
   "text-inherit rounded underline underline-offset-2 transition-colors hover:text-heading focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2";
 

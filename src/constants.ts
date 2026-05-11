@@ -7,3 +7,4 @@ export const SCHEDULE_URL =
   "https://practice.mbpractice.com/OnlineBooking/Index?subdomainName=firefly-counseling";
 export const TOVA_URL = "https://tovatest.com";
 export const BRAINCHECK_URL = "https://braincheck.com/";
+export const TEMPUS_URL = "https://www.tempus.com/";

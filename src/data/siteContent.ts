@@ -127,6 +127,7 @@ export const siteContent: Record<Locale, SiteContent> = {
           "Medication management with a prescribing clinician",
           "T.O.V.A. testing to assess attention and impulse control related to ADHD.",
           "BrainCheck assessments to track memory and cognitive function",
+          "Tempus genetic testing to help guide personalized medication decisions",
         ],
         mission:
           "Our mission remains the same: provide thoughtful, evidence-based, and compassionate care-now with even more ways to support your well-being.",
@@ -175,6 +176,13 @@ export const siteContent: Record<Locale, SiteContent> = {
                 title: "Attention and focus test (T.O.V.A.)",
                 paragraphs: [
                   "T.O.V.A. (Test of Variables of Attention) is a simple, computer-based test that uses a special device to look at attention and impulse control. It's one of the tools we may use when evaluating concerns like ADHD and other attention related issues. Your clinician will go over the results with you and use them as part of a larger picture so you can better understand your focus and next steps.",
+                ],
+              },
+              {
+                id: "tempus",
+                title: "Tempus genetic testing",
+                paragraphs: [
+                  "Tempus genetic testing can provide additional information about how your body may process certain medications. Your clinician reviews these results with you and uses them alongside your symptoms, history, and goals to support thoughtful medication decisions.",
                 ],
               },
             ],
@@ -316,6 +324,7 @@ export const siteContent: Record<Locale, SiteContent> = {
           "Manejo de medicamentos con un clinico autorizado para recetar",
           "Pruebas T.O.V.A. para evaluar la atencion y el control de impulsos",
           "Evaluaciones BrainCheck para dar seguimiento a la memoria y la funcion cognitiva",
+          "Pruebas geneticas de Tempus para orientar decisiones personalizadas sobre medicamentos",
         ],
         mission:
           "Nuestra mision sigue siendo la misma: brindar atencion compasiva, reflexiva y basada en evidencia, ahora con aun mas maneras de apoyar su bienestar.",
@@ -364,6 +373,13 @@ export const siteContent: Record<Locale, SiteContent> = {
                 title: "Prueba de atencion y enfoque (T.O.V.A.)",
                 paragraphs: [
                   "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atencion y el control de impulsos. Es una de las herramientas que podemos usar al evaluar inquietudes como TDAH y otros asuntos relacionados con la atencion. Su clinico revisara los resultados con usted y los usara como parte de un panorama mas amplio para que pueda comprender mejor su enfoque y sus proximos pasos.",
+                ],
+              },
+              {
+                id: "tempus",
+                title: "Pruebas geneticas de Tempus",
+                paragraphs: [
+                  "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Su clinico revisa estos resultados con usted y los usa junto con sus sintomas, su historial y sus objetivos para apoyar decisiones de medicacion reflexivas.",
                 ],
               },
             ],
