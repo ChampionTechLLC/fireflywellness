@@ -18,7 +18,7 @@ import { therapists } from "@/data/therapists";
 import { insurances } from "@/data/insurances";
 import { locationData } from "@/data/location";
 import { socialLinks } from "@/data/social";
-import { bulletList, link, socialIcon } from "@/styles";
+import { link, socialIcon } from "@/styles";
 
 export function HomePageContent() {
   const { content } = useLanguage();
@@ -105,29 +105,21 @@ export function HomePageContent() {
           <Text variant="subtitle" className="-mt-[10px] w-full text-center">
             {home.intro.subtitle}
           </Text>
-          {home.intro.paragraphs.map((paragraph, i) => (
-            <Text
-              key={paragraph}
-              variant="text"
-              className={`${i === 0 ? "mt-2 " : ""}w-full`}
-            >
-              {paragraph}
-            </Text>
-          ))}
-          <Text variant="text" className="w-full">
-            {home.intro.offerLead}
+          <Text variant="text" className="mt-2 w-full">
+            {home.intro.lead}
           </Text>
-          <ul className={`${bulletList.listSection} w-full pl-4`}>
-            {home.intro.offers.map((offer) => (
-              <li key={offer.href + offer.label}>
-                <NextLink href={offer.href} className={link.root}>
-                  {offer.label}
-                </NextLink>
-              </li>
-            ))}
-          </ul>
           <Text variant="text" className="w-full">
-            {home.intro.mission}
+            {home.intro.whoWeHelp}
+          </Text>
+          <Text variant="text" className="w-full text-center pt-2">
+            <a
+              href={SCHEDULE_URL}
+              className={link.root}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {home.intro.scheduleLink}
+            </a>
           </Text>
         </div>
       </Section>
@@ -263,35 +255,43 @@ export function HomePageContent() {
             <Divider />
           </div>
           {locationData.length > 0 && (
-            <div className="flex w-full flex-col items-center gap-2 text-center">
-              <Text variant="h4">{home.contact.address}</Text>
-              {locationData.map((address, i) => (
-                <address key={i} className="not-italic">
-                  <Text variant="text" className="text-center">
-                    {address.address1}
-                  </Text>
-                  {address.address2 && (
+            <div className="flex w-full flex-col items-center gap-6 text-center">
+              <div className="flex w-full flex-col items-center gap-2">
+                <Text variant="h4">{home.contact.address}</Text>
+                {locationData.map((address, i) => (
+                  <address key={i} className="not-italic">
                     <Text variant="text" className="text-center">
-                      {address.address2}
+                      {address.address1}
                     </Text>
-                  )}
-                  <Text variant="text" className="text-center">
-                    {address.city}, {address.state} {address.zip}
-                  </Text>
-                  {address.phone && (
+                    {address.address2 && (
+                      <Text variant="text" className="text-center">
+                        {address.address2}
+                      </Text>
+                    )}
                     <Text variant="text" className="text-center">
-                      <a href={`tel:${address.phone.replace(/\./g, "")}`} className={link.root}>
-                        {home.contact.phone}: {address.phone}
-                      </a>
+                      {address.city}, {address.state} {address.zip}
                     </Text>
-                  )}
-                  {address.fax && (
-                    <Text variant="text" className="text-center">
-                      {home.contact.fax}: {address.fax}
-                    </Text>
-                  )}
-                </address>
-              ))}
+                    {address.phone && (
+                      <Text variant="text" className="text-center">
+                        <a href={`tel:${address.phone.replace(/\./g, "")}`} className={link.root}>
+                          {home.contact.phone}: {address.phone}
+                        </a>
+                      </Text>
+                    )}
+                    {address.fax && (
+                      <Text variant="text" className="text-center">
+                        {home.contact.fax}: {address.fax}
+                      </Text>
+                    )}
+                  </address>
+                ))}
+              </div>
+              <div className="flex w-full max-w-md flex-col items-center gap-2">
+                <Text variant="h4">{home.contact.hoursLabel}</Text>
+                <Text variant="text" className="text-center">
+                  {home.contact.hours}
+                </Text>
+              </div>
             </div>
           )}
         </div>

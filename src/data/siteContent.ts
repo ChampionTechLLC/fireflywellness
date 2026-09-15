@@ -32,11 +32,9 @@ export type SiteContent = {
     intro: {
       title: string;
       subtitle: string;
-      paragraphs: string[];
-      offerLead: string;
-      offers: { label: string; href: string }[];
-      mission: string;
-      learnMore: string;
+      lead: string;
+      whoWeHelp: string;
+      scheduleLink: string;
     };
     servicesOverview: {
       title: string;
@@ -81,6 +79,8 @@ export type SiteContent = {
       address: string;
       phone: string;
       fax: string;
+      hoursLabel: string;
+      hours: string;
       mapTitle: string;
       follow: string;
     };
@@ -110,37 +110,13 @@ export const siteContent: Record<Locale, SiteContent> = {
       mobileSchedule: "Schedule an Appointment",
       heroLogoAlt: "Firefly Wellness logo",
       intro: {
-        title: "Welcome to Firefly Wellness",
-        subtitle: "(Formerly Firefly Counseling)",
-        paragraphs: [
-          "In 2017, Firefly Counseling was founded to help people find their light during challenging seasons and reconnect with their sense of direction and well-being.",
-          "In 2026, Firefly Counseling grew into Firefly Wellness. We offer therapy, ADHD and attention testing, and psychiatric medication for clients in Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and the surrounding western suburbs.",
-        ],
-        offerLead: "As of May 2026, we now offer:",
-        offers: [
-          {
-            label: "Psychiatric medication with our on-staff PMHNP",
-            href: "/medication-management",
-          },
-          {
-            label:
-              "T.O.V.A. testing to assess attention and impulse control related to ADHD.",
-            href: "/adhd-testing",
-          },
-          {
-            label:
-              "BrainCheck assessments to track memory and cognitive function",
-            href: "/medication-management",
-          },
-          {
-            label:
-              "Tempus genetic testing to help guide personalized medication decisions",
-            href: "/medication-management",
-          },
-        ],
-        mission:
-          "Our mission remains the same: provide thoughtful, evidence-based, and compassionate care—now with even more ways to support your well-being.",
-        learnMore: "Explore our services",
+        title: "Psychiatric Care & Therapy in Hinsdale",
+        subtitle: "Firefly Wellness, PLLC",
+        lead:
+          "Coordinated psychiatric medication, ADHD and attention testing, and therapy for adolescents through adults. Our team brings nearly two decades of mental health experience to every client relationship.",
+        whoWeHelp:
+          "We help with anxiety, depression, trauma, ADHD-related concerns, relationships, and life transitions—serving Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and nearby western suburbs.",
+        scheduleLink: "Book online now",
       },
       servicesOverview: {
         title: "Our services in Hinsdale",
@@ -256,6 +232,9 @@ export const siteContent: Record<Locale, SiteContent> = {
         address: "Address",
         phone: "Phone",
         fax: "Fax",
+        hoursLabel: "Business Hours",
+        hours:
+          "By appointment. Each clinician sets their own schedule—book online to see available times.",
         mapTitle: "Office location",
         follow: "follow firefly",
       },
@@ -283,37 +262,13 @@ export const siteContent: Record<Locale, SiteContent> = {
       mobileSchedule: "Programar una cita",
       heroLogoAlt: "Logotipo de Firefly Wellness",
       intro: {
-        title: "Bienvenido a Firefly Wellness",
-        subtitle: "(Antes Firefly Counseling)",
-        paragraphs: [
-          "En 2017, Firefly Counseling fue fundado para ayudar a las personas a encontrar su luz durante temporadas dificiles y reconectarse con su sentido de direccion y bienestar.",
-          "En 2026, Firefly Counseling crecio y se convirtio en Firefly Wellness. Ofrecemos terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica para clientes en Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste circundantes.",
-        ],
-        offerLead: "A partir de mayo de 2026, ahora ofrecemos:",
-        offers: [
-          {
-            label: "Medicacion psiquiatrica con nuestra PMHNP del equipo",
-            href: "/medication-management",
-          },
-          {
-            label:
-              "Pruebas T.O.V.A. para evaluar la atencion y el control de impulsos",
-            href: "/adhd-testing",
-          },
-          {
-            label:
-              "Evaluaciones BrainCheck para dar seguimiento a la memoria y la funcion cognitiva",
-            href: "/medication-management",
-          },
-          {
-            label:
-              "Pruebas geneticas de Tempus para orientar decisiones personalizadas sobre medicamentos",
-            href: "/medication-management",
-          },
-        ],
-        mission:
-          "Nuestra mision sigue siendo la misma: brindar atencion compasiva, reflexiva y basada en evidencia, ahora con aun mas maneras de apoyar su bienestar.",
-        learnMore: "Explore nuestros servicios",
+        title: "Atencion Psiquiatrica y Terapia en Hinsdale",
+        subtitle: "Firefly Wellness, PLLC",
+        lead:
+          "Medicacion psiquiatrica coordinada, pruebas de TDAH y atencion, y terapia para adolescentes y adultos. Nuestro equipo aporta casi dos decadas de experiencia en salud mental a cada relacion con el cliente.",
+        whoWeHelp:
+          "Ayudamos con ansiedad, depresion, trauma, inquietudes relacionadas con el TDAH, relaciones y transiciones de vida—sirviendo a Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
+        scheduleLink: "Reservar en linea ahora",
       },
       servicesOverview: {
         title: "Nuestros servicios en Hinsdale",
@@ -430,6 +385,9 @@ export const siteContent: Record<Locale, SiteContent> = {
         address: "Direccion",
         phone: "Telefono",
         fax: "Fax",
+        hoursLabel: "Horario comercial",
+        hours:
+          "Solo con cita. Cada clinico establece su propio horario: reserve en linea para ver disponibilidad.",
         mapTitle: "Ubicacion de la oficina",
         follow: "siga a firefly",
       },
