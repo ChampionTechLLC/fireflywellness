@@ -9,12 +9,21 @@ import { Button, LanguageToggle } from "@/components/ui";
 
 type NavItem =
   | { label: string; href: string; kind: "hash" }
+  | { label: string; href: string; kind: "route" }
   | { label: string; href: string; kind: "external"; variant?: "button" };
 
 const CLIENT_PORTAL_URL =
   "https://practice.mbpractice.com/ClientPortal/ClientLogin";
 
 function NavLink({ item }: { item: NavItem }) {
+  if (item.kind === "route") {
+    return (
+      <NextLink href={item.href} className={nav.link}>
+        {item.label}
+      </NextLink>
+    );
+  }
+
   return (
     <a
       href={item.href}
@@ -58,9 +67,10 @@ export function Navbar() {
     variant: "button",
   };
   const navLinkItems: NavItem[] = [
-    { label: content.nav.clinicians, href: "#clinicians", kind: "hash" },
-    { label: content.nav.services, href: "#services", kind: "hash" },
-    { label: content.nav.location, href: "#location", kind: "hash" },
+    { label: content.nav.clinicians, href: "/#clinicians", kind: "hash" },
+    { label: content.nav.services, href: "/services", kind: "route" },
+    { label: content.nav.location, href: "/#location", kind: "hash" },
+    { label: content.nav.careers, href: "/careers", kind: "route" },
     {
       label: content.nav.clientPortal,
       href: CLIENT_PORTAL_URL,
@@ -129,6 +139,15 @@ export function Navbar() {
               >
                 {item.label}
               </Button>
+            ) : item.kind === "route" ? (
+              <NextLink
+                key={item.label}
+                href={item.href}
+                className={nav.mobileLink}
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </NextLink>
             ) : (
               <a
                 key={item.label}

@@ -1,5 +1,6 @@
 "use client";
 
+import NextLink from "next/link";
 import { useEffect, useRef, useState } from "react";
 import {
   Section,
@@ -9,7 +10,6 @@ import {
   BulletList,
   Image,
   TherapistCard,
-  LinkedText,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
 import { HERO_LOGO_URL, SCHEDULE_URL } from "@/constants";
@@ -118,8 +118,10 @@ export function HomePageContent() {
           </Text>
           <ul className={`${bulletList.listSection} w-full pl-4`}>
             {home.intro.offers.map((offer) => (
-              <li key={offer}>
-                <LinkedText>{offer}</LinkedText>
+              <li key={offer.href + offer.label}>
+                <NextLink href={offer.href} className={link.root}>
+                  {offer.label}
+                </NextLink>
               </li>
             ))}
           </ul>
@@ -127,55 +129,29 @@ export function HomePageContent() {
             {home.intro.mission}
           </Text>
           <Text variant="text" className="w-full">
-            <a href="#comprehensive-wellness" className={link.root}>
+            <NextLink href="/services" className={link.root}>
               {home.intro.learnMore}
-            </a>
+            </NextLink>
           </Text>
         </div>
       </Section>
       <Section variant="white">
-        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
-          <Text variant="h2">{home.therapy.whyTitle}</Text>
-          {home.therapy.whyParagraphs.map((paragraph) => (
-            <Text key={paragraph} variant="text">
-              {paragraph}
-            </Text>
-          ))}
-
-          <Text variant="h2">{home.therapy.expectTitle}</Text>
-          <Text variant="text">{home.therapy.expectIntro}</Text>
-          <ul className={bulletList.listSection}>
-            {home.therapy.expectItems.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <Text variant="text">{home.therapy.expectOutro}</Text>
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <Text variant="h2">{home.therapyTeaser.title}</Text>
+          <Text variant="text">{home.therapyTeaser.blurb}</Text>
+          <Button href="/therapy" variant="primary">
+            {home.therapyTeaser.cta}
+          </Button>
         </div>
       </Section>
 
       <Section variant="green">
-        <div
-          id="comprehensive-wellness"
-          className="mx-auto flex max-w-2xl scroll-mt-24 flex-col gap-8 text-left"
-        >
-          <Text variant="h2">{home.wellness.title}</Text>
-          {home.wellness.groups.map((group) => (
-            <div key={group.heading} className="flex flex-col gap-6">
-              <Text variant="h3">{group.heading}</Text>
-              {group.items.map((item) => (
-                <div key={item.id} className="flex flex-col gap-3">
-                  <Text variant="h4">
-                    <LinkedText>{item.title}</LinkedText>
-                  </Text>
-                  {item.paragraphs.map((paragraph) => (
-                    <Text key={paragraph} variant="text">
-                      <LinkedText>{paragraph}</LinkedText>
-                    </Text>
-                  ))}
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <Text variant="h2">{home.servicesTeaser.title}</Text>
+          <Text variant="text">{home.servicesTeaser.blurb}</Text>
+          <Button href="/services" variant="primary">
+            {home.servicesTeaser.cta}
+          </Button>
         </div>
       </Section>
 
@@ -188,6 +164,16 @@ export function HomePageContent() {
       </Section>
 
       <Section variant="green">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <Text variant="h2">{home.careersTeaser.title}</Text>
+          <Text variant="text">{home.careersTeaser.blurb}</Text>
+          <Button href="/careers" variant="primary">
+            {home.careersTeaser.cta}
+          </Button>
+        </div>
+      </Section>
+
+      <Section variant="white">
         <div
           id="clinicians"
           className="mx-auto flex max-w-[72rem] scroll-mt-24 flex-col gap-8"
@@ -214,7 +200,7 @@ export function HomePageContent() {
         </div>
       </Section>
 
-      <Section variant="white">
+      <Section variant="green">
         <div className="mx-auto flex max-w-2xl flex-col gap-8">
           <Text variant="h2" className="text-center">
             {home.insurance.title}
@@ -239,19 +225,6 @@ export function HomePageContent() {
           <Text variant="text" className="text-center">
             {home.insurance.cashPay}
           </Text>
-        </div>
-      </Section>
-
-      <Section variant="green">
-        <div
-          id="services"
-          className="mx-auto flex max-w-2xl scroll-mt-24 flex-col gap-8 text-left"
-        >
-          <Text variant="h2">{home.services.title}</Text>
-          <Text variant="text">{home.services.intro}</Text>
-          <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
-            <BulletList items={home.services.items} />
-          </div>
         </div>
       </Section>
 

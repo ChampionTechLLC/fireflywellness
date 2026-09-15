@@ -8,3 +8,5 @@ export const SCHEDULE_URL =
 export const TOVA_URL = "https://tovatest.com";
 export const BRAINCHECK_URL = "https://braincheck.com/";
 export const TEMPUS_URL = "https://www.tempus.com/";
+export const CAREERS_APPLY_EMAIL = "Jeannette@FireflyCounseling.net";
+export const CAREERS_APPLY_SUBJECT = "LCPC Application – Firefly Wellness";

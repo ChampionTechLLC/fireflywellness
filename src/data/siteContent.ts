@@ -8,17 +8,6 @@ export type TherapistContent = {
   aboutMeBullets?: string[];
 };
 
-export type ComingService = {
-  id: string;
-  title: string;
-  paragraphs: string[];
-};
-
-export type ComingServiceGroup = {
-  heading: string;
-  items: ComingService[];
-};
-
 export type SiteContent = {
   language: {
     toggleLabel: string;
@@ -31,6 +20,7 @@ export type SiteContent = {
     clinicians: string;
     services: string;
     location: string;
+    careers: string;
     clientPortal: string;
     openMenu: string;
     closeMenu: string;
@@ -44,26 +34,29 @@ export type SiteContent = {
       subtitle: string;
       paragraphs: string[];
       offerLead: string;
-      offers: string[];
+      offers: { label: string; href: string }[];
       mission: string;
       learnMore: string;
     };
-    therapy: {
-      whyTitle: string;
-      whyParagraphs: string[];
-      expectTitle: string;
-      expectIntro: string;
-      expectItems: string[];
-      expectOutro: string;
-    };
-    wellness: {
+    therapyTeaser: {
       title: string;
-      groups: ComingServiceGroup[];
+      blurb: string;
+      cta: string;
+    };
+    servicesTeaser: {
+      title: string;
+      blurb: string;
+      cta: string;
     };
     commitment: {
       title: string;
       items: string[];
       closing: string;
+    };
+    careersTeaser: {
+      title: string;
+      blurb: string;
+      cta: string;
     };
     clinicians: {
       title: string;
@@ -76,11 +69,6 @@ export type SiteContent = {
     insurance: {
       title: string;
       cashPay: string;
-    };
-    services: {
-      title: string;
-      intro: string;
-      items: string[];
     };
     contact: {
       title: string;
@@ -107,6 +95,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       clinicians: "Clinicians",
       services: "Services",
       location: "Location",
+      careers: "Careers",
       clientPortal: "Client Portal",
       openMenu: "Open menu",
       closeMenu: "Close menu",
@@ -124,70 +113,41 @@ export const siteContent: Record<Locale, SiteContent> = {
         ],
         offerLead: "As of May 2026, we now offer:",
         offers: [
-          "Medication management with a prescribing clinician",
-          "T.O.V.A. testing to assess attention and impulse control related to ADHD.",
-          "BrainCheck assessments to track memory and cognitive function",
-          "Tempus genetic testing to help guide personalized medication decisions",
+          {
+            label: "Psychiatric medication with our on-staff PMHNP",
+            href: "/medication-management",
+          },
+          {
+            label:
+              "T.O.V.A. testing to assess attention and impulse control related to ADHD.",
+            href: "/adhd-testing",
+          },
+          {
+            label:
+              "BrainCheck assessments to track memory and cognitive function",
+            href: "/medication-management",
+          },
+          {
+            label:
+              "Tempus genetic testing to help guide personalized medication decisions",
+            href: "/medication-management",
+          },
         ],
         mission:
           "Our mission remains the same: provide thoughtful, evidence-based, and compassionate care-now with even more ways to support your well-being.",
-        learnMore: "Learn more",
+        learnMore: "Explore our services",
       },
-      therapy: {
-        whyTitle: "Why Therapy",
-        whyParagraphs: [
-          "Life can feel overwhelming. Trauma, chronic stress, relationship strain, or major transitions can leave you anxious, low, or stuck in unhelpful patterns.",
-          "You are not alone. According to the National Alliance on Mental Illness (NAMI), 1 in 5 adults experience mental health challenges each year. Struggling doesn't mean you're failing.",
-          "Therapy can help. At Firefly Wellness, we walk alongside you as you reconnect with your strengths and move toward a steadier, more meaningful life.",
-        ],
-        expectTitle: "What to Expect",
-        expectIntro:
-          "Therapy provides a safe, nonjudgmental space for reflection, growth, and change. While medication can support some individuals, therapy focuses on:",
-        expectItems: [
-          "Understanding your thoughts, emotions, and patterns",
-          "Strengthening coping skills",
-          "Creating sustainable emotional and behavioral shifts",
-        ],
-        expectOutro:
-          "Together with your therapist, you'll clarify goals, develop practical strategies, and work toward meaningful progress. Feeling nervous is completely normal - most clients do - and starting therapy is often described as one of the most valuable steps they've taken for themselves.",
+      therapyTeaser: {
+        title: "Therapy",
+        blurb:
+          "A safe, nonjudgmental space to understand patterns, build coping skills, and move toward lasting change—with clinicians who meet you where you are.",
+        cta: "Learn more about therapy",
       },
-      wellness: {
+      servicesTeaser: {
         title: "A More Comprehensive Approach to Wellness",
-        groups: [
-          {
-            heading: "Additional services we offer:",
-            items: [
-              {
-                id: "medication",
-                title: "Medication management",
-                paragraphs: [
-                  "Some people still feel very low, anxious, or on edge even when therapy is going well. Medicine can ease those symptoms enough to sleep, focus, and benefit from the work you do in therapy. We will offer prescribing visits and medication management with a clinician on our team.",
-                ],
-              },
-              {
-                id: "braincheck",
-                title: "Memory and thinking checks using BrainCheck",
-                paragraphs: [
-                  "We use BrainCheck to monitor your memory over time. After your first (baseline) assessment, your clinician will go over the results with you, answer your questions, and help you decide what comes next. We offer an initial visit and yearly check-ins to track changes over time.",
-                ],
-              },
-              {
-                id: "tova",
-                title: "Attention and focus test (T.O.V.A.)",
-                paragraphs: [
-                  "T.O.V.A. (Test of Variables of Attention) is a simple, computer-based test that uses a special device to look at attention and impulse control. It's one of the tools we may use when evaluating concerns like ADHD and other attention related issues. Your clinician will go over the results with you and use them as part of a larger picture so you can better understand your focus and next steps.",
-                ],
-              },
-              {
-                id: "tempus",
-                title: "Tempus genetic testing",
-                paragraphs: [
-                  "Tempus genetic testing can provide additional information about how your body may process certain medications. Your clinician reviews these results with you and uses them alongside your symptoms, history, and goals to support thoughtful medication decisions.",
-                ],
-              },
-            ],
-          },
-        ],
+        blurb:
+          "In addition to therapy, we offer ADHD and attention testing, medication management, and cognitive check-ins—coordinated under one practice.",
+        cta: "View all services",
       },
       commitment: {
         title: "Our Commitment",
@@ -199,6 +159,11 @@ export const siteContent: Record<Locale, SiteContent> = {
         ],
         closing:
           "At Firefly Wellness, our mission is to help you move from simply coping to truly thriving.",
+      },
+      careersTeaser: {
+        title: "Join Our Team",
+        blurb: "We're growing our clinical team in Hinsdale.",
+        cta: "View open positions",
       },
       clinicians: {
         title: "Meet Your Clinicians",
@@ -256,31 +221,6 @@ export const siteContent: Record<Locale, SiteContent> = {
         title: "Insurance We Accept",
         cashPay: "We also accept cash pay and out-of-network insurances.",
       },
-      services: {
-        title: "Services (available in English and Spanish)",
-        intro:
-          "We are happy to offer a wide array of services and multiple modalities to best fit your needs.",
-        items: [
-          "Depression",
-          "Anxiety and Stress",
-          "Trauma",
-          "PTSD",
-          "Sexual Intimacy",
-          "LGBTQ",
-          "Life Transitional Difficulties",
-          "Relationship Issues",
-          "Attention Problems",
-          "School Issues",
-          "Phobias and Fears",
-          "Family, Couples, Marriage",
-          "Premarital Counseling",
-          "Women's Issues",
-          "Emotional Regulation",
-          "Obsessive Behaviors",
-          "Workplace Issues",
-          "Sleep Problems",
-        ],
-      },
       contact: {
         title: "Let's Talk.",
         subtitle: "Schedule your appointment today!",
@@ -304,6 +244,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       clinicians: "Clinicos",
       services: "Servicios",
       location: "Ubicacion",
+      careers: "Carreras",
       clientPortal: "Portal del cliente",
       openMenu: "Abrir menu",
       closeMenu: "Cerrar menu",
@@ -321,70 +262,41 @@ export const siteContent: Record<Locale, SiteContent> = {
         ],
         offerLead: "A partir de mayo de 2026, ahora ofrecemos:",
         offers: [
-          "Manejo de medicamentos con un clinico autorizado para recetar",
-          "Pruebas T.O.V.A. para evaluar la atencion y el control de impulsos",
-          "Evaluaciones BrainCheck para dar seguimiento a la memoria y la funcion cognitiva",
-          "Pruebas geneticas de Tempus para orientar decisiones personalizadas sobre medicamentos",
+          {
+            label: "Medicacion psiquiatrica con nuestra PMHNP del equipo",
+            href: "/medication-management",
+          },
+          {
+            label:
+              "Pruebas T.O.V.A. para evaluar la atencion y el control de impulsos",
+            href: "/adhd-testing",
+          },
+          {
+            label:
+              "Evaluaciones BrainCheck para dar seguimiento a la memoria y la funcion cognitiva",
+            href: "/medication-management",
+          },
+          {
+            label:
+              "Pruebas geneticas de Tempus para orientar decisiones personalizadas sobre medicamentos",
+            href: "/medication-management",
+          },
         ],
         mission:
           "Nuestra mision sigue siendo la misma: brindar atencion compasiva, reflexiva y basada en evidencia, ahora con aun mas maneras de apoyar su bienestar.",
-        learnMore: "Conozca mas",
+        learnMore: "Explore nuestros servicios",
       },
-      therapy: {
-        whyTitle: "Por Que Terapia",
-        whyParagraphs: [
-          "La vida puede sentirse abrumadora. El trauma, el estres cronico, las dificultades en las relaciones o las transiciones importantes pueden dejarle con ansiedad, animo bajo o atrapado en patrones que no ayudan.",
-          "No esta solo. Segun la National Alliance on Mental Illness (NAMI), 1 de cada 5 adultos experimenta desafios de salud mental cada ano. Tener dificultades no significa que este fallando.",
-          "La terapia puede ayudar. En Firefly Wellness, caminamos a su lado mientras se reconecta con sus fortalezas y avanza hacia una vida mas estable y significativa.",
-        ],
-        expectTitle: "Que Puede Esperar",
-        expectIntro:
-          "La terapia ofrece un espacio seguro y sin juicio para la reflexion, el crecimiento y el cambio. Aunque los medicamentos pueden apoyar a algunas personas, la terapia se enfoca en:",
-        expectItems: [
-          "Comprender sus pensamientos, emociones y patrones",
-          "Fortalecer habilidades de afrontamiento",
-          "Crear cambios emocionales y conductuales sostenibles",
-        ],
-        expectOutro:
-          "Junto con su terapeuta, aclarara metas, desarrollara estrategias practicas y trabajara hacia un progreso significativo. Sentirse nervioso es completamente normal - a la mayoria de los clientes les pasa - y comenzar terapia a menudo se describe como uno de los pasos mas valiosos que han tomado por si mismos.",
+      therapyTeaser: {
+        title: "Terapia",
+        blurb:
+          "Un espacio seguro y sin juicio para comprender patrones, fortalecer habilidades de afrontamiento y avanzar hacia un cambio duradero—con clinicos que le encuentran donde esta.",
+        cta: "Conozca mas sobre terapia",
       },
-      wellness: {
+      servicesTeaser: {
         title: "Un Enfoque Mas Integral del Bienestar",
-        groups: [
-          {
-            heading: "Servicios adicionales que ofrecemos:",
-            items: [
-              {
-                id: "medication",
-                title: "Manejo de medicamentos",
-                paragraphs: [
-                  "Algunas personas todavia se sienten muy decaidas, ansiosas o tensas incluso cuando la terapia va bien. Los medicamentos pueden aliviar esos sintomas lo suficiente como para dormir, concentrarse y beneficiarse del trabajo que hacen en terapia. Ofreceremos visitas de prescripcion y manejo de medicamentos con un clinico de nuestro equipo.",
-                ],
-              },
-              {
-                id: "braincheck",
-                title: "Evaluaciones de memoria y pensamiento con BrainCheck",
-                paragraphs: [
-                  "Usamos BrainCheck para monitorear su memoria con el tiempo. Despues de su primera evaluacion de referencia, su clinico revisara los resultados con usted, respondera sus preguntas y le ayudara a decidir los proximos pasos. Ofrecemos una visita inicial y revisiones anuales para seguir los cambios con el tiempo.",
-                ],
-              },
-              {
-                id: "tova",
-                title: "Prueba de atencion y enfoque (T.O.V.A.)",
-                paragraphs: [
-                  "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atencion y el control de impulsos. Es una de las herramientas que podemos usar al evaluar inquietudes como TDAH y otros asuntos relacionados con la atencion. Su clinico revisara los resultados con usted y los usara como parte de un panorama mas amplio para que pueda comprender mejor su enfoque y sus proximos pasos.",
-                ],
-              },
-              {
-                id: "tempus",
-                title: "Pruebas geneticas de Tempus",
-                paragraphs: [
-                  "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Su clinico revisa estos resultados con usted y los usa junto con sus sintomas, su historial y sus objetivos para apoyar decisiones de medicacion reflexivas.",
-                ],
-              },
-            ],
-          },
-        ],
+        blurb:
+          "Ademas de terapia, ofrecemos pruebas de TDAH y atencion, manejo de medicamentos y revisiones cognitivas—coordinadas en una sola practica.",
+        cta: "Ver todos los servicios",
       },
       commitment: {
         title: "Nuestro Compromiso",
@@ -396,6 +308,11 @@ export const siteContent: Record<Locale, SiteContent> = {
         ],
         closing:
           "En Firefly Wellness, nuestra mision es ayudarle a pasar de simplemente sobrellevar la vida a realmente prosperar.",
+      },
+      careersTeaser: {
+        title: "Unase a nuestro equipo",
+        blurb: "Estamos ampliando nuestro equipo clinico en Hinsdale.",
+        cta: "Ver vacantes",
       },
       clinicians: {
         title: "Conozca a Sus Clinicos",
@@ -453,31 +370,6 @@ export const siteContent: Record<Locale, SiteContent> = {
         title: "Seguros Que Aceptamos",
         cashPay:
           "Tambien aceptamos pago privado y seguros fuera de la red.",
-      },
-      services: {
-        title: "Servicios (disponibles en ingles y espanol)",
-        intro:
-          "Nos complace ofrecer una amplia variedad de servicios y multiples modalidades para adaptarnos mejor a sus necesidades.",
-        items: [
-          "Depresion",
-          "Ansiedad y estres",
-          "Trauma",
-          "TEPT",
-          "Intimidad sexual",
-          "LGBTQ",
-          "Dificultades en transiciones de vida",
-          "Problemas de relacion",
-          "Problemas de atencion",
-          "Problemas escolares",
-          "Fobias y miedos",
-          "Familia, parejas, matrimonio",
-          "Consejeria prematrimonial",
-          "Asuntos de mujeres",
-          "Regulacion emocional",
-          "Conductas obsesivas",
-          "Problemas laborales",
-          "Problemas de sueno",
-        ],
       },
       contact: {
         title: "Hablemos.",
