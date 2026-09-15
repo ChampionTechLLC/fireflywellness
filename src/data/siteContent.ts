@@ -38,25 +38,29 @@ export type SiteContent = {
       mission: string;
       learnMore: string;
     };
-    therapyTeaser: {
+    servicesOverview: {
       title: string;
-      blurb: string;
-      cta: string;
+      intro: string;
+      items: {
+        title: string;
+        blurb: string;
+        href: string;
+        learnMore: string;
+      }[];
+      supportingNote: string;
+      viewAllCta: string;
     };
-    servicesTeaser: {
+    whyFirefly: {
       title: string;
-      blurb: string;
-      cta: string;
-    };
-    commitment: {
-      title: string;
+      intro: string;
       items: string[];
       closing: string;
+      cliniciansLink: string;
     };
-    careersTeaser: {
-      title: string;
-      blurb: string;
-      cta: string;
+    hiringTeaser: {
+      text: string;
+      linkLabel: string;
+      href: string;
     };
     clinicians: {
       title: string;
@@ -75,6 +79,7 @@ export type SiteContent = {
       subtitle: string;
       scheduleWith: (firstName: string) => string;
       address: string;
+      phone: string;
       fax: string;
       mapTitle: string;
       follow: string;
@@ -109,7 +114,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         subtitle: "(Formerly Firefly Counseling)",
         paragraphs: [
           "In 2017, Firefly Counseling was founded to help people find their light during challenging seasons and reconnect with their sense of direction and well-being.",
-          "In 2026, Firefly Counseling has grown into Firefly Wellness, reflecting our expanded approach to care.",
+          "In 2026, Firefly Counseling grew into Firefly Wellness. We offer therapy, ADHD and attention testing, and psychiatric medication for clients in Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and the surrounding western suburbs.",
         ],
         offerLead: "As of May 2026, we now offer:",
         offers: [
@@ -134,36 +139,59 @@ export const siteContent: Record<Locale, SiteContent> = {
           },
         ],
         mission:
-          "Our mission remains the same: provide thoughtful, evidence-based, and compassionate care-now with even more ways to support your well-being.",
+          "Our mission remains the same: provide thoughtful, evidence-based, and compassionate care—now with even more ways to support your well-being.",
         learnMore: "Explore our services",
       },
-      therapyTeaser: {
-        title: "Therapy",
-        blurb:
-          "A safe, nonjudgmental space to understand patterns, build coping skills, and move toward lasting change—with clinicians who meet you where you are.",
-        cta: "Learn more about therapy",
+      servicesOverview: {
+        title: "Our services in Hinsdale",
+        intro:
+          "Firefly Wellness brings therapy, ADHD and attention testing, and psychiatric medication together in one coordinated practice in Hinsdale, IL.",
+        items: [
+          {
+            title: "Psychiatric Medication",
+            blurb:
+              "Prescribing visits and ongoing medication support with our on-staff PMHNP, including tools that inform thoughtful medication decisions.",
+            href: "/medication-management",
+            learnMore: "Learn more about psychiatric medication",
+          },
+          {
+            title: "ADHD & Attention Testing",
+            blurb:
+              "Computer-based T.O.V.A. testing to help evaluate attention and impulse control as part of a broader clinical picture.",
+            href: "/adhd-testing",
+            learnMore: "Learn more about ADHD testing",
+          },
+          {
+            title: "Therapy",
+            blurb:
+              "Individual counseling for adolescents, young adults, and adults—focused on insight, coping skills, and lasting change.",
+            href: "/therapy",
+            learnMore: "Learn more about therapy",
+          },
+        ],
+        supportingNote:
+          "When clinically useful, BrainCheck and Tempus can support memory monitoring and personalized medication decisions alongside your care.",
+        viewAllCta: "View all services",
       },
-      servicesTeaser: {
-        title: "A More Comprehensive Approach to Wellness",
-        blurb:
-          "In addition to therapy, we offer ADHD and attention testing, medication management, and cognitive check-ins—coordinated under one practice.",
-        cta: "View all services",
-      },
-      commitment: {
-        title: "Our Commitment",
+      whyFirefly: {
+        title: "Why Firefly Wellness",
+        intro:
+          "We work with adolescents through adults navigating anxiety, depression, trauma, relationship concerns, and life transitions.",
         items: [
           "Evidence-based care",
           "Warm, collaborative relationships",
           "Respect for your individuality",
           "Ethical, thoughtful clinical practice",
+          "Services in English and Spanish",
         ],
         closing:
           "At Firefly Wellness, our mission is to help you move from simply coping to truly thriving.",
+        cliniciansLink: "Meet our clinicians",
       },
-      careersTeaser: {
-        title: "Join Our Team",
-        blurb: "We're growing our clinical team in Hinsdale.",
-        cta: "View open positions",
+      hiringTeaser: {
+        text: "We're growing our clinical team in Hinsdale.",
+        linkLabel: "View open positions",
+        href: "/careers",
       },
       clinicians: {
         title: "Meet Your Clinicians",
@@ -175,9 +203,9 @@ export const siteContent: Record<Locale, SiteContent> = {
           "1": {
             subtitle: "Founder, Bilingual Therapist",
             aboutMe: [
-              "My name is Jeannette Sziler. I am a Psychiatric Mental Health Nurse Practitioner, Licensed Clinical Professional Counselor and founder of Firefly Counseling. I have been in the mental healthcare field in some capacity or another for almost 2 decades. I am a bilingual, bicultural and biracial Mexican American.",
+              "My name is Jeannette Sziler. I am a Psychiatric Mental Health Nurse Practitioner, Licensed Clinical Professional Counselor and founder of Firefly Wellness. I have been in the mental healthcare field in some capacity or another for almost 2 decades. I am a bilingual, bicultural and biracial Mexican American.",
               "Throughout the years, I have worked with a variety of clients, allowing me to recognize I work best with those aged 11 through their 30s. Refining my skill set has led me to truly enjoy using expressive art therapies as well as Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT).",
-              "In addition to my clinical work, I recently completed my Master of Science in Nursing (MSN) and am now pursuing a post-graduate certificate as a Psychiatric-Mental Health Nurse Practitioner (PMHNP), coming in 2026. This advanced training will allow me to incorporate medication management into Firefly Counseling, expanding the ways we can support our clients' mental health needs.",
+              "In addition to my work as an LCPC, I completed my Master of Science in Nursing (MSN) and am a board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC). I provide psychiatric medication care at Firefly Wellness alongside therapy, expanding the ways we can support our clients' mental health needs.",
             ],
             aboutMeBullets: [
               "My fifteen minutes of fame was when I was featured in a local newspaper after my friend and I completed 100 hours of volunteer work at a local hospital when we were 13 years old.",
@@ -226,6 +254,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         subtitle: "Schedule your appointment today!",
         scheduleWith: (firstName) => `Schedule with ${firstName}`,
         address: "Address",
+        phone: "Phone",
         fax: "Fax",
         mapTitle: "Office location",
         follow: "follow firefly",
@@ -258,7 +287,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         subtitle: "(Antes Firefly Counseling)",
         paragraphs: [
           "En 2017, Firefly Counseling fue fundado para ayudar a las personas a encontrar su luz durante temporadas dificiles y reconectarse con su sentido de direccion y bienestar.",
-          "En 2026, Firefly Counseling crecio y se convirtio en Firefly Wellness, reflejando nuestro enfoque ampliado de atencion.",
+          "En 2026, Firefly Counseling crecio y se convirtio en Firefly Wellness. Ofrecemos terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica para clientes en Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste circundantes.",
         ],
         offerLead: "A partir de mayo de 2026, ahora ofrecemos:",
         offers: [
@@ -286,33 +315,56 @@ export const siteContent: Record<Locale, SiteContent> = {
           "Nuestra mision sigue siendo la misma: brindar atencion compasiva, reflexiva y basada en evidencia, ahora con aun mas maneras de apoyar su bienestar.",
         learnMore: "Explore nuestros servicios",
       },
-      therapyTeaser: {
-        title: "Terapia",
-        blurb:
-          "Un espacio seguro y sin juicio para comprender patrones, fortalecer habilidades de afrontamiento y avanzar hacia un cambio duradero—con clinicos que le encuentran donde esta.",
-        cta: "Conozca mas sobre terapia",
+      servicesOverview: {
+        title: "Nuestros servicios en Hinsdale",
+        intro:
+          "Firefly Wellness reune terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica en una practica coordinada en Hinsdale, IL.",
+        items: [
+          {
+            title: "Medicacion psiquiatrica",
+            blurb:
+              "Visitas de prescripcion y apoyo continuo con nuestra PMHNP del equipo, incluyendo herramientas que orientan decisiones de medicacion reflexivas.",
+            href: "/medication-management",
+            learnMore: "Conozca mas sobre medicacion psiquiatrica",
+          },
+          {
+            title: "Pruebas de TDAH y atencion",
+            blurb:
+              "Pruebas T.O.V.A. por computadora para ayudar a evaluar la atencion y el control de impulsos como parte de un panorama clinico mas amplio.",
+            href: "/adhd-testing",
+            learnMore: "Conozca mas sobre pruebas de TDAH",
+          },
+          {
+            title: "Terapia",
+            blurb:
+              "Consejeria individual para adolescentes, adultos jovenes y adultos—con enfoque en comprension, habilidades de afrontamiento y cambio duradero.",
+            href: "/therapy",
+            learnMore: "Conozca mas sobre terapia",
+          },
+        ],
+        supportingNote:
+          "Cuando es clinicamente util, BrainCheck y Tempus pueden apoyar el monitoreo de la memoria y decisiones personalizadas de medicacion junto con su cuidado.",
+        viewAllCta: "Ver todos los servicios",
       },
-      servicesTeaser: {
-        title: "Un Enfoque Mas Integral del Bienestar",
-        blurb:
-          "Ademas de terapia, ofrecemos pruebas de TDAH y atencion, manejo de medicamentos y revisiones cognitivas—coordinadas en una sola practica.",
-        cta: "Ver todos los servicios",
-      },
-      commitment: {
-        title: "Nuestro Compromiso",
+      whyFirefly: {
+        title: "Por que Firefly Wellness",
+        intro:
+          "Trabajamos con adolescentes y adultos que atraviesan ansiedad, depresion, trauma, inquietudes de relacion y transiciones de vida.",
         items: [
           "Atencion basada en evidencia",
           "Relaciones calidas y colaborativas",
           "Respeto por su individualidad",
           "Practica clinica etica y reflexiva",
+          "Servicios en ingles y espanol",
         ],
         closing:
           "En Firefly Wellness, nuestra mision es ayudarle a pasar de simplemente sobrellevar la vida a realmente prosperar.",
+        cliniciansLink: "Conozca a nuestros clinicos",
       },
-      careersTeaser: {
-        title: "Unase a nuestro equipo",
-        blurb: "Estamos ampliando nuestro equipo clinico en Hinsdale.",
-        cta: "Ver vacantes",
+      hiringTeaser: {
+        text: "Estamos ampliando nuestro equipo clinico en Hinsdale.",
+        linkLabel: "Ver vacantes",
+        href: "/careers",
       },
       clinicians: {
         title: "Conozca a Sus Clinicos",
@@ -324,9 +376,9 @@ export const siteContent: Record<Locale, SiteContent> = {
           "1": {
             subtitle: "Fundadora, terapeuta bilingue",
             aboutMe: [
-              "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiatrica, consejera profesional clinica licenciada y fundadora de Firefly Counseling. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 decadas. Soy mexicoamericana bilingue, bicultural y birracial.",
+              "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiatrica, consejera profesional clinica licenciada y fundadora de Firefly Wellness. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 decadas. Soy mexicoamericana bilingue, bicultural y birracial.",
               "A lo largo de los anos, he trabajado con una variedad de clientes, lo que me ha permitido reconocer que trabajo mejor con personas de 11 anos hasta sus 30s. Al refinar mis habilidades, he llegado a disfrutar mucho el uso de terapias de arte expresivo, asi como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptacion y Compromiso (ACT).",
-              "Ademas de mi trabajo clinico, recientemente complete mi Maestria en Ciencias de Enfermeria (MSN) y ahora estoy cursando un certificado de posgrado como enfermera practicante de salud mental psiquiatrica (PMHNP), previsto para 2026. Esta formacion avanzada me permitira incorporar manejo de medicamentos en Firefly Counseling, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
+              "Ademas de mi trabajo como LCPC, complete mi Maestria en Ciencias de Enfermeria (MSN) y soy enfermera practicante de salud mental psiquiatrica certificada (PMHNP-BC). Brindo atencion de medicacion psiquiatrica en Firefly Wellness junto con la terapia, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
             ],
             aboutMeBullets: [
               "Mis quince minutos de fama fueron cuando apareci en un periodico local despues de que una amiga y yo completamos 100 horas de voluntariado en un hospital local cuando teniamos 13 anos.",
@@ -376,6 +428,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         subtitle: "Programe su cita hoy.",
         scheduleWith: (firstName) => `Programar con ${firstName}`,
         address: "Direccion",
+        phone: "Telefono",
         fax: "Fax",
         mapTitle: "Ubicacion de la oficina",
         follow: "siga a firefly",

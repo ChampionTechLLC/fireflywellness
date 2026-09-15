@@ -12,7 +12,8 @@ const fontPrimary = Nunito({
 
 export const metadata: Metadata = {
   title: "Firefly Wellness",
-  description: "Marketing site for Firefly Wellness",
+  description:
+    "Firefly Wellness offers therapy, ADHD testing, and psychiatric medication in Hinsdale, IL and nearby western suburbs.",
   icons: {
     icon: [
       { url: "/icon.png", type: "image/png", sizes: "512x512" },

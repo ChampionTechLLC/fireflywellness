@@ -10,6 +10,7 @@ import {
   BulletList,
   Image,
   TherapistCard,
+  LinkedText,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
 import { HERO_LOGO_URL, SCHEDULE_URL } from "@/constants";
@@ -128,48 +129,49 @@ export function HomePageContent() {
           <Text variant="text" className="w-full">
             {home.intro.mission}
           </Text>
-          <Text variant="text" className="w-full">
-            <NextLink href="/services" className={link.root}>
-              {home.intro.learnMore}
-            </NextLink>
-          </Text>
         </div>
       </Section>
-      <Section variant="white">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
-          <Text variant="h2">{home.therapyTeaser.title}</Text>
-          <Text variant="text">{home.therapyTeaser.blurb}</Text>
-          <Button href="/therapy" variant="primary">
-            {home.therapyTeaser.cta}
-          </Button>
-        </div>
-      </Section>
-
-      <Section variant="green">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
-          <Text variant="h2">{home.servicesTeaser.title}</Text>
-          <Text variant="text">{home.servicesTeaser.blurb}</Text>
-          <Button href="/services" variant="primary">
-            {home.servicesTeaser.cta}
-          </Button>
-        </div>
-      </Section>
-
       <Section variant="white">
         <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
-          <Text variant="h2">{home.commitment.title}</Text>
-          <BulletList items={home.commitment.items} />
-          <Text variant="text">{home.commitment.closing}</Text>
+          <Text variant="h2" className="text-center">
+            {home.servicesOverview.title}
+          </Text>
+          <Text variant="text">{home.servicesOverview.intro}</Text>
+          {home.servicesOverview.items.map((item) => (
+            <div key={item.href} className="flex flex-col gap-2">
+              <Text variant="h3">{item.title}</Text>
+              <Text variant="text">{item.blurb}</Text>
+              <NextLink href={item.href} className={`${link.root} self-start`}>
+                {item.learnMore}
+              </NextLink>
+            </div>
+          ))}
+          <Text variant="text">
+            <LinkedText>{home.servicesOverview.supportingNote}</LinkedText>
+          </Text>
+          <Button href="/services" variant="primary" className="self-start">
+            {home.servicesOverview.viewAllCta}
+          </Button>
         </div>
       </Section>
 
       <Section variant="green">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
-          <Text variant="h2">{home.careersTeaser.title}</Text>
-          <Text variant="text">{home.careersTeaser.blurb}</Text>
-          <Button href="/careers" variant="primary">
-            {home.careersTeaser.cta}
-          </Button>
+        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
+          <Text variant="h2" className="text-center">
+            {home.whyFirefly.title}
+          </Text>
+          <Text variant="text">{home.whyFirefly.intro}</Text>
+          <BulletList items={home.whyFirefly.items} />
+          <Text variant="text">{home.whyFirefly.closing}</Text>
+          <NextLink href="/#clinicians" className={`${link.root} self-start`}>
+            {home.whyFirefly.cliniciansLink}
+          </NextLink>
+          <Text variant="text">
+            {home.hiringTeaser.text}{" "}
+            <NextLink href={home.hiringTeaser.href} className={link.root}>
+              {home.hiringTeaser.linkLabel}
+            </NextLink>
+          </Text>
         </div>
       </Section>
 
@@ -276,6 +278,13 @@ export function HomePageContent() {
                   <Text variant="text" className="text-center">
                     {address.city}, {address.state} {address.zip}
                   </Text>
+                  {address.phone && (
+                    <Text variant="text" className="text-center">
+                      <a href={`tel:${address.phone.replace(/\./g, "")}`} className={link.root}>
+                        {home.contact.phone}: {address.phone}
+                      </a>
+                    </Text>
+                  )}
                   {address.fax && (
                     <Text variant="text" className="text-center">
                       {home.contact.fax}: {address.fax}

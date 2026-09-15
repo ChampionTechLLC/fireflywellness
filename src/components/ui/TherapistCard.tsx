@@ -3,6 +3,8 @@ import { bulletList } from "@/styles";
 import type { Therapist } from "@/data/therapists";
 import type { TherapistContent } from "@/data/siteContent";
 
+type ScheduleButtonVariant = "primary" | "secondary";
+
 type TherapistCardProps = {
   therapist: Therapist;
   content: TherapistContent;
@@ -12,9 +14,15 @@ type TherapistCardProps = {
     seeLess: string;
     scheduleWith: (firstName: string) => string;
   };
+  scheduleButtonVariant?: ScheduleButtonVariant;
 };
 
-export function TherapistCard({ therapist, content, labels }: TherapistCardProps) {
+export function TherapistCard({
+  therapist,
+  content,
+  labels,
+  scheduleButtonVariant = "primary",
+}: TherapistCardProps) {
   const { name, credentials, imageUrl, scheduleUrl } =
     therapist;
   const { subtitle, aboutMe, aboutMeBullets } = content;
@@ -35,7 +43,7 @@ export function TherapistCard({ therapist, content, labels }: TherapistCardProps
         )}
         <Button
           href={scheduleUrl ?? "#"}
-          variant="secondary"
+          variant={scheduleButtonVariant}
           className="mt-0.5 self-start"
         >
           {labels.scheduleWith(name.split(" ")[0])}

@@ -131,12 +131,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       meta: {
         title: "Services | Firefly Wellness",
         description:
-          "Therapy, ADHD and attention testing, and medication management in Hinsdale, IL—coordinated care under one practice.",
+          "Therapy, ADHD and attention testing, and psychiatric medication in Hinsdale, IL—coordinated care under one practice.",
       },
       hero: {
         title: "Our Services",
         subtitle:
-          "Firefly Wellness brings therapy, ADHD and attention testing, and medication management together so you can get thoughtful care in one coordinated practice.",
+          "Firefly Wellness brings therapy, ADHD and attention testing, and psychiatric medication together so you can get thoughtful care in one coordinated practice.",
         cta: "Schedule an Appointment",
       },
       offerings: [
@@ -155,11 +155,11 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           learnMore: "Learn more about ADHD testing",
         },
         {
-          title: "Medication Management",
+          title: "Psychiatric Medication",
           blurb:
-            "Prescribing visits and ongoing medication support with a clinician on our team, including tools that inform thoughtful medication decisions.",
+            "Prescribing visits and ongoing medication support with our on-staff PMHNP, including tools that inform thoughtful medication decisions.",
           href: "/medication-management",
-          learnMore: "Learn more about medication management",
+          learnMore: "Learn more about psychiatric medication",
         },
       ],
       braincheck: {
@@ -315,12 +315,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     medicationManagement: {
       slug: "medication-management",
       meta: {
-        title: "Medication Management | Firefly Wellness",
+        title: "Psychiatric Medication | Firefly Wellness",
         description:
-          "Psychiatric medication management in Hinsdale with a prescribing clinician, including tools like Tempus and BrainCheck when clinically useful.",
+          "Psychiatric medication in Hinsdale with our on-staff PMHNP, including tools like Tempus and BrainCheck when clinically useful.",
       },
       hero: {
-        title: "Medication Management",
+        title: "Psychiatric Medication",
         subtitle:
           "Prescribing visits and ongoing medication support with a clinician on our team—coordinated with therapy and testing when that leads to better care.",
         cta: "Schedule an Appointment",
@@ -379,12 +379,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       meta: {
         title: "Servicios | Firefly Wellness",
         description:
-          "Terapia, pruebas de TDAH y atencion, y manejo de medicamentos en Hinsdale, IL—cuidado coordinado en una sola practica.",
+          "Terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica en Hinsdale, IL—cuidado coordinado en una sola practica.",
       },
       hero: {
         title: "Nuestros Servicios",
         subtitle:
-          "Firefly Wellness reune terapia, pruebas de TDAH y atencion, y manejo de medicamentos para que reciba cuidado reflexivo en una practica coordinada.",
+          "Firefly Wellness reune terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica para que reciba cuidado reflexivo en una practica coordinada.",
         cta: "Programar una cita",
       },
       offerings: [
@@ -403,11 +403,11 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           learnMore: "Conozca mas sobre pruebas de TDAH",
         },
         {
-          title: "Manejo de medicamentos",
+          title: "Medicacion psiquiatrica",
           blurb:
-            "Visitas de prescripcion y apoyo continuo con un clinico de nuestro equipo, incluyendo herramientas que orientan decisiones de medicacion reflexivas.",
+            "Visitas de prescripcion y apoyo continuo con nuestra PMHNP del equipo, incluyendo herramientas que orientan decisiones de medicacion reflexivas.",
           href: "/medication-management",
-          learnMore: "Conozca mas sobre manejo de medicamentos",
+          learnMore: "Conozca mas sobre medicacion psiquiatrica",
         },
       ],
       braincheck: {
