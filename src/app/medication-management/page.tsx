@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { MedicationManagementPageContent } from "@/components/ServicePagesContent";
+import { MedicationPageJsonLd } from "@/components/MedicationPageJsonLd";
 import { getServicePagesContent } from "@/data/servicePages";
 
 const page = getServicePagesContent("en").medicationManagement;
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function MedicationManagementPage() {
-  return <MedicationManagementPageContent />;
+  return (
+    <>
+      <MedicationPageJsonLd />
+      <MedicationManagementPageContent />
+    </>
+  );
 }

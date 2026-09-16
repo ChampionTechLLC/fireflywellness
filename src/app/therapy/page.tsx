@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { TherapyPageContent } from "@/components/ServicePagesContent";
+import { TherapyPageJsonLd } from "@/components/TherapyPageJsonLd";
 import { getServicePagesContent } from "@/data/servicePages";
 
 const page = getServicePagesContent("en").therapy;
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function TherapyPage() {
-  return <TherapyPageContent />;
+  return (
+    <>
+      <TherapyPageJsonLd />
+      <TherapyPageContent />
+    </>
+  );
 }

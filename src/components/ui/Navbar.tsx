@@ -70,7 +70,6 @@ export function Navbar() {
     { label: content.nav.clinicians, href: "/#clinicians", kind: "hash" },
     { label: content.nav.services, href: "/services", kind: "route" },
     { label: content.nav.location, href: "/#location", kind: "hash" },
-    { label: content.nav.careers, href: "/careers", kind: "route" },
     {
       label: content.nav.clientPortal,
       href: CLIENT_PORTAL_URL,

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AdhdTestingPageContent } from "@/components/ServicePagesContent";
+import { AdhdTestingPageJsonLd } from "@/components/AdhdTestingPageJsonLd";
 import { getServicePagesContent } from "@/data/servicePages";
 
 const page = getServicePagesContent("en").adhdTesting;
@@ -10,5 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function AdhdTestingPage() {
-  return <AdhdTestingPageContent />;
+  return (
+    <>
+      <AdhdTestingPageJsonLd />
+      <AdhdTestingPageContent />
+    </>
+  );
 }

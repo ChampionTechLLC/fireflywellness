@@ -29,6 +29,11 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
           <Text variant="subtitle" className="w-full text-center">
             {page.hero.subtitle}
           </Text>
+          {page.hero.availabilityNote ? (
+            <Text variant="text" className="w-full text-center">
+              {page.hero.availabilityNote}
+            </Text>
+          ) : null}
           <div className="flex w-full justify-center pt-2">
             <Button href={SCHEDULE_URL} variant="primary">
               {page.hero.cta}
@@ -70,32 +75,77 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
         </div>
       </Section>
 
-      <Section variant="white">
-        <div className={contentColumn}>
-          <Text variant="h2">{page.related.title}</Text>
-          <Text variant="text">{page.related.paragraph}</Text>
-          <ul className="flex flex-col gap-2">
-            {page.related.links.map((item) => (
-              <li key={item.href}>
-                <NextLink href={item.href} className={link.root}>
-                  {item.label}
-                </NextLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
+      {page.related ? (
+        <Section variant="white">
+          <div className={contentColumn}>
+            <Text variant="h2">{page.related.title}</Text>
+            <Text variant="text">{page.related.paragraph}</Text>
+            <ul className="flex flex-col gap-2">
+              {page.related.links.map((item) => (
+                <li key={item.href}>
+                  <NextLink href={item.href} className={link.root}>
+                    {item.label}
+                  </NextLink>
+                </li>
+              ))}
+            </ul>
+            {page.note ? <Text variant="text">{page.note}</Text> : null}
+          </div>
+        </Section>
+      ) : page.note ? (
+        <Section variant="white">
+          <div className={contentColumn}>
+            <Text variant="text">{page.note}</Text>
+          </div>
+        </Section>
+      ) : null}
 
-      <Section variant="green">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+      {page.faq ? (
+        <Section variant="green">
+          <div className={contentColumn}>
+            <Text variant="h2">{page.faq.title}</Text>
+            {page.faq.items.map((item) => (
+              <div key={item.question} className="flex flex-col gap-2">
+                <Text variant="h3">{item.question}</Text>
+                <Text variant="text">
+                  <LinkedText>{item.answer}</LinkedText>
+                </Text>
+              </div>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
+      <Section
+        variant={page.faq || !page.related ? "white" : "green"}
+      >
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 pb-8 text-center">
           <Text variant="h2">{page.closing.title}</Text>
           <Text variant="text">{page.closing.paragraph}</Text>
-          <Button href={SCHEDULE_URL} variant="primary">
-            {page.closing.cta}
-          </Button>
-          <NextLink href={page.closing.cliniciansHref} className={link.root}>
-            {page.closing.cliniciansLabel}
-          </NextLink>
+          {page.closing.cta ? (
+            <div className="flex w-full justify-center pt-6">
+              <Button href={SCHEDULE_URL} variant="primary">
+                {page.closing.cta}
+              </Button>
+            </div>
+          ) : null}
+          {page.closing.scheduleLabel ? (
+            <Text variant="text" className={page.closing.cta ? undefined : "pt-6"}>
+              <a
+                href={SCHEDULE_URL}
+                className={link.root}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {page.closing.scheduleLabel}
+              </a>
+            </Text>
+          ) : null}
+          {page.closing.cliniciansLabel && page.closing.cliniciansHref ? (
+            <NextLink href={page.closing.cliniciansHref} className={link.root}>
+              {page.closing.cliniciansLabel}
+            </NextLink>
+          ) : null}
         </div>
       </Section>
     </main>
@@ -144,9 +194,21 @@ export function ServicesHubPageContent() {
 
       <Section variant="green">
         <div className={contentColumn}>
+          <Text variant="h2">{hub.overview.title}</Text>
+          {hub.overview.paragraphs.map((paragraph) => (
+            <Text key={paragraph} variant="text">
+              {paragraph}
+            </Text>
+          ))}
+        </div>
+      </Section>
+
+      <Section variant="white">
+        <div className={contentColumn}>
+          <Text variant="h2">{hub.offeringsTitle}</Text>
           {hub.offerings.map((offering) => (
             <div key={offering.href} className="flex flex-col gap-3">
-              <Text variant="h2">{offering.title}</Text>
+              <Text variant="h3">{offering.title}</Text>
               <Text variant="text">{offering.blurb}</Text>
               <NextLink href={offering.href} className={`${link.root} self-start`}>
                 {offering.learnMore}
@@ -156,7 +218,7 @@ export function ServicesHubPageContent() {
         </div>
       </Section>
 
-      <Section variant="white">
+      <Section variant="green">
         <div className={contentColumn}>
           <Text variant="h2">{hub.braincheck.title}</Text>
           <Text variant="text">
@@ -165,23 +227,38 @@ export function ServicesHubPageContent() {
         </div>
       </Section>
 
-      <Section variant="green">
+      <Section variant="white">
         <div className={contentColumn}>
           <Text variant="h2">{hub.concerns.title}</Text>
           <Text variant="text">{hub.concerns.intro}</Text>
           <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
             <BulletList items={hub.concerns.items} />
           </div>
+          <Text variant="text">{hub.concerns.note}</Text>
+        </div>
+      </Section>
+
+      <Section variant="green">
+        <div className={contentColumn}>
+          <Text variant="h2">{hub.faq.title}</Text>
+          {hub.faq.items.map((item) => (
+            <div key={item.question} className="flex flex-col gap-2">
+              <Text variant="h3">{item.question}</Text>
+              <Text variant="text">{item.answer}</Text>
+            </div>
+          ))}
         </div>
       </Section>
 
       <Section variant="white">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 pb-8 text-center">
           <Text variant="h2">{hub.closing.title}</Text>
           <Text variant="text">{hub.closing.paragraph}</Text>
-          <Button href={SCHEDULE_URL} variant="primary">
-            {hub.closing.cta}
-          </Button>
+          <div className="flex w-full justify-center pt-6">
+            <Button href={SCHEDULE_URL} variant="primary">
+              {hub.closing.cta}
+            </Button>
+          </div>
         </div>
       </Section>
     </main>
