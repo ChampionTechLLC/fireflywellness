@@ -220,10 +220,15 @@ export function ServicesHubPageContent() {
 
       <Section variant="green">
         <div className={contentColumn}>
-          <Text variant="h2">{hub.braincheck.title}</Text>
-          <Text variant="text">
-            <LinkedText>{hub.braincheck.paragraph}</LinkedText>
-          </Text>
+          <Text variant="h2">{hub.additionalTools.title}</Text>
+          {hub.additionalTools.items.map((item) => (
+            <div key={item.title} className="flex flex-col gap-3">
+              <Text variant="h3">{item.title}</Text>
+              <Text variant="text">
+                <LinkedText>{item.paragraph}</LinkedText>
+              </Text>
+            </div>
+          ))}
         </div>
       </Section>
 

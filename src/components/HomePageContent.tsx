@@ -128,7 +128,6 @@ export function HomePageContent() {
           <Text variant="h2" className="text-center">
             {home.servicesOverview.title}
           </Text>
-          <Text variant="text">{home.servicesOverview.intro}</Text>
           {home.servicesOverview.items.map((item) => (
             <div key={item.href} className="flex flex-col gap-2">
               <Text variant="h3">{item.title}</Text>
@@ -138,9 +137,12 @@ export function HomePageContent() {
               </NextLink>
             </div>
           ))}
-          <Text variant="text">
-            <LinkedText>{home.servicesOverview.supportingNote}</LinkedText>
-          </Text>
+          <div className="flex flex-col gap-2">
+            <Text variant="h3">{home.servicesOverview.supportingNoteTitle}</Text>
+            <Text variant="text">
+              <LinkedText>{home.servicesOverview.supportingNote}</LinkedText>
+            </Text>
+          </div>
           <Button href="/services" variant="primary" className="self-start">
             {home.servicesOverview.viewAllCta}
           </Button>

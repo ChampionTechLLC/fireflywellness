@@ -28,7 +28,7 @@ function ListingBlock({
 
 function PlainList({ items }: { items: string[] }) {
   return (
-    <ul className="list-none space-y-1 pl-0 text-base leading-snug text-body">
+    <ul className="list-disc space-y-1 pl-5 text-base leading-snug text-body">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -59,11 +59,7 @@ export function CareersPageContent() {
           ))}
 
           <ListingBlock heading={listing.whyJoin.heading}>
-            <div className="space-y-3">
-              {listing.whyJoin.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+            <PlainList items={listing.whyJoin.items} />
           </ListingBlock>
 
           <ListingBlock heading={listing.responsibilities.heading}>
@@ -72,14 +68,6 @@ export function CareersPageContent() {
 
           <ListingBlock heading={listing.qualifications.heading}>
             <PlainList items={listing.qualifications.items} />
-          </ListingBlock>
-
-          <ListingBlock heading={listing.cultureAndPerks.heading}>
-            <PlainList items={listing.cultureAndPerks.items} />
-          </ListingBlock>
-
-          <ListingBlock heading={listing.caseload.heading}>
-            <p>{listing.caseload.paragraph}</p>
           </ListingBlock>
 
           <ListingBlock heading={listing.apply.heading}>

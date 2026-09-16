@@ -38,13 +38,13 @@ export type SiteContent = {
     };
     servicesOverview: {
       title: string;
-      intro: string;
       items: {
         title: string;
         blurb: string;
         href: string;
         learnMore: string;
       }[];
+      supportingNoteTitle: string;
       supportingNote: string;
       viewAllCta: string;
     };
@@ -120,8 +120,6 @@ export const siteContent: Record<Locale, SiteContent> = {
       },
       servicesOverview: {
         title: "Our services in Hinsdale",
-        intro:
-          "Firefly Wellness brings therapy, ADHD and attention testing, and psychiatric medication together in one coordinated practice in Hinsdale, IL.",
         items: [
           {
             title: "Psychiatric Medication",
@@ -145,6 +143,7 @@ export const siteContent: Record<Locale, SiteContent> = {
             learnMore: "Learn more about therapy",
           },
         ],
+        supportingNoteTitle: "Additional Testing and Tools",
         supportingNote:
           "When clinically useful, BrainCheck and Tempus can support memory monitoring and personalized medication decisions alongside your care.",
         viewAllCta: "View all services",
@@ -272,8 +271,6 @@ export const siteContent: Record<Locale, SiteContent> = {
       },
       servicesOverview: {
         title: "Nuestros servicios en Hinsdale",
-        intro:
-          "Firefly Wellness reune terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica en una practica coordinada en Hinsdale, IL.",
         items: [
           {
             title: "Medicacion psiquiatrica",
@@ -297,6 +294,7 @@ export const siteContent: Record<Locale, SiteContent> = {
             learnMore: "Conozca mas sobre terapia",
           },
         ],
+        supportingNoteTitle: "Pruebas y Herramientas Adicionales",
         supportingNote:
           "Cuando es clinicamente util, BrainCheck y Tempus pueden apoyar el monitoreo de la memoria y decisiones personalizadas de medicacion junto con su cuidado.",
         viewAllCta: "Ver todos los servicios",

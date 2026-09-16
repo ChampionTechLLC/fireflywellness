@@ -8,7 +8,7 @@ export type CareersListing = {
   intro: string[];
   whyJoin: {
     heading: string;
-    paragraphs: string[];
+    items: string[];
   };
   responsibilities: {
     heading: string;
@@ -17,14 +17,6 @@ export type CareersListing = {
   qualifications: {
     heading: string;
     items: string[];
-  };
-  cultureAndPerks: {
-    heading: string;
-    items: string[];
-  };
-  caseload: {
-    heading: string;
-    paragraph: string;
   };
   apply: {
     heading: string;
@@ -34,24 +26,28 @@ export type CareersListing = {
 };
 
 export const lcpcListing: CareersListing = {
-  title: "Licensed Clinical Professional Counselor (LCPC)",
+  title: "Licensed Clinical Professional Counselor / Social Worker (LCPC, LCSW)",
   meta: {
     location: "Location: Hinsdale, IL (Hybrid)",
-    employmentType: "Employment Type: W-2 Employee",
+    employmentType:
+      "Employment Type: Full-Time W-2, typical caseload of 25 sessions per week",
     compensation:
-      "Compensation: Starting at $50 per completed clinical session, with additional compensation available for clinicians able to provide therapy in Polish.",
+      "Compensation: Competitive compensation and benefits structure based on experience",
   },
   intro: [
-    "Firefly Wellness is seeking a licensed therapist to join our growing team in Hinsdale.",
-    "For nearly a decade, Firefly has provided high-quality counseling services to individuals and families across Illinois. In addition to therapy, we are expanding into a more comprehensive behavioral health model that includes medication management and ADHD/cognitive testing through our on-staff Psychiatric Mental Health Nurse Practitioner (PMHNP).",
-    "We are looking for a clinician who enjoys working with adolescents, college students, young adults, and emerging professionals, while also being comfortable supporting adult clients.",
+    "Firefly Wellness is seeking a full-time LCPC or LCSW to join our growing Hinsdale practice. Since 2017, Firefly has provided high-quality counseling to individuals and families throughout Chicago’s western suburbs.",
   ],
   whyJoin: {
     heading: "Why Join Firefly",
-    paragraphs: [
-      "At Firefly Wellness, therapists are not expected to build their own caseload from scratch. We provide referrals, administrative support, and a collaborative environment that allows clinicians to focus on clinical care.",
-      "This role includes the opportunity to immediately absorb approximately 10–12 weekly appointments from an existing caseload.",
-      "As our organization grows, clients will have access to therapy, psychiatric medication management, ADHD evaluations, and cognitive testing within one coordinated practice. We believe this integrated approach leads to better outcomes for both clients and providers.",
+    items: [
+      "6–10 established weekly clients immediately—no need to build a caseload from scratch",
+      "Consistent referral stream and administrative support",
+      "Flexible scheduling and hybrid work model",
+      "Integrated behavioral health services, including therapy, psychiatric medication management, ADHD evaluations, and cognitive testing—all within one coordinated practice",
+      "PTO, technology credit & continuing education support",
+      "Healthcare stipend provided until health insurance benefits begin in 2027",
+      "Quarterly team outings",
+      "Additional compensation for Polish- or Spanish-speaking clinicians",
     ],
   },
   responsibilities: {
@@ -61,44 +57,22 @@ export const lcpcListing: CareersListing = {
       "Conduct assessments and develop treatment plans",
       "Complete timely, accurate clinical documentation",
       "Collaborate with colleagues and psychiatric providers as needed",
-      "Maintain ethical and professional standards consistent with Illinois licensure requirements",
+      "Maintain ethical and professional standards consistent with Illinois licensure",
     ],
   },
   qualifications: {
     heading: "Qualifications",
     items: [
-      "LCPC required",
-      "2+ years of clinical experience preferred",
-      "Experience with adolescents, college students, and young adults",
+      "LCPC or LCSW required",
+      "Experience working with adolescents, college students, and young adults",
       "Comfortable treating anxiety, depression, ADHD, trauma, relationship concerns, and life transitions",
       "Strong foundation in CBT and evidence-based treatment approaches",
-      "Spanish-speaking clinicians encouraged to apply",
-      "Polish-speaking clinicians strongly encouraged to apply",
     ],
-  },
-  cultureAndPerks: {
-    heading: "Culture and Perks",
-    items: [
-      "Flexible scheduling",
-      "Hybrid work model",
-      "Autonomy over scheduling",
-      "Established referral stream",
-      "PTO available beginning at 25 sessions per week",
-      "Technology stipend/credit",
-      "Continuing education support",
-      "Healthcare credit provided until health insurance benefits begin in late 2026",
-      "Differential or additional compensation available for clinicians able to provide therapy in Polish",
-    ],
-  },
-  caseload: {
-    heading: "Caseload Expectations",
-    paragraph:
-      "Typical full-time clinicians maintain 25–30 sessions per week.",
   },
   apply: {
     heading: "Apply",
     paragraph:
-      "Please submit your resume and a brief cover letter outlining your clinical experience, populations of interest, and preferred schedule.",
+      "Please submit your resume and a brief cover letter outlining your clinical experience, populations of interest, and preferred schedule to our hiring team.",
     ctaLabel: "Apply by email",
   },
 };
