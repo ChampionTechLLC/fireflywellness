@@ -38,7 +38,7 @@ export const therapists: Therapist[] = [
     credentials: "LCSW",
     email: "Tricia@FireflyCounseling.net",
     phone: "630.294.3909",
-    imageUrl: "/photos/tricia-opperman.jpg",
+    imageUrl: "/photos/tricia-opperman.png",
     scheduleUrl: "#",
   },
 ];
