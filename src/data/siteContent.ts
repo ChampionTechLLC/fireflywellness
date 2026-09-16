@@ -8,17 +8,6 @@ export type TherapistContent = {
   aboutMeBullets?: string[];
 };
 
-export type ComingService = {
-  id: string;
-  title: string;
-  paragraphs: string[];
-};
-
-export type ComingServiceGroup = {
-  heading: string;
-  items: ComingService[];
-};
-
 export type SiteContent = {
   language: {
     toggleLabel: string;
@@ -31,6 +20,7 @@ export type SiteContent = {
     clinicians: string;
     services: string;
     location: string;
+    careers: string;
     clientPortal: string;
     openMenu: string;
     closeMenu: string;
@@ -42,28 +32,33 @@ export type SiteContent = {
     intro: {
       title: string;
       subtitle: string;
-      paragraphs: string[];
-      offerLead: string;
-      offers: string[];
-      mission: string;
-      learnMore: string;
+      lead: string;
+      whoWeHelp: string;
+      scheduleLink: string;
     };
-    therapy: {
-      whyTitle: string;
-      whyParagraphs: string[];
-      expectTitle: string;
-      expectIntro: string;
-      expectItems: string[];
-      expectOutro: string;
-    };
-    wellness: {
+    servicesOverview: {
       title: string;
-      groups: ComingServiceGroup[];
+      intro: string;
+      items: {
+        title: string;
+        blurb: string;
+        href: string;
+        learnMore: string;
+      }[];
+      supportingNote: string;
+      viewAllCta: string;
     };
-    commitment: {
+    whyFirefly: {
       title: string;
+      intro: string;
       items: string[];
       closing: string;
+      cliniciansLink: string;
+    };
+    hiringTeaser: {
+      text: string;
+      linkLabel: string;
+      href: string;
     };
     clinicians: {
       title: string;
@@ -77,17 +72,15 @@ export type SiteContent = {
       title: string;
       cashPay: string;
     };
-    services: {
-      title: string;
-      intro: string;
-      items: string[];
-    };
     contact: {
       title: string;
       subtitle: string;
       scheduleWith: (firstName: string) => string;
       address: string;
+      phone: string;
       fax: string;
+      hoursLabel: string;
+      hours: string;
       mapTitle: string;
       follow: string;
     };
@@ -107,6 +100,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       clinicians: "Clinicians",
       services: "Services",
       location: "Location",
+      careers: "Careers",
       clientPortal: "Client Portal",
       openMenu: "Open menu",
       closeMenu: "Close menu",
@@ -116,89 +110,64 @@ export const siteContent: Record<Locale, SiteContent> = {
       mobileSchedule: "Schedule an Appointment",
       heroLogoAlt: "Firefly Wellness logo",
       intro: {
-        title: "Welcome to Firefly Wellness",
-        subtitle: "(Formerly Firefly Counseling)",
-        paragraphs: [
-          "In 2017, Firefly Counseling was founded to help people find their light during challenging seasons and reconnect with their sense of direction and well-being.",
-          "In 2026, Firefly Counseling has grown into Firefly Wellness, reflecting our expanded approach to care.",
-        ],
-        offerLead: "As of May 2026, we now offer:",
-        offers: [
-          "Medication management with a prescribing clinician",
-          "T.O.V.A. testing to assess attention and impulse control related to ADHD.",
-          "BrainCheck assessments to track memory and cognitive function",
-          "Tempus genetic testing to help guide personalized medication decisions",
-        ],
-        mission:
-          "Our mission remains the same: provide thoughtful, evidence-based, and compassionate care-now with even more ways to support your well-being.",
-        learnMore: "Learn more",
+        title: "Psychiatric Care & Therapy in Hinsdale",
+        subtitle: "Firefly Wellness, PLLC",
+        lead:
+          "Coordinated psychiatric medication, ADHD and attention testing, and therapy for adolescents through adults. Our team brings nearly two decades of mental health experience to every client relationship.",
+        whoWeHelp:
+          "We help with anxiety, depression, trauma, ADHD-related concerns, relationships, and life transitions—serving Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and nearby western suburbs.",
+        scheduleLink: "Book online now",
       },
-      therapy: {
-        whyTitle: "Why Therapy",
-        whyParagraphs: [
-          "Life can feel overwhelming. Trauma, chronic stress, relationship strain, or major transitions can leave you anxious, low, or stuck in unhelpful patterns.",
-          "You are not alone. According to the National Alliance on Mental Illness (NAMI), 1 in 5 adults experience mental health challenges each year. Struggling doesn't mean you're failing.",
-          "Therapy can help. At Firefly Wellness, we walk alongside you as you reconnect with your strengths and move toward a steadier, more meaningful life.",
-        ],
-        expectTitle: "What to Expect",
-        expectIntro:
-          "Therapy provides a safe, nonjudgmental space for reflection, growth, and change. While medication can support some individuals, therapy focuses on:",
-        expectItems: [
-          "Understanding your thoughts, emotions, and patterns",
-          "Strengthening coping skills",
-          "Creating sustainable emotional and behavioral shifts",
-        ],
-        expectOutro:
-          "Together with your therapist, you'll clarify goals, develop practical strategies, and work toward meaningful progress. Feeling nervous is completely normal - most clients do - and starting therapy is often described as one of the most valuable steps they've taken for themselves.",
-      },
-      wellness: {
-        title: "A More Comprehensive Approach to Wellness",
-        groups: [
+      servicesOverview: {
+        title: "Our services in Hinsdale",
+        intro:
+          "Firefly Wellness brings therapy, ADHD and attention testing, and psychiatric medication together in one coordinated practice in Hinsdale, IL.",
+        items: [
           {
-            heading: "Additional services we offer:",
-            items: [
-              {
-                id: "medication",
-                title: "Medication management",
-                paragraphs: [
-                  "Some people still feel very low, anxious, or on edge even when therapy is going well. Medicine can ease those symptoms enough to sleep, focus, and benefit from the work you do in therapy. We will offer prescribing visits and medication management with a clinician on our team.",
-                ],
-              },
-              {
-                id: "braincheck",
-                title: "Memory and thinking checks using BrainCheck",
-                paragraphs: [
-                  "We use BrainCheck to monitor your memory over time. After your first (baseline) assessment, your clinician will go over the results with you, answer your questions, and help you decide what comes next. We offer an initial visit and yearly check-ins to track changes over time.",
-                ],
-              },
-              {
-                id: "tova",
-                title: "Attention and focus test (T.O.V.A.)",
-                paragraphs: [
-                  "T.O.V.A. (Test of Variables of Attention) is a simple, computer-based test that uses a special device to look at attention and impulse control. It's one of the tools we may use when evaluating concerns like ADHD and other attention related issues. Your clinician will go over the results with you and use them as part of a larger picture so you can better understand your focus and next steps.",
-                ],
-              },
-              {
-                id: "tempus",
-                title: "Tempus genetic testing",
-                paragraphs: [
-                  "Tempus genetic testing can provide additional information about how your body may process certain medications. Your clinician reviews these results with you and uses them alongside your symptoms, history, and goals to support thoughtful medication decisions.",
-                ],
-              },
-            ],
+            title: "Psychiatric Medication",
+            blurb:
+              "Prescribing visits and ongoing medication support with our on-staff PMHNP, including tools that inform thoughtful medication decisions.",
+            href: "/medication-management",
+            learnMore: "Learn more about psychiatric medication",
+          },
+          {
+            title: "ADHD & Attention Testing",
+            blurb:
+              "Computer-based T.O.V.A. testing to help evaluate attention and impulse control as part of a broader clinical picture.",
+            href: "/adhd-testing",
+            learnMore: "Learn more about ADHD testing",
+          },
+          {
+            title: "Therapy",
+            blurb:
+              "Individual counseling for adolescents, young adults, and adults—focused on insight, coping skills, and lasting change.",
+            href: "/therapy",
+            learnMore: "Learn more about therapy",
           },
         ],
+        supportingNote:
+          "When clinically useful, BrainCheck and Tempus can support memory monitoring and personalized medication decisions alongside your care.",
+        viewAllCta: "View all services",
       },
-      commitment: {
-        title: "Our Commitment",
+      whyFirefly: {
+        title: "Why Firefly Wellness",
+        intro:
+          "We work with adolescents through adults navigating anxiety, depression, trauma, relationship concerns, and life transitions.",
         items: [
           "Evidence-based care",
           "Warm, collaborative relationships",
           "Respect for your individuality",
           "Ethical, thoughtful clinical practice",
+          "Services in English and Spanish",
         ],
         closing:
           "At Firefly Wellness, our mission is to help you move from simply coping to truly thriving.",
+        cliniciansLink: "Meet our clinicians",
+      },
+      hiringTeaser: {
+        text: "We're growing our clinical team in Hinsdale.",
+        linkLabel: "View open positions",
+        href: "/careers",
       },
       clinicians: {
         title: "Meet Your Clinicians",
@@ -210,9 +179,9 @@ export const siteContent: Record<Locale, SiteContent> = {
           "1": {
             subtitle: "Founder, Bilingual Therapist",
             aboutMe: [
-              "My name is Jeannette Sziler. I am a Psychiatric Mental Health Nurse Practitioner, Licensed Clinical Professional Counselor and founder of Firefly Counseling. I have been in the mental healthcare field in some capacity or another for almost 2 decades. I am a bilingual, bicultural and biracial Mexican American.",
+              "My name is Jeannette Sziler. I am a Psychiatric Mental Health Nurse Practitioner, Licensed Clinical Professional Counselor and founder of Firefly Wellness. I have been in the mental healthcare field in some capacity or another for almost 2 decades. I am a bilingual, bicultural and biracial Mexican American.",
               "Throughout the years, I have worked with a variety of clients, allowing me to recognize I work best with those aged 11 through their 30s. Refining my skill set has led me to truly enjoy using expressive art therapies as well as Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT).",
-              "In addition to my clinical work, I recently completed my Master of Science in Nursing (MSN) and am now pursuing a post-graduate certificate as a Psychiatric-Mental Health Nurse Practitioner (PMHNP), coming in 2026. This advanced training will allow me to incorporate medication management into Firefly Counseling, expanding the ways we can support our clients' mental health needs.",
+              "In addition to my work as an LCPC, I completed my Master of Science in Nursing (MSN) and am a board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC). I provide psychiatric medication care at Firefly Wellness alongside therapy, expanding the ways we can support our clients' mental health needs.",
             ],
             aboutMeBullets: [
               "My fifteen minutes of fame was when I was featured in a local newspaper after my friend and I completed 100 hours of volunteer work at a local hospital when we were 13 years old.",
@@ -256,37 +225,16 @@ export const siteContent: Record<Locale, SiteContent> = {
         title: "Insurance We Accept",
         cashPay: "We also accept cash pay and out-of-network insurances.",
       },
-      services: {
-        title: "Services (available in English and Spanish)",
-        intro:
-          "We are happy to offer a wide array of services and multiple modalities to best fit your needs.",
-        items: [
-          "Depression",
-          "Anxiety and Stress",
-          "Trauma",
-          "PTSD",
-          "Sexual Intimacy",
-          "LGBTQ",
-          "Life Transitional Difficulties",
-          "Relationship Issues",
-          "Attention Problems",
-          "School Issues",
-          "Phobias and Fears",
-          "Family, Couples, Marriage",
-          "Premarital Counseling",
-          "Women's Issues",
-          "Emotional Regulation",
-          "Obsessive Behaviors",
-          "Workplace Issues",
-          "Sleep Problems",
-        ],
-      },
       contact: {
         title: "Let's Talk.",
         subtitle: "Schedule your appointment today!",
         scheduleWith: (firstName) => `Schedule with ${firstName}`,
         address: "Address",
+        phone: "Phone",
         fax: "Fax",
+        hoursLabel: "Business Hours",
+        hours:
+          "By appointment. Each clinician sets their own schedule—book online to see available times.",
         mapTitle: "Office location",
         follow: "follow firefly",
       },
@@ -304,6 +252,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       clinicians: "Clinicos",
       services: "Servicios",
       location: "Ubicacion",
+      careers: "Carreras",
       clientPortal: "Portal del cliente",
       openMenu: "Abrir menu",
       closeMenu: "Cerrar menu",
@@ -313,89 +262,64 @@ export const siteContent: Record<Locale, SiteContent> = {
       mobileSchedule: "Programar una cita",
       heroLogoAlt: "Logotipo de Firefly Wellness",
       intro: {
-        title: "Bienvenido a Firefly Wellness",
-        subtitle: "(Antes Firefly Counseling)",
-        paragraphs: [
-          "En 2017, Firefly Counseling fue fundado para ayudar a las personas a encontrar su luz durante temporadas dificiles y reconectarse con su sentido de direccion y bienestar.",
-          "En 2026, Firefly Counseling crecio y se convirtio en Firefly Wellness, reflejando nuestro enfoque ampliado de atencion.",
-        ],
-        offerLead: "A partir de mayo de 2026, ahora ofrecemos:",
-        offers: [
-          "Manejo de medicamentos con un clinico autorizado para recetar",
-          "Pruebas T.O.V.A. para evaluar la atencion y el control de impulsos",
-          "Evaluaciones BrainCheck para dar seguimiento a la memoria y la funcion cognitiva",
-          "Pruebas geneticas de Tempus para orientar decisiones personalizadas sobre medicamentos",
-        ],
-        mission:
-          "Nuestra mision sigue siendo la misma: brindar atencion compasiva, reflexiva y basada en evidencia, ahora con aun mas maneras de apoyar su bienestar.",
-        learnMore: "Conozca mas",
+        title: "Atencion Psiquiatrica y Terapia en Hinsdale",
+        subtitle: "Firefly Wellness, PLLC",
+        lead:
+          "Medicacion psiquiatrica coordinada, pruebas de TDAH y atencion, y terapia para adolescentes y adultos. Nuestro equipo aporta casi dos decadas de experiencia en salud mental a cada relacion con el cliente.",
+        whoWeHelp:
+          "Ayudamos con ansiedad, depresion, trauma, inquietudes relacionadas con el TDAH, relaciones y transiciones de vida—sirviendo a Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
+        scheduleLink: "Reservar en linea ahora",
       },
-      therapy: {
-        whyTitle: "Por Que Terapia",
-        whyParagraphs: [
-          "La vida puede sentirse abrumadora. El trauma, el estres cronico, las dificultades en las relaciones o las transiciones importantes pueden dejarle con ansiedad, animo bajo o atrapado en patrones que no ayudan.",
-          "No esta solo. Segun la National Alliance on Mental Illness (NAMI), 1 de cada 5 adultos experimenta desafios de salud mental cada ano. Tener dificultades no significa que este fallando.",
-          "La terapia puede ayudar. En Firefly Wellness, caminamos a su lado mientras se reconecta con sus fortalezas y avanza hacia una vida mas estable y significativa.",
-        ],
-        expectTitle: "Que Puede Esperar",
-        expectIntro:
-          "La terapia ofrece un espacio seguro y sin juicio para la reflexion, el crecimiento y el cambio. Aunque los medicamentos pueden apoyar a algunas personas, la terapia se enfoca en:",
-        expectItems: [
-          "Comprender sus pensamientos, emociones y patrones",
-          "Fortalecer habilidades de afrontamiento",
-          "Crear cambios emocionales y conductuales sostenibles",
-        ],
-        expectOutro:
-          "Junto con su terapeuta, aclarara metas, desarrollara estrategias practicas y trabajara hacia un progreso significativo. Sentirse nervioso es completamente normal - a la mayoria de los clientes les pasa - y comenzar terapia a menudo se describe como uno de los pasos mas valiosos que han tomado por si mismos.",
-      },
-      wellness: {
-        title: "Un Enfoque Mas Integral del Bienestar",
-        groups: [
+      servicesOverview: {
+        title: "Nuestros servicios en Hinsdale",
+        intro:
+          "Firefly Wellness reune terapia, pruebas de TDAH y atencion, y medicacion psiquiatrica en una practica coordinada en Hinsdale, IL.",
+        items: [
           {
-            heading: "Servicios adicionales que ofrecemos:",
-            items: [
-              {
-                id: "medication",
-                title: "Manejo de medicamentos",
-                paragraphs: [
-                  "Algunas personas todavia se sienten muy decaidas, ansiosas o tensas incluso cuando la terapia va bien. Los medicamentos pueden aliviar esos sintomas lo suficiente como para dormir, concentrarse y beneficiarse del trabajo que hacen en terapia. Ofreceremos visitas de prescripcion y manejo de medicamentos con un clinico de nuestro equipo.",
-                ],
-              },
-              {
-                id: "braincheck",
-                title: "Evaluaciones de memoria y pensamiento con BrainCheck",
-                paragraphs: [
-                  "Usamos BrainCheck para monitorear su memoria con el tiempo. Despues de su primera evaluacion de referencia, su clinico revisara los resultados con usted, respondera sus preguntas y le ayudara a decidir los proximos pasos. Ofrecemos una visita inicial y revisiones anuales para seguir los cambios con el tiempo.",
-                ],
-              },
-              {
-                id: "tova",
-                title: "Prueba de atencion y enfoque (T.O.V.A.)",
-                paragraphs: [
-                  "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atencion y el control de impulsos. Es una de las herramientas que podemos usar al evaluar inquietudes como TDAH y otros asuntos relacionados con la atencion. Su clinico revisara los resultados con usted y los usara como parte de un panorama mas amplio para que pueda comprender mejor su enfoque y sus proximos pasos.",
-                ],
-              },
-              {
-                id: "tempus",
-                title: "Pruebas geneticas de Tempus",
-                paragraphs: [
-                  "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Su clinico revisa estos resultados con usted y los usa junto con sus sintomas, su historial y sus objetivos para apoyar decisiones de medicacion reflexivas.",
-                ],
-              },
-            ],
+            title: "Medicacion psiquiatrica",
+            blurb:
+              "Visitas de prescripcion y apoyo continuo con nuestra PMHNP del equipo, incluyendo herramientas que orientan decisiones de medicacion reflexivas.",
+            href: "/medication-management",
+            learnMore: "Conozca mas sobre medicacion psiquiatrica",
+          },
+          {
+            title: "Pruebas de TDAH y atencion",
+            blurb:
+              "Pruebas T.O.V.A. por computadora para ayudar a evaluar la atencion y el control de impulsos como parte de un panorama clinico mas amplio.",
+            href: "/adhd-testing",
+            learnMore: "Conozca mas sobre pruebas de TDAH",
+          },
+          {
+            title: "Terapia",
+            blurb:
+              "Consejeria individual para adolescentes, adultos jovenes y adultos—con enfoque en comprension, habilidades de afrontamiento y cambio duradero.",
+            href: "/therapy",
+            learnMore: "Conozca mas sobre terapia",
           },
         ],
+        supportingNote:
+          "Cuando es clinicamente util, BrainCheck y Tempus pueden apoyar el monitoreo de la memoria y decisiones personalizadas de medicacion junto con su cuidado.",
+        viewAllCta: "Ver todos los servicios",
       },
-      commitment: {
-        title: "Nuestro Compromiso",
+      whyFirefly: {
+        title: "Por que Firefly Wellness",
+        intro:
+          "Trabajamos con adolescentes y adultos que atraviesan ansiedad, depresion, trauma, inquietudes de relacion y transiciones de vida.",
         items: [
           "Atencion basada en evidencia",
           "Relaciones calidas y colaborativas",
           "Respeto por su individualidad",
           "Practica clinica etica y reflexiva",
+          "Servicios en ingles y espanol",
         ],
         closing:
           "En Firefly Wellness, nuestra mision es ayudarle a pasar de simplemente sobrellevar la vida a realmente prosperar.",
+        cliniciansLink: "Conozca a nuestros clinicos",
+      },
+      hiringTeaser: {
+        text: "Estamos ampliando nuestro equipo clinico en Hinsdale.",
+        linkLabel: "Ver vacantes",
+        href: "/careers",
       },
       clinicians: {
         title: "Conozca a Sus Clinicos",
@@ -407,9 +331,9 @@ export const siteContent: Record<Locale, SiteContent> = {
           "1": {
             subtitle: "Fundadora, terapeuta bilingue",
             aboutMe: [
-              "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiatrica, consejera profesional clinica licenciada y fundadora de Firefly Counseling. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 decadas. Soy mexicoamericana bilingue, bicultural y birracial.",
+              "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiatrica, consejera profesional clinica licenciada y fundadora de Firefly Wellness. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 decadas. Soy mexicoamericana bilingue, bicultural y birracial.",
               "A lo largo de los anos, he trabajado con una variedad de clientes, lo que me ha permitido reconocer que trabajo mejor con personas de 11 anos hasta sus 30s. Al refinar mis habilidades, he llegado a disfrutar mucho el uso de terapias de arte expresivo, asi como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptacion y Compromiso (ACT).",
-              "Ademas de mi trabajo clinico, recientemente complete mi Maestria en Ciencias de Enfermeria (MSN) y ahora estoy cursando un certificado de posgrado como enfermera practicante de salud mental psiquiatrica (PMHNP), previsto para 2026. Esta formacion avanzada me permitira incorporar manejo de medicamentos en Firefly Counseling, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
+              "Ademas de mi trabajo como LCPC, complete mi Maestria en Ciencias de Enfermeria (MSN) y soy enfermera practicante de salud mental psiquiatrica certificada (PMHNP-BC). Brindo atencion de medicacion psiquiatrica en Firefly Wellness junto con la terapia, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
             ],
             aboutMeBullets: [
               "Mis quince minutos de fama fueron cuando apareci en un periodico local despues de que una amiga y yo completamos 100 horas de voluntariado en un hospital local cuando teniamos 13 anos.",
@@ -454,37 +378,16 @@ export const siteContent: Record<Locale, SiteContent> = {
         cashPay:
           "Tambien aceptamos pago privado y seguros fuera de la red.",
       },
-      services: {
-        title: "Servicios (disponibles en ingles y espanol)",
-        intro:
-          "Nos complace ofrecer una amplia variedad de servicios y multiples modalidades para adaptarnos mejor a sus necesidades.",
-        items: [
-          "Depresion",
-          "Ansiedad y estres",
-          "Trauma",
-          "TEPT",
-          "Intimidad sexual",
-          "LGBTQ",
-          "Dificultades en transiciones de vida",
-          "Problemas de relacion",
-          "Problemas de atencion",
-          "Problemas escolares",
-          "Fobias y miedos",
-          "Familia, parejas, matrimonio",
-          "Consejeria prematrimonial",
-          "Asuntos de mujeres",
-          "Regulacion emocional",
-          "Conductas obsesivas",
-          "Problemas laborales",
-          "Problemas de sueno",
-        ],
-      },
       contact: {
         title: "Hablemos.",
         subtitle: "Programe su cita hoy.",
         scheduleWith: (firstName) => `Programar con ${firstName}`,
         address: "Direccion",
+        phone: "Telefono",
         fax: "Fax",
+        hoursLabel: "Horario comercial",
+        hours:
+          "Solo con cita. Cada clinico establece su propio horario: reserve en linea para ver disponibilidad.",
         mapTitle: "Ubicacion de la oficina",
         follow: "siga a firefly",
       },

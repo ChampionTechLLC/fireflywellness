@@ -1,5 +1,6 @@
 "use client";
 
+import NextLink from "next/link";
 import { useEffect, useRef, useState } from "react";
 import {
   Section,
@@ -17,7 +18,7 @@ import { therapists } from "@/data/therapists";
 import { insurances } from "@/data/insurances";
 import { locationData } from "@/data/location";
 import { socialLinks } from "@/data/social";
-import { bulletList, link, socialIcon } from "@/styles";
+import { link, socialIcon } from "@/styles";
 
 export function HomePageContent() {
   const { content } = useLanguage();
@@ -104,90 +105,69 @@ export function HomePageContent() {
           <Text variant="subtitle" className="-mt-[10px] w-full text-center">
             {home.intro.subtitle}
           </Text>
-          {home.intro.paragraphs.map((paragraph, i) => (
-            <Text
-              key={paragraph}
-              variant="text"
-              className={`${i === 0 ? "mt-2 " : ""}w-full`}
+          <Text variant="text" className="mt-2 w-full">
+            {home.intro.lead}
+          </Text>
+          <Text variant="text" className="w-full">
+            {home.intro.whoWeHelp}
+          </Text>
+          <Text variant="text" className="w-full text-center pt-2">
+            <a
+              href={SCHEDULE_URL}
+              className={link.root}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {paragraph}
-            </Text>
-          ))}
-          <Text variant="text" className="w-full">
-            {home.intro.offerLead}
-          </Text>
-          <ul className={`${bulletList.listSection} w-full pl-4`}>
-            {home.intro.offers.map((offer) => (
-              <li key={offer}>
-                <LinkedText>{offer}</LinkedText>
-              </li>
-            ))}
-          </ul>
-          <Text variant="text" className="w-full">
-            {home.intro.mission}
-          </Text>
-          <Text variant="text" className="w-full">
-            <a href="#comprehensive-wellness" className={link.root}>
-              {home.intro.learnMore}
+              {home.intro.scheduleLink}
             </a>
           </Text>
         </div>
       </Section>
       <Section variant="white">
         <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
-          <Text variant="h2">{home.therapy.whyTitle}</Text>
-          {home.therapy.whyParagraphs.map((paragraph) => (
-            <Text key={paragraph} variant="text">
-              {paragraph}
-            </Text>
+          <Text variant="h2" className="text-center">
+            {home.servicesOverview.title}
+          </Text>
+          <Text variant="text">{home.servicesOverview.intro}</Text>
+          {home.servicesOverview.items.map((item) => (
+            <div key={item.href} className="flex flex-col gap-2">
+              <Text variant="h3">{item.title}</Text>
+              <Text variant="text">{item.blurb}</Text>
+              <NextLink href={item.href} className={`${link.root} self-start`}>
+                {item.learnMore}
+              </NextLink>
+            </div>
           ))}
-
-          <Text variant="h2">{home.therapy.expectTitle}</Text>
-          <Text variant="text">{home.therapy.expectIntro}</Text>
-          <ul className={bulletList.listSection}>
-            {home.therapy.expectItems.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <Text variant="text">{home.therapy.expectOutro}</Text>
+          <Text variant="text">
+            <LinkedText>{home.servicesOverview.supportingNote}</LinkedText>
+          </Text>
+          <Button href="/services" variant="primary" className="self-start">
+            {home.servicesOverview.viewAllCta}
+          </Button>
         </div>
       </Section>
 
       <Section variant="green">
-        <div
-          id="comprehensive-wellness"
-          className="mx-auto flex max-w-2xl scroll-mt-24 flex-col gap-8 text-left"
-        >
-          <Text variant="h2">{home.wellness.title}</Text>
-          {home.wellness.groups.map((group) => (
-            <div key={group.heading} className="flex flex-col gap-6">
-              <Text variant="h3">{group.heading}</Text>
-              {group.items.map((item) => (
-                <div key={item.id} className="flex flex-col gap-3">
-                  <Text variant="h4">
-                    <LinkedText>{item.title}</LinkedText>
-                  </Text>
-                  {item.paragraphs.map((paragraph) => (
-                    <Text key={paragraph} variant="text">
-                      <LinkedText>{paragraph}</LinkedText>
-                    </Text>
-                  ))}
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
+          <Text variant="h2" className="text-center">
+            {home.whyFirefly.title}
+          </Text>
+          <Text variant="text">{home.whyFirefly.intro}</Text>
+          <BulletList items={home.whyFirefly.items} />
+          <Text variant="text">{home.whyFirefly.closing}</Text>
+          <NextLink href="/#clinicians" className={`${link.root} self-start`}>
+            {home.whyFirefly.cliniciansLink}
+          </NextLink>
+          <Text variant="text">
+            {home.hiringTeaser.text}{" "}
+            <NextLink href={home.hiringTeaser.href} className={link.root}>
+              {home.hiringTeaser.linkLabel}
+            </NextLink>
+          </Text>
         </div>
       </Section>
 
       <Section variant="white">
-        <div className="mx-auto flex max-w-2xl flex-col gap-8 text-left">
-          <Text variant="h2">{home.commitment.title}</Text>
-          <BulletList items={home.commitment.items} />
-          <Text variant="text">{home.commitment.closing}</Text>
-        </div>
-      </Section>
-
-      <Section variant="green">
         <div
           id="clinicians"
           className="mx-auto flex max-w-[72rem] scroll-mt-24 flex-col gap-8"
@@ -214,7 +194,7 @@ export function HomePageContent() {
         </div>
       </Section>
 
-      <Section variant="white">
+      <Section variant="green">
         <div className="mx-auto flex max-w-2xl flex-col gap-8">
           <Text variant="h2" className="text-center">
             {home.insurance.title}
@@ -239,19 +219,6 @@ export function HomePageContent() {
           <Text variant="text" className="text-center">
             {home.insurance.cashPay}
           </Text>
-        </div>
-      </Section>
-
-      <Section variant="green">
-        <div
-          id="services"
-          className="mx-auto flex max-w-2xl scroll-mt-24 flex-col gap-8 text-left"
-        >
-          <Text variant="h2">{home.services.title}</Text>
-          <Text variant="text">{home.services.intro}</Text>
-          <div className="[&>ul]:columns-1 [&>ul]:md:columns-2 [&>ul]:gap-8">
-            <BulletList items={home.services.items} />
-          </div>
         </div>
       </Section>
 
@@ -288,28 +255,43 @@ export function HomePageContent() {
             <Divider />
           </div>
           {locationData.length > 0 && (
-            <div className="flex w-full flex-col items-center gap-2 text-center">
-              <Text variant="h4">{home.contact.address}</Text>
-              {locationData.map((address, i) => (
-                <address key={i} className="not-italic">
-                  <Text variant="text" className="text-center">
-                    {address.address1}
-                  </Text>
-                  {address.address2 && (
+            <div className="flex w-full flex-col items-center gap-6 text-center">
+              <div className="flex w-full flex-col items-center gap-2">
+                <Text variant="h4">{home.contact.address}</Text>
+                {locationData.map((address, i) => (
+                  <address key={i} className="not-italic">
                     <Text variant="text" className="text-center">
-                      {address.address2}
+                      {address.address1}
                     </Text>
-                  )}
-                  <Text variant="text" className="text-center">
-                    {address.city}, {address.state} {address.zip}
-                  </Text>
-                  {address.fax && (
+                    {address.address2 && (
+                      <Text variant="text" className="text-center">
+                        {address.address2}
+                      </Text>
+                    )}
                     <Text variant="text" className="text-center">
-                      {home.contact.fax}: {address.fax}
+                      {address.city}, {address.state} {address.zip}
                     </Text>
-                  )}
-                </address>
-              ))}
+                    {address.phone && (
+                      <Text variant="text" className="text-center">
+                        <a href={`tel:${address.phone.replace(/\./g, "")}`} className={link.root}>
+                          {home.contact.phone}: {address.phone}
+                        </a>
+                      </Text>
+                    )}
+                    {address.fax && (
+                      <Text variant="text" className="text-center">
+                        {home.contact.fax}: {address.fax}
+                      </Text>
+                    )}
+                  </address>
+                ))}
+              </div>
+              <div className="flex w-full max-w-md flex-col items-center gap-2">
+                <Text variant="h4">{home.contact.hoursLabel}</Text>
+                <Text variant="text" className="text-center">
+                  {home.contact.hours}
+                </Text>
+              </div>
             </div>
           )}
         </div>
