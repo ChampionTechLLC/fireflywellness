@@ -9,7 +9,8 @@ export const HERO_LOGO_URL = "/hero/Logo%20A6_Logo%20B7.png";
 export const TOVA_URL = "https://tovatest.com";
 export const BRAINCHECK_URL = "https://braincheck.com/";
 export const TEMPUS_URL = "https://www.tempus.com/";
-export const CAREERS_APPLY_EMAIL = "Jeannette@FireflyCounseling.net";
-export const CAREERS_APPLY_SUBJECT = "LCPC Application – Firefly Wellness";
+export const CAREERS_APPLY_EMAIL = "clientrelations@fireflycounseling.net";
+export const CAREERS_APPLY_SUBJECT =
+  "LCPC / LCSW Application – Firefly Wellness";
 export const SCHEDULE_URL =
   "https://practice.mbpractice.com/OnlineBooking/Index?subdomainName=firefly-counseling";

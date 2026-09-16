@@ -75,9 +75,12 @@ export type ServicesHubCopy = {
     href: string;
     learnMore: string;
   }[];
-  braincheck: {
+  additionalTools: {
     title: string;
-    paragraph: string;
+    items: {
+      title: string;
+      paragraph: string;
+    }[];
   };
   concerns: {
     title: string;
@@ -194,10 +197,20 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           learnMore: "Learn more about therapy",
         },
       ],
-      braincheck: {
-        title: "Memory and Cognitive Check-Ins",
-        paragraph:
-          "BrainCheck assessments help monitor memory and thinking over time. After an initial baseline visit, your clinician reviews the results with you and helps decide next steps—often alongside therapy or medication care. Follow-up assessments help your clinician track trends in memory and thinking between visits and talk through what the results mean. BrainCheck is a monitoring tool, not a standalone diagnosis.",
+      additionalTools: {
+        title: "Additional Testing and Tools",
+        items: [
+          {
+            title: "Tempus Genetic Testing",
+            paragraph:
+              "Tempus genetic testing can provide additional information about how your body may process certain medications. Results are reviewed with you and used alongside—not instead of—your clinical picture, often as part of psychiatric medication care.",
+          },
+          {
+            title: "Memory and Cognitive Check-Ins",
+            paragraph:
+              "BrainCheck assessments help monitor memory and thinking over time. After an initial baseline visit, your clinician reviews the results with you and helps decide next steps—often alongside therapy or medication care. Follow-up assessments help your clinician track trends in memory and thinking between visits and talk through what the results mean. BrainCheck is a monitoring tool, not a standalone diagnosis.",
+          },
+        ],
       },
       concerns: {
         title: "Concerns We Help With",
@@ -467,10 +480,20 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           learnMore: "Conozca mas sobre terapia",
         },
       ],
-      braincheck: {
-        title: "Revisiones de Memoria y Cognicion",
-        paragraph:
-          "Las evaluaciones BrainCheck ayudan a monitorear la memoria y el pensamiento con el tiempo. Despues de una visita inicial de referencia, su clinico revisa los resultados con usted y ayuda a decidir los proximos pasos—a menudo junto con terapia o medicacion. Las evaluaciones de seguimiento ayudan a su clinico a seguir tendencias en la memoria y el pensamiento entre visitas y a explicar lo que significan los resultados. BrainCheck es una herramienta de monitoreo, no un diagnostico por si solo.",
+      additionalTools: {
+        title: "Pruebas y Herramientas Adicionales",
+        items: [
+          {
+            title: "Pruebas Geneticas Tempus",
+            paragraph:
+              "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Los resultados se revisan con usted y se usan junto con—no en lugar de—su panorama clinico, a menudo como parte del cuidado de medicacion psiquiatrica.",
+          },
+          {
+            title: "Revisiones de Memoria y Cognicion",
+            paragraph:
+              "Las evaluaciones BrainCheck ayudan a monitorear la memoria y el pensamiento con el tiempo. Despues de una visita inicial de referencia, su clinico revisa los resultados con usted y ayuda a decidir los proximos pasos—a menudo junto con terapia o medicacion. Las evaluaciones de seguimiento ayudan a su clinico a seguir tendencias en la memoria y el pensamiento entre visitas y a explicar lo que significan los resultados. BrainCheck es una herramienta de monitoreo, no un diagnostico por si solo.",
+          },
+        ],
       },
       concerns: {
         title: "Temas Con Los Que Ayudamos",
