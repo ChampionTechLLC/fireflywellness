@@ -19,7 +19,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     id: "facebook",
-    url: "https://www.facebook.com/fireflycounselingLLC/",
+    url: "https://www.facebook.com/profile.php?id=61591614757444",
     icon: "/social/facebook.svg",
     label: "Facebook",
   },
