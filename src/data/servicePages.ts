@@ -183,14 +183,14 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
         {
           title: "Psychiatric Medication",
           blurb:
-            "Our on-staff board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC) provides prescribing visits and ongoing medication support, including tools that inform thoughtful medication decisions. This care is a strong fit when medication may help with mood, anxiety, attention, or sleep-related concerns—and when careful follow-up matters.",
+            "Our board-certified PMHNP-BC provides personalized psychiatric medication evaluation and ongoing medication management for ADHD, anxiety, depression, and other mental health concerns. Treatment is tailored to your symptoms, history, goals, and individual needs.",
           href: "/medication-management",
           learnMore: "Learn more about psychiatric medication",
         },
         {
           title: "ADHD & Attention Testing",
           blurb:
-            "Computer-based T.O.V.A. testing helps evaluate attention and impulse control as part of a broader clinical picture. Results are reviewed with your clinician and used alongside your history and goals—not as a standalone diagnosis.",
+            "Computer-based T.O.V.A. testing helps evaluate attention and impulse control as part of a broader clinical picture. Results are reviewed with your clinician and used alongside your history and goals.",
           href: "/adhd-testing",
           learnMore: "Learn more about ADHD testing",
         },
@@ -208,12 +208,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           {
             title: "Tempus Genetic Testing",
             paragraph:
-              "Tempus genetic testing can provide additional information about how your body may process certain medications. Results are reviewed with you and used alongside—not instead of—your clinical picture, often as part of psychiatric medication care.",
+              "Tempus genetic testing can provide additional information about how your body may process certain medications. Results are reviewed with you and used alongside your clinical picture, often as part of psychiatric medication care.",
           },
           {
             title: "Memory and Cognitive Check-Ins",
             paragraph:
-              "BrainCheck assessments help monitor memory and thinking over time. After an initial baseline visit, your clinician reviews the results with you and helps decide next steps—often alongside therapy or medication care. Follow-up assessments help your clinician track trends in memory and thinking between visits and talk through what the results mean. BrainCheck is a monitoring tool, not a standalone diagnosis.",
+              "BrainCheck assessments help establish a baseline and monitor changes in memory and thinking over time. Your clinician reviews the results with you and considers them alongside your history, symptoms, and other clinical information to help guide next steps. Follow-up assessments can help track changes between visits and provide additional information to support ongoing care, including therapy or medication management when appropriate.",
           },
         ],
       },
