@@ -260,7 +260,10 @@ export function HomePageContent() {
             <Divider />
           </div>
           {locationData.length > 0 && (
-            <div className="flex w-full flex-col items-center gap-6 text-center">
+            <div
+              id="location"
+              className="flex w-full scroll-mt-24 flex-col items-center gap-6 text-center"
+            >
               <div className="flex w-full flex-col items-center gap-2">
                 <Text variant="h4">{home.contact.address}</Text>
                 {locationData.map((address, i) => (
@@ -304,10 +307,7 @@ export function HomePageContent() {
 
       {locationData[0]?.mapEmbedUrl && (
         <Section variant="white">
-          <div
-            id="location"
-            className="-mt-10 flex scroll-mt-24 flex-col gap-10 md:-mt-16"
-          >
+          <div className="-mt-10 flex flex-col gap-10 md:-mt-16">
             <div className="relative aspect-video w-full overflow-hidden rounded-xl">
               <iframe
                 title={home.contact.mapTitle}

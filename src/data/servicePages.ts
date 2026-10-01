@@ -366,7 +366,7 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           "Testing is one part of understanding attention and ADHD-related concerns. The process at Firefly is straightforward and clinician-guided, and a typical path looks like this:",
         steps: [
           "Discuss your concerns with a Firefly clinician and decide whether testing is a good next step",
-          "Complete the T.O.V.A. assessment in a structured testing appointment",
+          "Complete the ADHD and Attention Evaluation during a structured testing appointment",
           "Review your results with your clinician in plain language, in the context of your overall history and symptoms",
           "Decide on next steps together, which may include behavioral or therapy support, additional evaluation, school or workplace strategies, or a psychiatric medication evaluation",
           "Continue coordinated care within the practice when helpful",
