@@ -14,6 +14,7 @@ export type ServicePageCopy = {
   hero: {
     title: string;
     subtitle: string;
+    serviceArea?: string;
     cta: string;
     availabilityNote?: string;
   };
@@ -30,6 +31,10 @@ export type ServicePageCopy = {
     title: string;
     intro?: string;
     steps: string[];
+  };
+  ongoingCare?: {
+    title: string;
+    paragraphs: string[];
   };
   related?: {
     title: string;
@@ -321,28 +326,30 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     adhdTesting: {
       slug: "adhd-testing",
       meta: {
-        title: "ADHD & Attention Testing in Hinsdale | Firefly Wellness",
+        title: "ADHD Evaluation & Attention Testing in Hinsdale | Firefly Wellness",
         description:
           "T.O.V.A. attention and impulse-control testing in Hinsdale as part of a broader clinical evaluation—not a standalone diagnosis—for adolescents through adults, coordinated with therapy and psychiatric medication when helpful.",
       },
       hero: {
-        title: "ADHD & Attention Testing in Hinsdale",
+        title: "ADHD Evaluation & Attention Testing in Hinsdale",
         subtitle:
-          "Objective attention testing with T.O.V.A., reviewed by your clinician as part of a larger picture—so you can better understand focus, impulse control, and next steps in Hinsdale, IL, serving Oak Brook, Clarendon Hills, Western Springs, Westmont, and nearby western suburbs.",
+          "Get a clearer picture of attention, focus, and impulse control with objective T.O.V.A. testing, combined with a comprehensive clinical evaluation. Your clinician uses the results alongside your history and symptoms to help guide next steps in care.",
+        serviceArea:
+          "Serving Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and surrounding western suburbs.",
         availabilityNote:
           "Testing appointments are often available with short wait times.",
         cta: "Schedule an Appointment",
       },
       who: {
-        title: "Who May Benefit",
+        title: "When ADHD or Attention Testing May Be Helpful",
         intro:
           "Attention concerns show up differently across ages and settings. Testing can be useful when focus, impulsivity, or follow-through are getting in the way of school, work, or daily life.",
         items: [
-          "Adolescents and adults wondering about ADHD or attention difficulties",
-          "Students struggling with concentration, organization, or school performance",
-          "Professionals noticing focus problems at work or under stress",
-          "Clients already in therapy who want clearer information about attention and impulse control",
-          "People seeking a clearer picture of focus and impulse control to guide next steps with their clinician",
+          "Adolescents and adults wondering whether ADHD may be affecting daily life",
+          "Students experiencing difficulties with concentration, organization, or school performance",
+          "Adults noticing problems with focus, follow-through, or organization at work",
+          "Individuals who have questions about attention or impulse control",
+          "People seeking additional information to help guide conversations about treatment and next steps",
         ],
       },
       what: {
@@ -354,15 +361,23 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
         ],
       },
       expect: {
-        title: "What to Expect",
+        title: "What to Expect During and After Testing",
         intro:
-          "ADHD and attention testing at Firefly is straightforward and clinician-guided. A typical path looks like this:",
+          "Testing is one part of understanding attention and ADHD-related concerns. The process at Firefly is straightforward and clinician-guided, and a typical path looks like this:",
         steps: [
-          "Discuss concerns with a Firefly clinician and determine whether testing is a good next step",
+          "Discuss your concerns with a Firefly clinician and decide whether testing is a good next step",
           "Complete the T.O.V.A. assessment in a structured testing appointment",
-          "Review results with your clinician in plain language",
-          "Talk through recommendations—therapy support, medication evaluation, school/work strategies, or additional assessment",
+          "Review your results with your clinician in plain language, in the context of your overall history and symptoms",
+          "Decide on next steps together, which may include behavioral or therapy support, additional evaluation, school or workplace strategies, or a psychiatric medication evaluation",
           "Continue coordinated care within the practice when helpful",
+        ],
+      },
+      ongoingCare: {
+        title: "ADHD Evaluation and Ongoing Care",
+        paragraphs: [
+          "Understanding attention concerns is only the beginning. When appropriate, Firefly Wellness provides ongoing psychiatric care and medication management tailored to your individual needs and treatment goals.",
+          "For individuals diagnosed with ADHD, medication may help improve attention, reduce impulsivity, and support organization and follow-through. Your clinician can discuss whether medication is appropriate for you, explain the available treatment options, and monitor your response over time.",
+          "Medication is just one part of ADHD care. Depending on your needs, treatment may also include therapy, behavioral strategies, lifestyle recommendations, or other supports.",
         ],
       },
       closing: {
@@ -608,28 +623,30 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     adhdTesting: {
       slug: "adhd-testing",
       meta: {
-        title: "Pruebas de TDAH y Atencion en Hinsdale | Firefly Wellness",
+        title: "Evaluacion de TDAH y Pruebas de Atencion en Hinsdale | Firefly Wellness",
         description:
           "Pruebas T.O.V.A. de atencion y control de impulsos en Hinsdale como parte de una evaluacion clinica mas amplia—no un diagnostico por si solas—para adolescentes hasta adultos, coordinadas con terapia y medicacion psiquiatrica cuando es util.",
       },
       hero: {
-        title: "Pruebas de TDAH y Atencion en Hinsdale",
+        title: "Evaluacion de TDAH y Pruebas de Atencion en Hinsdale",
         subtitle:
-          "Pruebas objetivas de atencion con T.O.V.A., revisadas por su clinico como parte de un panorama mas amplio—para comprender mejor el enfoque, el control de impulsos y los proximos pasos en Hinsdale, IL, sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
+          "Obtenga una vision mas clara de la atencion, el enfoque y el control de impulsos con pruebas objetivas T.O.V.A., combinadas con una evaluacion clinica integral. Su clinico usa los resultados junto con su historial y sintomas para ayudar a guiar los proximos pasos en su cuidado.",
+        serviceArea:
+          "Atendemos Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
         availabilityNote:
           "Las citas de pruebas suelen estar disponibles con tiempos de espera cortos.",
         cta: "Programar una cita",
       },
       who: {
-        title: "Quien Puede Beneficiarse",
+        title: "Cuando Puede Ser Util una Evaluacion de TDAH o Pruebas de Atencion",
         intro:
           "Las inquietudes de atencion se manifiestan de formas distintas segun la edad y el entorno. Las pruebas pueden ser utiles cuando la concentracion, la impulsividad o el seguimiento dificultan la escuela, el trabajo o la vida diaria.",
         items: [
-          "Adolescentes y adultos con dudas sobre TDAH o dificultades de atencion",
-          "Estudiantes con problemas de concentracion, organizacion o rendimiento escolar",
-          "Profesionales que notan problemas de enfoque en el trabajo o bajo estres",
-          "Clientes ya en terapia que desean informacion mas clara sobre atencion y control de impulsos",
-          "Personas que buscan un panorama mas claro del enfoque y el control de impulsos para orientar proximos pasos con su clinico",
+          "Adolescentes y adultos que se preguntan si el TDAH puede estar afectando su vida diaria",
+          "Estudiantes con dificultades de concentracion, organizacion o rendimiento escolar",
+          "Adultos que notan problemas de enfoque, seguimiento u organizacion en el trabajo",
+          "Personas con preguntas sobre la atencion o el control de impulsos",
+          "Personas que buscan informacion adicional para orientar conversaciones sobre el tratamiento y los proximos pasos",
         ],
       },
       what: {
@@ -641,15 +658,23 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
         ],
       },
       expect: {
-        title: "Que Puede Esperar",
+        title: "Que Esperar Durante y Despues de las Pruebas",
         intro:
-          "Las pruebas de TDAH y atencion en Firefly son sencillas y guiadas por un clinico. Un recorrido tipico se ve asi:",
+          "Las pruebas son una parte de la comprension de la atencion y las inquietudes relacionadas con el TDAH. El proceso en Firefly es sencillo y guiado por un clinico, y un recorrido tipico se ve asi:",
         steps: [
           "Hablar de sus inquietudes con un clinico de Firefly y decidir si las pruebas son un buen siguiente paso",
           "Completar la evaluacion T.O.V.A. en una cita estructurada",
-          "Revisar los resultados con su clinico en un lenguaje claro",
-          "Conversar sobre recomendaciones—apoyo en terapia, evaluacion de medicamentos, estrategias escolares/laborales u otra evaluacion",
+          "Revisar sus resultados con su clinico en un lenguaje claro, en el contexto de su historial y sintomas generales",
+          "Decidir juntos los proximos pasos, que pueden incluir apoyo conductual o terapeutico, una evaluacion adicional, estrategias para la escuela o el trabajo, o una evaluacion de medicacion psiquiatrica",
           "Continuar el cuidado coordinado dentro de la practica cuando sea util",
+        ],
+      },
+      ongoingCare: {
+        title: "Evaluacion de TDAH y Cuidado Continuo",
+        paragraphs: [
+          "Comprender las inquietudes de atencion es solo el comienzo. Cuando es apropiado, Firefly Wellness ofrece atencion psiquiatrica continua y manejo de medicamentos adaptados a sus necesidades individuales y metas de tratamiento.",
+          "Para las personas diagnosticadas con TDAH, la medicacion puede ayudar a mejorar la atencion, reducir la impulsividad y apoyar la organizacion y el seguimiento. Su clinico puede hablar sobre si la medicacion es adecuada para usted, explicar las opciones de tratamiento disponibles y monitorear su respuesta con el tiempo.",
+          "La medicacion es solo una parte del cuidado del TDAH. Segun sus necesidades, el tratamiento tambien puede incluir terapia, estrategias conductuales, recomendaciones de estilo de vida u otros apoyos.",
         ],
       },
       closing: {

@@ -32,8 +32,7 @@ export type SiteContent = {
     intro: {
       title: string;
       subtitle: string;
-      lead: string;
-      whoWeHelp: string;
+      paragraphs: string[];
       scheduleLink: string;
     };
     servicesOverview: {
@@ -112,10 +111,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       intro: {
         title: "Psychiatric Care & Therapy in Hinsdale",
         subtitle: "Firefly Wellness, PLLC",
-        lead:
-          "Coordinated psychiatric medication, ADHD and attention testing, and therapy for adolescents through adults. Our team brings nearly two decades of mental health experience to every client relationship.",
-        whoWeHelp:
-          "We help with anxiety, depression, trauma, ADHD-related concerns, relationships, and life transitions—serving Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and nearby western suburbs.",
+        paragraphs: [
+          "Welcome to Firefly Wellness. Our team brings nearly two decades of mental health experience to providing thoughtful, personalized care for adolescents and adults. We help individuals navigate ADHD, anxiety, depression, trauma, relationship challenges, and life transitions through psychiatric care, medication management, ADHD evaluation, and therapy.",
+          "At Firefly Wellness, we believe meaningful care starts with understanding the whole person. We take the time to listen, understand your concerns, and create a treatment approach that feels collaborative, supportive, and tailored to your needs.",
+          "Located in Hinsdale, we serve individuals and families throughout Oak Brook, Clarendon Hills, Western Springs, Westmont, and the surrounding western suburbs.",
+        ],
         scheduleLink: "Book online now",
       },
       servicesOverview: {
@@ -263,10 +263,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       intro: {
         title: "Atencion Psiquiatrica y Terapia en Hinsdale",
         subtitle: "Firefly Wellness, PLLC",
-        lead:
-          "Medicacion psiquiatrica coordinada, pruebas de TDAH y atencion, y terapia para adolescentes y adultos. Nuestro equipo aporta casi dos decadas de experiencia en salud mental a cada relacion con el cliente.",
-        whoWeHelp:
-          "Ayudamos con ansiedad, depresion, trauma, inquietudes relacionadas con el TDAH, relaciones y transiciones de vida—sirviendo a Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
+        paragraphs: [
+          "Bienvenidos a Firefly Wellness. Nuestro equipo aporta casi dos decadas de experiencia en salud mental para brindar un cuidado reflexivo y personalizado a adolescentes y adultos. Ayudamos a las personas a manejar el TDAH, la ansiedad, la depresion, el trauma, los desafios en las relaciones y las transiciones de vida mediante atencion psiquiatrica, manejo de medicamentos, evaluacion de TDAH y terapia.",
+          "En Firefly Wellness, creemos que un cuidado significativo comienza por comprender a la persona en su totalidad. Nos tomamos el tiempo para escuchar, comprender sus inquietudes y crear un enfoque de tratamiento colaborativo, de apoyo y adaptado a sus necesidades.",
+          "Ubicados en Hinsdale, atendemos a personas y familias en Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
+        ],
         scheduleLink: "Reservar en linea ahora",
       },
       servicesOverview: {

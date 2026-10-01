@@ -29,6 +29,11 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
           <Text variant="subtitle" className="w-full text-center">
             {page.hero.subtitle}
           </Text>
+          {page.hero.serviceArea ? (
+            <Text variant="subtitle" className="w-full text-center">
+              {page.hero.serviceArea}
+            </Text>
+          ) : null}
           {page.hero.availabilityNote ? (
             <Text variant="text" className="w-full text-center">
               {page.hero.availabilityNote}
@@ -75,6 +80,19 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
         </div>
       </Section>
 
+      {page.ongoingCare ? (
+        <Section variant="white">
+          <div className={contentColumn}>
+            <Text variant="h2">{page.ongoingCare.title}</Text>
+            {page.ongoingCare.paragraphs.map((paragraph) => (
+              <Text key={paragraph} variant="text">
+                {paragraph}
+              </Text>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
       {page.related ? (
         <Section variant="white">
           <div className={contentColumn}>
@@ -117,7 +135,9 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
       ) : null}
 
       <Section
-        variant={page.faq || !page.related ? "white" : "green"}
+        variant={
+          page.faq || !(page.related || page.ongoingCare) ? "white" : "green"
+        }
       >
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 pb-8 text-center">
           <Text variant="h2">{page.closing.title}</Text>

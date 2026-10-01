@@ -105,12 +105,15 @@ export function HomePageContent() {
           <Text variant="subtitle" className="-mt-[10px] w-full text-center">
             {home.intro.subtitle}
           </Text>
-          <Text variant="text" className="mt-2 w-full">
-            {home.intro.lead}
-          </Text>
-          <Text variant="text" className="w-full">
-            {home.intro.whoWeHelp}
-          </Text>
+          {home.intro.paragraphs.map((paragraph, index) => (
+            <Text
+              key={paragraph}
+              variant="text"
+              className={index === 0 ? "mt-2 w-full" : "w-full"}
+            >
+              {paragraph}
+            </Text>
+          ))}
           <Text variant="text" className="w-full text-center pt-2">
             <a
               href={SCHEDULE_URL}
