@@ -1,19 +1,18 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/constants";
 
-const routes = [
-  "/",
-  "/services",
-  "/therapy",
-  "/adhd-testing",
-  "/medication-management",
-  "/careers",
+/** Update a page's date when its content meaningfully changes. */
+const pages = [
+  { path: "/", lastModified: "2026-10-02" },
+  { path: "/services", lastModified: "2026-10-02" },
+  { path: "/therapy", lastModified: "2026-10-02" },
+  { path: "/adhd-testing", lastModified: "2026-10-02" },
+  { path: "/medication-management", lastModified: "2026-10-02" },
+  { path: "/careers", lastModified: "2026-10-02" },
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
-  return routes.map((path) => ({
+  return pages.map(({ path, lastModified }) => ({
     url: new URL(path, SITE_URL).toString(),
     lastModified,
     changeFrequency: path === "/" ? "weekly" : "monthly",
