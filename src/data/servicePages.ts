@@ -467,8 +467,8 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       overview: {
         title: "Cuidado Coordinado en Una Sola Practica",
         paragraphs: [
-          "En Firefly Wellness, la medicacion psiquiatrica, las pruebas de TDAH y atencion, y la terapia trabajan juntas cuando eso apoya un mejor cuidado. No tiene que reunir proveedores en distintos consultorios—nuestros clinicos colaboran para que las recomendaciones se mantengan alineadas con sus metas.",
-          "Atendemos a adolescentes hasta adultos, y el cuidado esta disponible en ingles y espanol. Ya sea que comience con un servicio o combine apoyos con el tiempo, le ayudamos a dar pasos reflexivos.",
+          "En Firefly Wellness, adoptamos un enfoque colaborativo del cuidado, reuniendo la experiencia adecuada en un solo lugar. En lugar de coordinar proveedores en distintos consultorios, puede acceder a un apoyo integral dentro de una sola practica, con clinicos que trabajan juntos para mantener su cuidado conectado con sus necesidades, metas y bienestar general.",
+          "Atendemos a adolescentes y adultos, con cuidado disponible en ingles y espanol. Ya sea que este dando su primer paso hacia el apoyo o buscando lo que sigue, lo acompanamos donde se encuentre y le brindamos un cuidado reflexivo y personalizado en cada paso del camino.",
         ],
       },
       offeringsTitle: "Servicios Principales",

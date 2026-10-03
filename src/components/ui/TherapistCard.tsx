@@ -1,3 +1,4 @@
+import NextImage from "next/image";
 import { Button, Expandable, Text } from "@/components/ui";
 import { bulletList } from "@/styles";
 import type { Therapist } from "@/data/therapists";
@@ -50,13 +51,14 @@ export function TherapistCard({
         </Button>
       </div>
 
-      <div className="mt-4 aspect-[3/4] w-full overflow-hidden rounded-lg bg-body/20">
+      <div className="relative mt-4 aspect-[3/4] w-full overflow-hidden rounded-lg bg-body/20">
         {imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <NextImage
             src={imageUrl}
             alt={`${name}, ${credentials}`}
-            className="h-full w-full object-cover [image-rendering:-webkit-optimize-contrast]"
+            fill
+            sizes="(min-width: 640px) 384px, 100vw"
+            className="object-cover"
           />
         ) : (
           <div
