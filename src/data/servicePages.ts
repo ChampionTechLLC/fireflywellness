@@ -172,10 +172,10 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
         cta: "Schedule an Appointment",
       },
       overview: {
-        title: "Coordinated Care Under One Practice",
+        title: "Coordinated Care Within One Practice",
         paragraphs: [
-          "At Firefly Wellness, we take a collaborative approach to care, bringing the right expertise together around you. Instead of piecing together providers across different offices, you can receive comprehensive support in one place, with clinicians working together to keep your care aligned with your needs, goals, and overall well-being.",
-          "We support adolescents and adults, with care available in both English and Spanish. Whether you’re taking your first step toward support or exploring what comes next, we meet you where you are and help you move forward with thoughtful, personalized care.",
+          "At Firefly Wellness, we take a collaborative approach to care, bringing the right expertise together in one place. Instead of coordinating providers across different offices, you can access comprehensive support within one practice, with clinicians working together to keep your care connected to your needs, goals, and overall well-being.",
+          "We support adolescents and adults, with care available in both English and Spanish. Whether you’re taking your first step toward support or looking for what comes next, we meet you where you are and provide thoughtful, personalized care every step of the way.",
         ],
       },
       offeringsTitle: "Core Services",
