@@ -181,7 +181,7 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       offeringsTitle: "Core Services",
       offerings: [
         {
-          title: "Psychiatric Medication",
+          title: "Psychiatric Medication Management",
           blurb:
             "Our board-certified PMHNP-BC provides personalized psychiatric medication evaluation and ongoing medication management for ADHD, anxiety, depression, and other mental health concerns. Treatment is tailored to your symptoms, history, goals, and individual needs.",
           href: "/medication-management",
