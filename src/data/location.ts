@@ -13,6 +13,10 @@ export type Address = {
   fax?: string;
   /** Google Maps embed iframe src (Share > Embed a map). */
   mapEmbedUrl?: string;
+  latitude?: number;
+  longitude?: number;
+  /** Google Business Profile share link. */
+  googleBusinessUrl?: string;
 };
 
 export const locationData: Address[] = [
@@ -25,5 +29,8 @@ export const locationData: Address[] = [
     phone: "779.379.2311",
     fax: "779-220-0850",
     mapEmbedUrl: "https://www.google.com/maps?q=15+Spinning+Wheel+Road,Suite+232,Hinsdale,IL+60521&output=embed&z=12",
+    latitude: 41.821841,
+    longitude: -87.9201146,
+    googleBusinessUrl: "https://maps.app.goo.gl/ZoHyZYqezNUUtLgS9",
   },
 ];

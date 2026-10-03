@@ -1,7 +1,7 @@
 import { HERO_LOGO_URL, SITE_URL } from "@/constants";
 import { locationData } from "@/data/location";
 import { getServicePagesContent } from "@/data/servicePages";
-import { socialLinks } from "@/data/social";
+import { businessLocationJsonLd } from "@/lib/businessJsonLd";
 
 const areaServed = [
   "Hinsdale, IL",
@@ -47,7 +47,7 @@ export function AdhdTestingPageJsonLd() {
       "@type": "City",
       name,
     })),
-    sameAs: socialLinks.map((link) => link.url),
+    ...businessLocationJsonLd(address),
   };
 
   const medicalTherapy = {
