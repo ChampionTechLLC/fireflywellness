@@ -474,16 +474,16 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       offeringsTitle: "Servicios Principales",
       offerings: [
         {
-          title: "Medicacion Psiquiatrica",
+          title: "Manejo de Medicacion Psiquiatrica",
           blurb:
-            "Nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP-BC) del equipo ofrece visitas de prescripcion y apoyo continuo con medicamentos, incluyendo herramientas que orientan decisiones de medicacion reflexivas. Este cuidado es una buena opcion cuando la medicacion puede ayudar con el animo, la ansiedad, la atencion o el sueno—y cuando un seguimiento cuidadoso importa.",
+            "Nuestra PMHNP-BC certificada por la junta ofrece evaluacion personalizada de medicacion psiquiatrica y manejo continuo de medicamentos para el TDAH, la ansiedad, la depresion y otras inquietudes de salud mental. El tratamiento se adapta a sus sintomas, historial, metas y necesidades individuales.",
           href: "/medication-management",
           learnMore: "Conozca mas sobre medicacion psiquiatrica",
         },
         {
           title: "Pruebas de TDAH y Atencion",
           blurb:
-            "Las pruebas T.O.V.A. por computadora ayudan a evaluar la atencion y el control de impulsos como parte de un panorama clinico mas amplio. Los resultados se revisan con su clinico y se usan junto con su historial y metas—no como un diagnostico por si solos.",
+            "Las pruebas T.O.V.A. por computadora ayudan a evaluar la atencion y el control de impulsos como parte de un panorama clinico mas amplio. Los resultados se revisan con su clinico y se usan junto con su historial y metas.",
           href: "/adhd-testing",
           learnMore: "Conozca mas sobre pruebas de TDAH",
         },
@@ -501,12 +501,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           {
             title: "Pruebas Geneticas Tempus",
             paragraph:
-              "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Los resultados se revisan con usted y se usan junto con—no en lugar de—su panorama clinico, a menudo como parte del cuidado de medicacion psiquiatrica.",
+              "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Los resultados se revisan con usted y se usan junto con su panorama clinico, a menudo como parte del cuidado de medicacion psiquiatrica.",
           },
           {
             title: "Revisiones de Memoria y Cognicion",
             paragraph:
-              "Las evaluaciones BrainCheck ayudan a monitorear la memoria y el pensamiento con el tiempo. Despues de una visita inicial de referencia, su clinico revisa los resultados con usted y ayuda a decidir los proximos pasos—a menudo junto con terapia o medicacion. Las evaluaciones de seguimiento ayudan a su clinico a seguir tendencias en la memoria y el pensamiento entre visitas y a explicar lo que significan los resultados. BrainCheck es una herramienta de monitoreo, no un diagnostico por si solo.",
+              "Las evaluaciones BrainCheck ayudan a establecer una referencia inicial y a monitorear cambios en la memoria y el pensamiento con el tiempo. Su clinico revisa los resultados con usted y los considera junto con su historial, sintomas y otra informacion clinica para ayudar a orientar los proximos pasos. Las evaluaciones de seguimiento pueden ayudar a observar cambios entre visitas y aportar informacion adicional para apoyar el cuidado continuo, incluyendo terapia o manejo de medicamentos cuando sea apropiado.",
           },
         ],
       },
@@ -663,7 +663,7 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           "Las pruebas son una parte de la comprension de la atencion y las inquietudes relacionadas con el TDAH. El proceso en Firefly es sencillo y guiado por un clinico, y un recorrido tipico se ve asi:",
         steps: [
           "Hablar de sus inquietudes con un clinico de Firefly y decidir si las pruebas son un buen siguiente paso",
-          "Completar la evaluacion T.O.V.A. en una cita estructurada",
+          "Completar la Evaluacion de TDAH y Atencion durante una cita de pruebas estructurada",
           "Revisar sus resultados con su clinico en un lenguaje claro, en el contexto de su historial y sintomas generales",
           "Decidir juntos los proximos pasos, que pueden incluir apoyo conductual o terapeutico, una evaluacion adicional, estrategias para la escuela o el trabajo, o una evaluacion de medicacion psiquiatrica",
           "Continuar el cuidado coordinado dentro de la practica cuando sea util",
