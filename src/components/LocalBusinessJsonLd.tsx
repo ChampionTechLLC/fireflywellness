@@ -19,6 +19,7 @@ export function LocalBusinessJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
+    "@id": `${SITE_URL}/#medicalbusiness`,
     name: "Firefly Wellness, PLLC",
     alternateName: "Firefly Counseling",
     url: SITE_URL,

@@ -328,7 +328,7 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       meta: {
         title: "ADHD Evaluation & Attention Testing in Hinsdale | Firefly Wellness",
         description:
-          "T.O.V.A. attention and impulse-control testing in Hinsdale as part of a broader clinical evaluation—not a standalone diagnosis—for adolescents through adults, coordinated with therapy and psychiatric medication when helpful.",
+          "ADHD evaluation and T.O.V.A. attention testing in Hinsdale for adolescents and adults, with results reviewed by your clinician to guide next steps in care.",
       },
       hero: {
         title: "ADHD Evaluation & Attention Testing in Hinsdale",
@@ -390,12 +390,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     medicationManagement: {
       slug: "medication-management",
       meta: {
-        title: "Psychiatric Medication in Hinsdale | Firefly Wellness",
+        title: "Psychiatric Medication Management in Hinsdale | Firefly Wellness",
         description:
           "Outpatient psychiatric medication in Hinsdale with our on-staff board-certified PMHNP-BC—for adolescents through adults, coordinated with therapy and testing, including Tempus and BrainCheck when part of your care.",
       },
       hero: {
-        title: "Psychiatric Medication in Hinsdale",
+        title: "Psychiatric Medication Management in Hinsdale",
         subtitle:
           "Prescribing visits and ongoing medication support with our on-staff board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC)—coordinated with therapy and ADHD testing in Hinsdale, IL, serving Oak Brook, Clarendon Hills, Western Springs, Westmont, and nearby western suburbs.",
         availabilityNote:
@@ -625,7 +625,7 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       meta: {
         title: "Evaluacion de TDAH y Pruebas de Atencion en Hinsdale | Firefly Wellness",
         description:
-          "Pruebas T.O.V.A. de atencion y control de impulsos en Hinsdale como parte de una evaluacion clinica mas amplia—no un diagnostico por si solas—para adolescentes hasta adultos, coordinadas con terapia y medicacion psiquiatrica cuando es util.",
+          "Evaluacion de TDAH y pruebas de atencion T.O.V.A. en Hinsdale para adolescentes y adultos, con resultados revisados por su clinico para orientar los proximos pasos.",
       },
       hero: {
         title: "Evaluacion de TDAH y Pruebas de Atencion en Hinsdale",
@@ -687,12 +687,12 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     medicationManagement: {
       slug: "medication-management",
       meta: {
-        title: "Medicacion Psiquiatrica en Hinsdale | Firefly Wellness",
+        title: "Manejo de Medicacion Psiquiatrica en Hinsdale | Firefly Wellness",
         description:
           "Medicacion psiquiatrica ambulatoria en Hinsdale con nuestra PMHNP-BC certificada por la junta—para adolescentes hasta adultos, coordinada con terapia y pruebas, incluyendo Tempus y BrainCheck cuando forman parte de su cuidado.",
       },
       hero: {
-        title: "Medicacion Psiquiatrica en Hinsdale",
+        title: "Manejo de Medicacion Psiquiatrica en Hinsdale",
         subtitle:
           "Visitas de prescripcion y apoyo continuo con medicamentos con nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP-BC)—coordinado con terapia y pruebas de TDAH en Hinsdale, IL, sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
         availabilityNote:

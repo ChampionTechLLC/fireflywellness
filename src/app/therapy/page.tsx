@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { TherapyPageContent } from "@/components/ServicePagesContent";
 import { TherapyPageJsonLd } from "@/components/TherapyPageJsonLd";
 import { getServicePagesContent } from "@/data/servicePages";
+import { buildPageMetadata } from "@/lib/pageMetadata";
 
 const page = getServicePagesContent("en").therapy;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: page.meta.title,
   description: page.meta.description,
-};
+  path: "/therapy",
+});
 
 export default function TherapyPage() {
   return (

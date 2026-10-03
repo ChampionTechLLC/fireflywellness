@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { Navbar } from "@/components/ui";
+import { SITE_URL } from "@/constants";
 import "./globals.css";
 
 const fontPrimary = Nunito({
@@ -11,9 +12,18 @@ const fontPrimary = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Firefly Wellness",
   description:
     "Firefly Wellness offers therapy, ADHD testing, and psychiatric medication in Hinsdale, IL and nearby western suburbs.",
+  openGraph: {
+    siteName: "Firefly Wellness",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: [
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
