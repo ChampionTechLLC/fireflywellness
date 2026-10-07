@@ -17,17 +17,39 @@ export type ServicePageCopy = {
     serviceArea?: string;
     cta: string;
     availabilityNote?: string;
+    highlights?: string[];
+  };
+  insurance?: {
+    title: string;
+    paragraph: string;
+    cashPay: string;
+  };
+  carePath?: {
+    title: string;
+    intro: string;
+    steps: {
+      title: string;
+      description: string;
+    }[];
+  };
+  whyFirefly?: {
+    title: string;
+    items: {
+      title: string;
+      paragraph: string;
+    }[];
   };
   who: {
     title: string;
     intro: string;
     items: string[];
+    closing?: string;
   };
   what: {
     title: string;
     paragraphs: string[];
   };
-  expect: {
+  expect?: {
     title: string;
     intro?: string;
     steps: string[];
@@ -326,64 +348,155 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     adhdTesting: {
       slug: "adhd-testing",
       meta: {
-        title: "ADHD Evaluation & Attention Testing in Hinsdale | Firefly Wellness",
+        title: "ADHD Evaluation & Testing in Hinsdale | Firefly Wellness",
         description:
-          "ADHD evaluation and T.O.V.A. attention testing in Hinsdale for adolescents and adults, with results reviewed by your clinician to guide next steps in care.",
+          "ADHD evaluation for adults and adolescents in Hinsdale with objective T.O.V.A. testing, a clear clinical assessment, and treatment in one practice. Most major insurance accepted. Appointments often available within days.",
       },
       hero: {
-        title: "ADHD Evaluation & Attention Testing in Hinsdale",
+        title: "ADHD Evaluation & Testing in Hinsdale",
         subtitle:
-          "Get a clearer picture of attention, focus, and impulse control with objective T.O.V.A. testing, combined with a comprehensive clinical evaluation. Your clinician uses the results alongside your history and symptoms to help guide next steps in care.",
+          "Find out whether ADHD explains what you have been experiencing—and leave with a clear plan for what comes next. A comprehensive clinical evaluation with objective T.O.V.A. testing, followed by treatment in the same practice if you need it.",
         serviceArea:
           "Serving Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont, and surrounding western suburbs.",
-        availabilityNote:
-          "Testing appointments are often available with short wait times.",
-        cta: "Schedule an Appointment",
+        highlights: [
+          "Appointments often available within days",
+          "Insurance accepted: Cigna, BCBS, UnitedHealthcare, Medicare, and more",
+          "Objective, computer-based T.O.V.A. testing",
+          "Evaluation, medication, and therapy in one practice",
+        ],
+        cta: "Schedule an ADHD Evaluation",
+      },
+      insurance: {
+        title: "Insurance Accepted for ADHD Evaluation",
+        paragraph:
+          "We accept Cigna, Blue Cross Blue Shield, Humana, Lyra, Medicare, TriWest, and UnitedHealthcare for ADHD evaluation and follow-up care.",
+        cashPay: "We also accept cash pay and out-of-network insurances.",
+      },
+      carePath: {
+        title: "Evaluation and Ongoing ADHD Care in One Practice",
+        intro:
+          "Many testing providers stop at a report. At Firefly, you don’t have to start over somewhere else—your evaluation can lead directly into treatment with the same coordinated team.",
+        steps: [
+          {
+            title: "Clinical Evaluation",
+            description:
+              "Talk through your history, symptoms, and goals with a Firefly clinician.",
+          },
+          {
+            title: "Objective T.O.V.A. Testing",
+            description:
+              "A structured, computer-based test that measures attention and impulse control.",
+          },
+          {
+            title: "Clear Results",
+            description:
+              "Review your findings in plain language, in the context of your full clinical picture.",
+          },
+          {
+            title: "Psychiatric Evaluation",
+            description:
+              "When appropriate, meet with our board-certified PMHNP-BC to discuss treatment options, including medication.",
+          },
+          {
+            title: "Ongoing Care",
+            description:
+              "Medication management, therapy, and practical strategies—coordinated under one roof.",
+          },
+        ],
+      },
+      whyFirefly: {
+        title: "Why Choose Firefly for ADHD Care",
+        items: [
+          {
+            title: "No Hand-Offs Between Offices",
+            paragraph:
+              "Testing, prescribing, and therapy happen within one coordinated team, so your care stays connected from the first visit onward.",
+          },
+          {
+            title: "On-Staff Board-Certified PMHNP-BC",
+            paragraph:
+              "If medication may help, you can be evaluated by our own Psychiatric-Mental Health Nurse Practitioner—no outside referral needed.",
+          },
+          {
+            title: "Objective Data, Not Just a Questionnaire",
+            paragraph:
+              "T.O.V.A. testing adds measurable information about attention and impulse control alongside your clinical interview.",
+          },
+          {
+            title: "Fast Access",
+            paragraph:
+              "Evaluation appointments are often available within days, so you are not left waiting months for answers.",
+          },
+          {
+            title: "Insurance Accepted",
+            paragraph:
+              "We work with Cigna, Blue Cross Blue Shield, Humana, Lyra, Medicare, TriWest, and UnitedHealthcare.",
+          },
+          {
+            title: "Care in English and Spanish",
+            paragraph:
+              "Evaluation and ongoing care are available in both languages.",
+          },
+        ],
       },
       who: {
-        title: "When ADHD or Attention Testing May Be Helpful",
+        title: "Adult ADHD Evaluation",
         intro:
-          "Attention concerns show up differently across ages and settings. Testing can be useful when focus, impulsivity, or follow-through are getting in the way of school, work, or daily life.",
+          "ADHD does not always look the way people expect, and many adults go years without answers. An evaluation may be helpful if you recognize yourself here:",
         items: [
-          "Adolescents and adults wondering whether ADHD may be affecting daily life",
-          "Students experiencing difficulties with concentration, organization, or school performance",
-          "Adults noticing problems with focus, follow-through, or organization at work",
-          "Individuals who have questions about attention or impulse control",
-          "People seeking additional information to help guide conversations about treatment and next steps",
+          "Missing deadlines or leaving projects unfinished at work",
+          "Losing track of tasks, bills, or appointments",
+          "Starting strong but struggling with follow-through",
+          "Feeling scattered or overwhelmed despite real effort",
+          "Wondering for years whether ADHD explains your experience",
+          "Diagnosed as a child and wanting an updated evaluation as an adult",
         ],
+        closing:
+          "We also evaluate adolescents and students whose concentration, organization, or school performance is a concern.",
       },
       what: {
-        title: "Understanding T.O.V.A. Testing",
+        title: "What Your Evaluation Includes",
         paragraphs: [
-          "T.O.V.A. (Test of Variables of Attention) is a simple, computer-based test that uses a special device to look at attention and impulse control.",
-          "It is one of the tools we may use when evaluating concerns like ADHD and other attention-related issues. Results are never the whole story on their own—your clinician places them in context with your history, symptoms, and goals.",
-          "At Firefly Wellness, testing sits within a coordinated behavioral health model. That means findings can inform therapy recommendations, referrals for psychiatric medication evaluation, or further clinical follow-up when appropriate.",
+          "Your ADHD evaluation combines a clinical assessment of your history and symptoms with objective attention testing. You will review the results with your clinician in plain language and leave with personalized recommendations—which may include treatment within Firefly.",
+          "T.O.V.A. (Test of Variables of Attention) is a simple, computer-based test that uses a special device to look at attention and impulse control. It is one of the tools we use when evaluating ADHD and other attention-related concerns.",
+          "Test results are never the whole story on their own—your clinician places them in context with your history, symptoms, and goals before recommending next steps.",
         ],
       },
-      expect: {
-        title: "What to Expect During and After Testing",
-        intro:
-          "Testing is one part of understanding attention and ADHD-related concerns. The process at Firefly is straightforward and clinician-guided, and a typical path looks like this:",
-        steps: [
-          "Discuss your concerns with a Firefly clinician and decide whether testing is a good next step",
-          "Complete the ADHD and Attention Evaluation during a structured testing appointment",
-          "Review your results with your clinician in plain language, in the context of your overall history and symptoms",
-          "Decide on next steps together, which may include behavioral or therapy support, additional evaluation, school or workplace strategies, or a psychiatric medication evaluation",
-          "Continue coordinated care within the practice when helpful",
-        ],
-      },
-      ongoingCare: {
-        title: "ADHD Evaluation and Ongoing Care",
-        paragraphs: [
-          "Understanding attention concerns is only the beginning. When appropriate, Firefly Wellness provides ongoing psychiatric care and medication management tailored to your individual needs and treatment goals.",
-          "For individuals diagnosed with ADHD, medication may help improve attention, reduce impulsivity, and support organization and follow-through. Your clinician can discuss whether medication is appropriate for you, explain the available treatment options, and monitor your response over time.",
-          "Medication is just one part of ADHD care. Depending on your needs, treatment may also include therapy, behavioral strategies, lifestyle recommendations, or other supports.",
+      faq: {
+        title: "Frequently Asked Questions",
+        items: [
+          {
+            question: "Do you take my insurance for ADHD testing?",
+            answer:
+              "We accept Cigna, Blue Cross Blue Shield, Humana, Lyra, Medicare, TriWest, and UnitedHealthcare for ADHD evaluation and follow-up care. We also accept cash pay and out-of-network insurances.",
+          },
+          {
+            question: "How soon can I be seen?",
+            answer:
+              "ADHD evaluation appointments are often available within days. Schedule online or contact our office to find the next available time.",
+          },
+          {
+            question: "Is T.O.V.A. testing a diagnosis by itself?",
+            answer:
+              "No. T.O.V.A. is one clinical tool. Your clinician combines the results with your history and symptoms as part of a comprehensive evaluation before making any diagnosis or recommendation.",
+          },
+          {
+            question: "Can I get ADHD medication at Firefly after my evaluation?",
+            answer:
+              "When appropriate, yes. Our on-staff board-certified PMHNP-BC provides psychiatric evaluation and ongoing medication management, coordinated with therapy and behavioral strategies when helpful.",
+          },
+          {
+            question: "Do you evaluate adolescents?",
+            answer:
+              "Yes. We evaluate adolescents as well as adults, and care is available in both English and Spanish.",
+          },
         ],
       },
       closing: {
-        title: "See If Attention Testing Is Right for You",
+        title: "Get Answers About Your Attention and Focus",
         paragraph:
-          "If focus or impulse control has been hard to understand on your own, structured testing can add useful information to the conversation with your clinician.",
+          "If focus, organization, or follow-through have been getting in the way, a clear evaluation is a practical first step—and you will have a team ready to help with whatever comes next.",
+        cta: "Schedule an ADHD Evaluation",
         scheduleLabel: "Book online now",
       },
     },
@@ -623,64 +736,156 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     adhdTesting: {
       slug: "adhd-testing",
       meta: {
-        title: "Evaluacion de TDAH y Pruebas de Atencion en Hinsdale | Firefly Wellness",
+        title: "Evaluacion y Pruebas de TDAH en Hinsdale | Firefly Wellness",
         description:
-          "Evaluacion de TDAH y pruebas de atencion T.O.V.A. en Hinsdale para adolescentes y adultos, con resultados revisados por su clinico para orientar los proximos pasos.",
+          "Evaluacion de TDAH para adultos y adolescentes en Hinsdale con pruebas objetivas T.O.V.A., una evaluacion clinica clara y tratamiento en una sola practica. Aceptamos la mayoria de los seguros principales. Citas a menudo disponibles en pocos dias.",
       },
       hero: {
-        title: "Evaluacion de TDAH y Pruebas de Atencion en Hinsdale",
+        title: "Evaluacion y Pruebas de TDAH en Hinsdale",
         subtitle:
-          "Obtenga una vision mas clara de la atencion, el enfoque y el control de impulsos con pruebas objetivas T.O.V.A., combinadas con una evaluacion clinica integral. Su clinico usa los resultados junto con su historial y sintomas para ayudar a guiar los proximos pasos en su cuidado.",
+          "Descubra si el TDAH explica lo que ha estado viviendo—y salga con un plan claro para lo que sigue. Una evaluacion clinica integral con pruebas objetivas T.O.V.A., seguida de tratamiento en la misma practica si lo necesita.",
         serviceArea:
           "Atendemos Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
-        availabilityNote:
-          "Las citas de pruebas suelen estar disponibles con tiempos de espera cortos.",
-        cta: "Programar una cita",
+        highlights: [
+          "Citas a menudo disponibles en pocos dias",
+          "Aceptamos seguros: Cigna, BCBS, UnitedHealthcare, Medicare y mas",
+          "Pruebas T.O.V.A. objetivas por computadora",
+          "Evaluacion, medicacion y terapia en una sola practica",
+        ],
+        cta: "Programar una evaluacion de TDAH",
+      },
+      insurance: {
+        title: "Seguros Aceptados para la Evaluacion de TDAH",
+        paragraph:
+          "Aceptamos Cigna, Blue Cross Blue Shield, Humana, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluacion de TDAH y el cuidado de seguimiento.",
+        cashPay: "Tambien aceptamos pago privado y seguros fuera de la red.",
+      },
+      carePath: {
+        title: "Evaluacion y Cuidado Continuo del TDAH en Una Sola Practica",
+        intro:
+          "Muchos proveedores de pruebas terminan con un informe. En Firefly, no tiene que empezar de nuevo en otro lugar—su evaluacion puede llevar directamente al tratamiento con el mismo equipo coordinado.",
+        steps: [
+          {
+            title: "Evaluacion Clinica",
+            description:
+              "Hable sobre su historial, sintomas y metas con un clinico de Firefly.",
+          },
+          {
+            title: "Prueba Objetiva T.O.V.A.",
+            description:
+              "Una prueba estructurada por computadora que mide la atencion y el control de impulsos.",
+          },
+          {
+            title: "Resultados Claros",
+            description:
+              "Revise sus hallazgos en un lenguaje claro, en el contexto de su panorama clinico completo.",
+          },
+          {
+            title: "Evaluacion Psiquiatrica",
+            description:
+              "Cuando es apropiado, reunase con nuestra PMHNP-BC certificada por la junta para hablar sobre opciones de tratamiento, incluida la medicacion.",
+          },
+          {
+            title: "Cuidado Continuo",
+            description:
+              "Manejo de medicamentos, terapia y estrategias practicas—coordinados bajo un mismo techo.",
+          },
+        ],
+      },
+      whyFirefly: {
+        title: "Por Que Elegir Firefly para el Cuidado del TDAH",
+        items: [
+          {
+            title: "Sin Traslados Entre Consultorios",
+            paragraph:
+              "Las pruebas, la prescripcion y la terapia ocurren dentro de un mismo equipo coordinado, para que su cuidado se mantenga conectado desde la primera visita.",
+          },
+          {
+            title: "PMHNP-BC Certificada en Nuestro Equipo",
+            paragraph:
+              "Si la medicacion puede ayudar, puede ser evaluado por nuestra propia Psychiatric-Mental Health Nurse Practitioner—sin necesidad de una referencia externa.",
+          },
+          {
+            title: "Datos Objetivos, No Solo un Cuestionario",
+            paragraph:
+              "La prueba T.O.V.A. agrega informacion medible sobre la atencion y el control de impulsos junto con su entrevista clinica.",
+          },
+          {
+            title: "Acceso Rapido",
+            paragraph:
+              "Las citas de evaluacion suelen estar disponibles en pocos dias, para que no tenga que esperar meses por respuestas.",
+          },
+          {
+            title: "Aceptamos Seguros",
+            paragraph:
+              "Trabajamos con Cigna, Blue Cross Blue Shield, Humana, Lyra, Medicare, TriWest y UnitedHealthcare.",
+          },
+          {
+            title: "Cuidado en Ingles y Espanol",
+            paragraph:
+              "La evaluacion y el cuidado continuo estan disponibles en ambos idiomas.",
+          },
+        ],
       },
       who: {
-        title: "Cuando Puede Ser Util una Evaluacion de TDAH o Pruebas de Atencion",
+        title: "Evaluacion de TDAH en Adultos",
         intro:
-          "Las inquietudes de atencion se manifiestan de formas distintas segun la edad y el entorno. Las pruebas pueden ser utiles cuando la concentracion, la impulsividad o el seguimiento dificultan la escuela, el trabajo o la vida diaria.",
+          "El TDAH no siempre se ve como la gente espera, y muchos adultos pasan anos sin respuestas. Una evaluacion puede ser util si se identifica con lo siguiente:",
         items: [
-          "Adolescentes y adultos que se preguntan si el TDAH puede estar afectando su vida diaria",
-          "Estudiantes con dificultades de concentracion, organizacion o rendimiento escolar",
-          "Adultos que notan problemas de enfoque, seguimiento u organizacion en el trabajo",
-          "Personas con preguntas sobre la atencion o el control de impulsos",
-          "Personas que buscan informacion adicional para orientar conversaciones sobre el tratamiento y los proximos pasos",
+          "No cumplir con fechas limite o dejar proyectos sin terminar en el trabajo",
+          "Perder el control de tareas, cuentas o citas",
+          "Empezar con fuerza pero tener dificultades para dar seguimiento",
+          "Sentirse disperso o abrumado a pesar de un esfuerzo real",
+          "Preguntarse durante anos si el TDAH explica su experiencia",
+          "Haber sido diagnosticado de nino y querer una evaluacion actualizada como adulto",
         ],
+        closing:
+          "Tambien evaluamos a adolescentes y estudiantes cuya concentracion, organizacion o rendimiento escolar es motivo de preocupacion.",
       },
       what: {
-        title: "Comprendiendo la Prueba T.O.V.A.",
+        title: "Que Incluye Su Evaluacion",
         paragraphs: [
-          "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atencion y el control de impulsos.",
-          "Es una de las herramientas que podemos usar al evaluar inquietudes como TDAH y otros asuntos relacionados con la atencion. Los resultados nunca son toda la historia por si solos—su clinico los coloca en contexto con su historial, sintomas y metas.",
-          "En Firefly Wellness, las pruebas forman parte de un modelo coordinado de salud conductual. Eso significa que los hallazgos pueden orientar recomendaciones de terapia, evaluaciones de medicacion psiquiatrica u otro seguimiento clinico cuando corresponde.",
+          "Su evaluacion de TDAH combina una evaluacion clinica de su historial y sintomas con pruebas objetivas de atencion. Revisara los resultados con su clinico en un lenguaje claro y saldra con recomendaciones personalizadas—que pueden incluir tratamiento dentro de Firefly.",
+          "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atencion y el control de impulsos. Es una de las herramientas que usamos al evaluar el TDAH y otras inquietudes relacionadas con la atencion.",
+          "Los resultados de la prueba nunca son toda la historia por si solos—su clinico los coloca en contexto con su historial, sintomas y metas antes de recomendar los proximos pasos.",
         ],
       },
-      expect: {
-        title: "Que Esperar Durante y Despues de las Pruebas",
-        intro:
-          "Las pruebas son una parte de la comprension de la atencion y las inquietudes relacionadas con el TDAH. El proceso en Firefly es sencillo y guiado por un clinico, y un recorrido tipico se ve asi:",
-        steps: [
-          "Hablar de sus inquietudes con un clinico de Firefly y decidir si las pruebas son un buen siguiente paso",
-          "Completar la Evaluacion de TDAH y Atencion durante una cita de pruebas estructurada",
-          "Revisar sus resultados con su clinico en un lenguaje claro, en el contexto de su historial y sintomas generales",
-          "Decidir juntos los proximos pasos, que pueden incluir apoyo conductual o terapeutico, una evaluacion adicional, estrategias para la escuela o el trabajo, o una evaluacion de medicacion psiquiatrica",
-          "Continuar el cuidado coordinado dentro de la practica cuando sea util",
-        ],
-      },
-      ongoingCare: {
-        title: "Evaluacion de TDAH y Cuidado Continuo",
-        paragraphs: [
-          "Comprender las inquietudes de atencion es solo el comienzo. Cuando es apropiado, Firefly Wellness ofrece atencion psiquiatrica continua y manejo de medicamentos adaptados a sus necesidades individuales y metas de tratamiento.",
-          "Para las personas diagnosticadas con TDAH, la medicacion puede ayudar a mejorar la atencion, reducir la impulsividad y apoyar la organizacion y el seguimiento. Su clinico puede hablar sobre si la medicacion es adecuada para usted, explicar las opciones de tratamiento disponibles y monitorear su respuesta con el tiempo.",
-          "La medicacion es solo una parte del cuidado del TDAH. Segun sus necesidades, el tratamiento tambien puede incluir terapia, estrategias conductuales, recomendaciones de estilo de vida u otros apoyos.",
+      faq: {
+        title: "Preguntas Frecuentes",
+        items: [
+          {
+            question: "Aceptan mi seguro para las pruebas de TDAH?",
+            answer:
+              "Aceptamos Cigna, Blue Cross Blue Shield, Humana, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluacion de TDAH y el cuidado de seguimiento. Tambien aceptamos pago privado y seguros fuera de la red.",
+          },
+          {
+            question: "Que tan pronto me pueden atender?",
+            answer:
+              "Las citas de evaluacion de TDAH suelen estar disponibles en pocos dias. Programe en linea o comuniquese con nuestra oficina para encontrar el proximo horario disponible.",
+          },
+          {
+            question: "La prueba T.O.V.A. es un diagnostico por si sola?",
+            answer:
+              "No. T.O.V.A. es una herramienta clinica. Su clinico combina los resultados con su historial y sintomas como parte de una evaluacion integral antes de hacer cualquier diagnostico o recomendacion.",
+          },
+          {
+            question:
+              "Puedo recibir medicacion para el TDAH en Firefly despues de mi evaluacion?",
+            answer:
+              "Cuando es apropiado, si. Nuestra PMHNP-BC certificada por la junta ofrece evaluacion psiquiatrica y manejo continuo de medicamentos, coordinados con terapia y estrategias conductuales cuando es util.",
+          },
+          {
+            question: "Evaluan a adolescentes?",
+            answer:
+              "Si. Evaluamos a adolescentes y adultos, y el cuidado esta disponible en ingles y espanol.",
+          },
         ],
       },
       closing: {
-        title: "Vea Si las Pruebas de Atencion Son Adecuadas para Usted",
+        title: "Obtenga Respuestas Sobre Su Atencion y Enfoque",
         paragraph:
-          "Si el enfoque o el control de impulsos ha sido dificil de entender por su cuenta, una prueba estructurada puede aportar informacion util a la conversacion con su clinico.",
+          "Si el enfoque, la organizacion o el seguimiento le han estado afectando, una evaluacion clara es un primer paso practico—y tendra un equipo listo para ayudarle con lo que siga.",
+        cta: "Programar una evaluacion de TDAH",
         scheduleLabel: "Reservar en linea ahora",
       },
     },

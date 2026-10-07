@@ -11,11 +11,11 @@ import {
   Image,
   TherapistCard,
   LinkedText,
+  InsuranceLogos,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
 import { HERO_LOGO_URL, SCHEDULE_URL } from "@/constants";
 import { therapists } from "@/data/therapists";
-import { insurances } from "@/data/insurances";
 import { locationData } from "@/data/location";
 import { socialLinks } from "@/data/social";
 import { link, socialIcon } from "@/styles";
@@ -204,22 +204,7 @@ export function HomePageContent() {
           <Text variant="h2" className="text-center">
             {home.insurance.title}
           </Text>
-          <div className="flex flex-wrap justify-center gap-8">
-            {insurances.map((insurance) => (
-              <div
-                key={insurance.name}
-                className="flex h-16 w-32 items-center justify-center rounded bg-section-white"
-              >
-                <Image
-                  src={insurance.image}
-                  alt={insurance.name}
-                  width={128}
-                  height={64}
-                  className="max-h-full max-w-full [&_img]:object-contain"
-                />
-              </div>
-            ))}
-          </div>
+          <InsuranceLogos />
           <Divider />
           <Text variant="text" className="text-center">
             {home.insurance.cashPay}

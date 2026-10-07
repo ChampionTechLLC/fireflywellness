@@ -73,6 +73,22 @@ export function AdhdTestingPageJsonLd() {
       },
       medicalBusiness,
       medicalTherapy,
+      ...(page.faq
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${pageUrl}#faq`,
+              mainEntity: page.faq.items.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 
