@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Curious face with a checklist clipboard">
+  <circle cx="50" cy="50" r="44" />
+  <path d="M28 37 L40 35.5" />
+  <path d="M54 34 Q59.5 28.5 65 32" />
+  <circle cx="34" cy="45" r="2.5" fill="#000" stroke="none" />
+  <circle cx="60" cy="44" r="2.5" fill="#000" stroke="none" />
+  <path d="M38 66 Q48 72 58 65" />
+  <rect x="70" y="8.5" width="24" height="29" rx="3" fill="#fff" />
+  <rect x="77" y="4.5" width="10" height="6.5" rx="2" fill="#fff" />
+  <g stroke-width="2.5">
+    <path d="M73.5 19 L76 21.5 L80 16.5" />
+    <path d="M83 19 H90" />
+    <path d="M73.5 29 L76 31.5 L80 26.5" />
+    <path d="M83 29 H90" />
+  </g>
+</svg>

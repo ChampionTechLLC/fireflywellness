@@ -19,9 +19,11 @@ export type SiteContent = {
     schedule: string;
     clinicians: string;
     services: string;
+    fees: string;
     location: string;
     careers: string;
     clientPortal: string;
+    more: string;
     openMenu: string;
     closeMenu: string;
     mainLabel: string;
@@ -70,6 +72,7 @@ export type SiteContent = {
     insurance: {
       title: string;
       cashPay: string;
+      feesLink: string;
     };
     contact: {
       title: string;
@@ -98,9 +101,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       schedule: "Schedule an Appointment",
       clinicians: "Clinicians",
       services: "Services",
+      fees: "Insurance & Fees",
       location: "Location",
       careers: "Careers",
       clientPortal: "Client Portal",
+      more: "More",
       openMenu: "Open menu",
       closeMenu: "Close menu",
       mainLabel: "Main",
@@ -131,9 +136,23 @@ export const siteContent: Record<Locale, SiteContent> = {
           {
             title: "ADHD & Attention Testing",
             blurb:
-              "Computer-based T.O.V.A. testing to help evaluate attention and impulse control as part of a broader clinical picture.",
+              "Computer-based T.O.V.A. testing to help evaluate attention and impulse control as one part of a full evaluation.",
             href: "/adhd-testing",
             learnMore: "Learn more about ADHD testing",
+          },
+          {
+            title: "Anxiety Treatment",
+            blurb:
+              "Psychiatric evaluation, medication when appropriate, and therapy for worry, panic, and other anxiety concerns—coordinated in one practice.",
+            href: "/anxiety-treatment",
+            learnMore: "Learn more about anxiety treatment",
+          },
+          {
+            title: "Depression Treatment",
+            blurb:
+              "Psychiatric evaluation, antidepressant medication management, and therapy, with regular follow-up as you start feeling like yourself again.",
+            href: "/depression-treatment",
+            learnMore: "Learn more about depression treatment",
           },
           {
             title: "Therapy",
@@ -180,7 +199,7 @@ export const siteContent: Record<Locale, SiteContent> = {
             aboutMe: [
               "My name is Jeannette Sziler. I am a Psychiatric Mental Health Nurse Practitioner, Licensed Clinical Professional Counselor and founder of Firefly Wellness. I have been in the mental healthcare field in some capacity or another for almost 2 decades. I am a bilingual, bicultural and biracial Mexican American.",
               "Throughout the years, I have worked with a variety of clients, allowing me to recognize I work best with those aged 11 through their 30s. Refining my skill set has led me to truly enjoy using expressive art therapies as well as Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT).",
-              "In addition to my work as an LCPC, I completed my Master of Science in Nursing (MSN) and am a board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC). I provide psychiatric medication care at Firefly Wellness alongside therapy, expanding the ways we can support our clients' mental health needs.",
+              "In addition to my work as an LCPC, I completed my Master of Science in Nursing (MSN) and am a board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP). I provide psychiatric medication care at Firefly Wellness alongside therapy, expanding the ways we can support our clients' mental health needs.",
             ],
             aboutMeBullets: [
               "My fifteen minutes of fame was when I was featured in a local newspaper after my friend and I completed 100 hours of volunteer work at a local hospital when we were 13 years old.",
@@ -223,6 +242,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       insurance: {
         title: "Insurance We Accept",
         cashPay: "We also accept cash pay and out-of-network insurances.",
+        feesLink: "View insurance details and self-pay rates",
       },
       contact: {
         title: "Let's Talk.",
@@ -250,9 +270,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       schedule: "Programar una cita",
       clinicians: "Clinicos",
       services: "Servicios",
+      fees: "Seguros y tarifas",
       location: "Ubicacion",
       careers: "Carreras",
       clientPortal: "Portal del cliente",
+      more: "Mas",
       openMenu: "Abrir menu",
       closeMenu: "Cerrar menu",
       mainLabel: "Principal",
@@ -283,9 +305,23 @@ export const siteContent: Record<Locale, SiteContent> = {
           {
             title: "Pruebas de TDAH y atencion",
             blurb:
-              "Pruebas T.O.V.A. por computadora para ayudar a evaluar la atencion y el control de impulsos como parte de un panorama clinico mas amplio.",
+              "Pruebas T.O.V.A. por computadora para ayudar a evaluar la atencion y el control de impulsos como una parte de una evaluacion completa.",
             href: "/adhd-testing",
             learnMore: "Conozca mas sobre pruebas de TDAH",
+          },
+          {
+            title: "Tratamiento de la ansiedad",
+            blurb:
+              "Evaluacion psiquiatrica, medicacion cuando es apropiada y terapia para la preocupacion, el panico y otras inquietudes de ansiedad—coordinados en una sola practica.",
+            href: "/anxiety-treatment",
+            learnMore: "Conozca mas sobre el tratamiento de la ansiedad",
+          },
+          {
+            title: "Tratamiento de la depresion",
+            blurb:
+              "Evaluacion psiquiatrica, manejo de antidepresivos y terapia, con seguimiento regular a medida que vuelve a sentirse como usted mismo.",
+            href: "/depression-treatment",
+            learnMore: "Conozca mas sobre el tratamiento de la depresion",
           },
           {
             title: "Terapia",
@@ -332,7 +368,7 @@ export const siteContent: Record<Locale, SiteContent> = {
             aboutMe: [
               "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiatrica, consejera profesional clinica licenciada y fundadora de Firefly Wellness. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 decadas. Soy mexicoamericana bilingue, bicultural y birracial.",
               "A lo largo de los anos, he trabajado con una variedad de clientes, lo que me ha permitido reconocer que trabajo mejor con personas de 11 anos hasta sus 30s. Al refinar mis habilidades, he llegado a disfrutar mucho el uso de terapias de arte expresivo, asi como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptacion y Compromiso (ACT).",
-              "Ademas de mi trabajo como LCPC, complete mi Maestria en Ciencias de Enfermeria (MSN) y soy enfermera practicante de salud mental psiquiatrica certificada (PMHNP-BC). Brindo atencion de medicacion psiquiatrica en Firefly Wellness junto con la terapia, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
+              "Ademas de mi trabajo como LCPC, complete mi Maestria en Ciencias de Enfermeria (MSN) y soy enfermera practicante de salud mental psiquiatrica certificada (PMHNP). Brindo atencion de medicacion psiquiatrica en Firefly Wellness junto con la terapia, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
             ],
             aboutMeBullets: [
               "Mis quince minutos de fama fueron cuando apareci en un periodico local despues de que una amiga y yo completamos 100 horas de voluntariado en un hospital local cuando teniamos 13 anos.",
@@ -376,6 +412,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         title: "Seguros Que Aceptamos",
         cashPay:
           "Tambien aceptamos pago privado y seguros fuera de la red.",
+        feesLink: "Ver detalles de seguros y tarifas de pago privado",
       },
       contact: {
         title: "Hablemos.",

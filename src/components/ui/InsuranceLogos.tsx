@@ -7,14 +7,14 @@ export function InsuranceLogos() {
       {insurances.map((insurance) => (
         <div
           key={insurance.name}
-          className="flex h-16 w-32 items-center justify-center rounded bg-section-white"
+          className="flex h-16 w-32 items-center justify-center overflow-hidden rounded bg-section-white"
         >
           <Image
             src={insurance.image}
             alt={insurance.name}
             width={128}
             height={64}
-            className="max-h-full max-w-full [&_img]:object-contain"
+            className={`flex h-full w-full items-center justify-center [&_img]:max-h-full [&_img]:w-auto [&_img]:object-contain ${insurance.className ?? ""}`.trim()}
           />
         </div>
       ))}

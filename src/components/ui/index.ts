@@ -12,3 +12,4 @@ export { Expandable } from "./Expandable";
 export { LanguageToggle } from "./LanguageToggle";
 export { LinkedText } from "./LinkedText";
 export { InsuranceLogos } from "./InsuranceLogos";
+export { ServiceIcon, ServiceListItem } from "./ServiceListItem";

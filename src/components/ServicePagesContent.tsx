@@ -8,6 +8,8 @@ import {
   InsuranceLogos,
   LinkedText,
   Section,
+  ServiceIcon,
+  ServiceListItem,
   Text,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -16,6 +18,7 @@ import {
   getServicePagesContent,
   type ServicePageCopy,
 } from "@/data/servicePages";
+import { testingToolsIcon } from "@/data/serviceIcons";
 import { link } from "@/styles";
 
 const contentColumn = "mx-auto flex max-w-2xl flex-col gap-8 text-left";
@@ -40,20 +43,19 @@ function CheckIcon() {
 function ServicePageBody({ page }: { page: ServicePageCopy }) {
   const sections: { key: string; content: React.ReactNode }[] = [];
 
-  if (page.insurance) {
-    sections.push({
-      key: "insurance",
-      content: (
-        <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
-          <Text variant="h2">{page.insurance.title}</Text>
-          <Text variant="text">{page.insurance.paragraph}</Text>
-          <InsuranceLogos />
-          <Divider />
-          <Text variant="text">{page.insurance.cashPay}</Text>
-        </div>
-      ),
-    });
-  }
+  sections.push({
+    key: "who",
+    content: (
+      <div className={contentColumn}>
+        <Text variant="h2">{page.who.title}</Text>
+        <Text variant="text">{page.who.intro}</Text>
+        <BulletList items={page.who.items} />
+        {page.who.closing ? (
+          <Text variant="text">{page.who.closing}</Text>
+        ) : null}
+      </div>
+    ),
+  });
 
   if (page.carePath) {
     sections.push({
@@ -77,7 +79,9 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
                   <Text variant="h4" as="h3">
                     {step.title}
                   </Text>
-                  <Text variant="text">{step.description}</Text>
+                  <Text variant="text">
+                    <LinkedText>{step.description}</LinkedText>
+                  </Text>
                 </div>
               </li>
             ))}
@@ -87,6 +91,29 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
               {page.hero.cta}
             </Button>
           </div>
+        </div>
+      ),
+    });
+  }
+
+  if (page.insurance) {
+    sections.push({
+      key: "insurance",
+      content: (
+        <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
+          <Text variant="h2">{page.insurance.title}</Text>
+          <Text variant="text">{page.insurance.paragraph}</Text>
+          <InsuranceLogos />
+          <Divider />
+          <Text variant="text">{page.insurance.cashPay}</Text>
+          {page.insurance.feesLink ? (
+            <NextLink
+              href="/insurance-fees"
+              className={`${link.root} self-center`}
+            >
+              {page.insurance.feesLink}
+            </NextLink>
+          ) : null}
         </div>
       ),
     });
@@ -109,7 +136,9 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
                 <Text variant="h4" as="h3">
                   {item.title}
                 </Text>
-                <Text variant="text">{item.paragraph}</Text>
+                <Text variant="text">
+                  <LinkedText>{item.paragraph}</LinkedText>
+                </Text>
               </div>
             ))}
           </div>
@@ -118,33 +147,51 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
     });
   }
 
-  sections.push({
-    key: "who",
-    content: (
-      <div className={contentColumn}>
-        <Text variant="h2">{page.who.title}</Text>
-        <Text variant="text">{page.who.intro}</Text>
-        <BulletList items={page.who.items} />
-        {page.who.closing ? (
-          <Text variant="text">{page.who.closing}</Text>
-        ) : null}
-      </div>
-    ),
-  });
+  if (page.what) {
+    const what = page.what;
+    sections.push({
+      key: "what",
+      content: (
+        <div className={contentColumn}>
+          <Text variant="h2">{what.title}</Text>
+          {what.paragraphs.map((paragraph) => (
+            <Text key={paragraph} variant="text">
+              <LinkedText>{paragraph}</LinkedText>
+            </Text>
+          ))}
+        </div>
+      ),
+    });
+  }
 
-  sections.push({
-    key: "what",
-    content: (
-      <div className={contentColumn}>
-        <Text variant="h2">{page.what.title}</Text>
-        {page.what.paragraphs.map((paragraph) => (
-          <Text key={paragraph} variant="text">
-            <LinkedText>{paragraph}</LinkedText>
-          </Text>
-        ))}
-      </div>
-    ),
-  });
+  for (const topic of page.topics ?? []) {
+    sections.push({
+      key: `topic-${topic.id}`,
+      content: (
+        <div id={topic.id} className={contentColumn}>
+          <Text variant="h2">{topic.title}</Text>
+          {topic.intro ? <Text variant="text">{topic.intro}</Text> : null}
+          {topic.bullets ? <BulletList items={topic.bullets} /> : null}
+          {topic.paragraphs?.map((paragraph) => (
+            <Text key={paragraph} variant="text">
+              <LinkedText>{paragraph}</LinkedText>
+            </Text>
+          ))}
+          {topic.links ? (
+            <ul className="flex flex-col gap-2">
+              {topic.links.map((item) => (
+                <li key={item.href}>
+                  <NextLink href={item.href} className={link.root}>
+                    {item.label}
+                  </NextLink>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ),
+    });
+  }
 
   if (page.expect) {
     const expect = page.expect;
@@ -156,7 +203,9 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
           {expect.intro ? <Text variant="text">{expect.intro}</Text> : null}
           <ol className="list-decimal space-y-2 pl-5 text-base leading-relaxed text-body">
             {expect.steps.map((step) => (
-              <li key={step}>{step}</li>
+              <li key={step}>
+                <LinkedText>{step}</LinkedText>
+              </li>
             ))}
           </ol>
         </div>
@@ -173,7 +222,7 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
           <Text variant="h2">{ongoingCare.title}</Text>
           {ongoingCare.paragraphs.map((paragraph) => (
             <Text key={paragraph} variant="text">
-              {paragraph}
+              <LinkedText>{paragraph}</LinkedText>
             </Text>
           ))}
         </div>
@@ -264,7 +313,9 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
                   className="flex items-start gap-2 text-base leading-relaxed text-body"
                 >
                   <CheckIcon />
-                  <span>{highlight}</span>
+                  <span>
+                    <LinkedText>{highlight}</LinkedText>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -329,6 +380,18 @@ export function AdhdTestingPageContent() {
   return <ServicePageBody page={page} />;
 }
 
+export function AnxietyTreatmentPageContent() {
+  const { locale } = useLanguage();
+  const page = getServicePagesContent(locale).anxietyTreatment;
+  return <ServicePageBody page={page} />;
+}
+
+export function DepressionTreatmentPageContent() {
+  const { locale } = useLanguage();
+  const page = getServicePagesContent(locale).depressionTreatment;
+  return <ServicePageBody page={page} />;
+}
+
 export function MedicationManagementPageContent() {
   const { locale } = useLanguage();
   const page = getServicePagesContent(locale).medicationManagement;
@@ -362,7 +425,7 @@ export function ServicesHubPageContent() {
           <Text variant="h2">{hub.overview.title}</Text>
           {hub.overview.paragraphs.map((paragraph) => (
             <Text key={paragraph} variant="text">
-              {paragraph}
+              <LinkedText>{paragraph}</LinkedText>
             </Text>
           ))}
         </div>
@@ -372,20 +435,21 @@ export function ServicesHubPageContent() {
         <div className={contentColumn}>
           <Text variant="h2">{hub.offeringsTitle}</Text>
           {hub.offerings.map((offering) => (
-            <div key={offering.href} className="flex flex-col gap-3">
-              <Text variant="h3">{offering.title}</Text>
-              <Text variant="text">{offering.blurb}</Text>
-              <NextLink href={offering.href} className={`${link.root} self-start`}>
-                {offering.learnMore}
-              </NextLink>
-            </div>
+            <ServiceListItem
+              key={offering.href}
+              {...offering}
+              blurb={<LinkedText>{offering.blurb}</LinkedText>}
+            />
           ))}
         </div>
       </Section>
 
       <Section variant="green">
         <div className={contentColumn}>
-          <Text variant="h2">{hub.additionalTools.title}</Text>
+          <div className="flex items-center gap-4 md:gap-6">
+            <ServiceIcon src={testingToolsIcon} />
+            <Text variant="h2">{hub.additionalTools.title}</Text>
+          </div>
           {hub.additionalTools.items.map((item) => (
             <div key={item.title} className="flex flex-col gap-3">
               <Text variant="h3">{item.title}</Text>
@@ -414,7 +478,9 @@ export function ServicesHubPageContent() {
           {hub.faq.items.map((item) => (
             <div key={item.question} className="flex flex-col gap-2">
               <Text variant="h3">{item.question}</Text>
-              <Text variant="text">{item.answer}</Text>
+              <Text variant="text">
+                <LinkedText>{item.answer}</LinkedText>
+              </Text>
             </div>
           ))}
         </div>

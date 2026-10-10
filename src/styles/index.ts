@@ -73,6 +73,14 @@ export const nav = {
   mobileMenuInner: "flex flex-col px-6 py-4 gap-1",
   mobileLink:
     "block rounded-lg px-4 py-3 uppercase text-body hover:bg-body/10 hover:text-heading font-medium no-underline",
+  mobileGroupLabel:
+    "mt-2 border-t border-body/15 px-4 pt-4 pb-1 text-xs font-semibold uppercase tracking-wide text-body/70",
+  moreButton:
+    "inline-flex items-center gap-1 uppercase text-body hover:text-heading font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2 rounded",
+  dropdown:
+    "absolute right-0 top-full mt-3 flex min-w-[12rem] flex-col rounded-lg border border-body/20 bg-background py-2 shadow-md",
+  dropdownLink:
+    "block px-4 py-2 uppercase text-body hover:bg-body/10 hover:text-heading font-medium no-underline focus:outline-none focus:bg-body/10",
 } as const;
 
 export const languageToggle = {

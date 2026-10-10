@@ -8,6 +8,9 @@ const pages = [
   { path: "/therapy", lastModified: "2026-10-02" },
   { path: "/adhd-testing", lastModified: "2026-10-02" },
   { path: "/medication-management", lastModified: "2026-10-02" },
+  { path: "/anxiety-treatment", lastModified: "2026-10-07" },
+  { path: "/depression-treatment", lastModified: "2026-10-07" },
+  { path: "/insurance-fees", lastModified: "2026-10-07" },
   { path: "/careers", lastModified: "2026-10-02" },
 ] as const;
 

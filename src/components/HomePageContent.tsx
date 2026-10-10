@@ -12,10 +12,12 @@ import {
   TherapistCard,
   LinkedText,
   InsuranceLogos,
+  ServiceListItem,
 } from "@/components/ui";
 import { useLanguage } from "@/components/LanguageProvider";
 import { HERO_LOGO_URL, SCHEDULE_URL } from "@/constants";
 import { therapists } from "@/data/therapists";
+import { testingToolsIcon } from "@/data/serviceIcons";
 import { locationData } from "@/data/location";
 import { socialLinks } from "@/data/social";
 import { link, socialIcon } from "@/styles";
@@ -132,23 +134,20 @@ export function HomePageContent() {
             {home.servicesOverview.title}
           </Text>
           {home.servicesOverview.items.map((item) => (
-            <div key={item.href} className="flex flex-col gap-2">
-              <Text variant="h3">{item.title}</Text>
-              <Text variant="text">{item.blurb}</Text>
-              <NextLink href={item.href} className={`${link.root} self-start`}>
-                {item.learnMore}
-              </NextLink>
-            </div>
+            <ServiceListItem key={item.href} {...item} />
           ))}
-          <div className="flex flex-col gap-2">
-            <Text variant="h3">{home.servicesOverview.supportingNoteTitle}</Text>
-            <Text variant="text">
+          <ServiceListItem
+            title={home.servicesOverview.supportingNoteTitle}
+            blurb={
               <LinkedText>{home.servicesOverview.supportingNote}</LinkedText>
-            </Text>
+            }
+            icon={testingToolsIcon}
+          />
+          <div className="flex justify-center">
+            <Button href="/services" variant="primary">
+              {home.servicesOverview.viewAllCta}
+            </Button>
           </div>
-          <Button href="/services" variant="primary" className="self-start">
-            {home.servicesOverview.viewAllCta}
-          </Button>
         </div>
       </Section>
 
@@ -209,6 +208,12 @@ export function HomePageContent() {
           <Text variant="text" className="text-center">
             {home.insurance.cashPay}
           </Text>
+          <NextLink
+            href="/insurance-fees"
+            className={`${link.root} self-center`}
+          >
+            {home.insurance.feesLink}
+          </NextLink>
         </div>
       </Section>
 
