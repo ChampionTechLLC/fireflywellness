@@ -1,63 +1,39 @@
-import { HERO_LOGO_URL, SITE_URL } from "@/constants";
+import { SITE_URL } from "@/constants";
 import { locationData } from "@/data/location";
 import {
   getServicePagesContent,
   type ServicePagesContent,
 } from "@/data/servicePages";
-import { businessLocationJsonLd } from "@/lib/businessJsonLd";
+import type { Locale } from "@/data/siteContent";
+import { BUSINESS_ID, medicalBusinessJsonLd } from "@/lib/businessJsonLd";
+import { localizedPath, type EnglishPath } from "@/lib/routes";
 
-const areaServed = [
-  "Hinsdale, IL",
-  "Oak Brook, IL",
-  "Clarendon Hills, IL",
-  "Western Springs, IL",
-  "Westmont, IL",
-];
+type ServicePageKey = Exclude<keyof ServicePagesContent, "hub">;
 
-type ServicePageJsonLdProps = {
-  pageKey: Exclude<keyof ServicePagesContent, "hub">;
-  path: string;
+const pagePaths: Record<ServicePageKey, EnglishPath> = {
+  therapy: "/therapy",
+  adhdTesting: "/adhd-testing",
+  medicationManagement: "/medication-management",
+  anxietyTreatment: "/anxiety-treatment",
+  depressionTreatment: "/depression-treatment",
 };
 
-export function ServicePageJsonLd({ pageKey, path }: ServicePageJsonLdProps) {
+type ServicePageJsonLdProps = {
+  pageKey: ServicePageKey;
+  locale: Locale;
+};
+
+export function ServicePageJsonLd({ pageKey, locale }: ServicePageJsonLdProps) {
   const address = locationData[0];
   if (!address) return null;
 
-  const page = getServicePagesContent("en")[pageKey];
-  const logoUrl = new URL(HERO_LOGO_URL, SITE_URL).toString();
-  const pageUrl = new URL(path, SITE_URL).toString();
-  const businessId = `${SITE_URL}/#medicalbusiness`;
+  const page = getServicePagesContent(locale)[pageKey];
+  const pageUrl = new URL(
+    localizedPath(pagePaths[pageKey], locale),
+    SITE_URL,
+  ).toString();
   const serviceId = `${pageUrl}#service`;
   const faqId = `${pageUrl}#faq`;
-
-  const medicalBusiness = {
-    "@type": "MedicalBusiness",
-    "@id": businessId,
-    name: "Firefly Wellness, PLLC",
-    alternateName: "Firefly Counseling",
-    url: SITE_URL,
-    image: logoUrl,
-    logo: logoUrl,
-    description: page.meta.description,
-    ...(address.phone
-      ? { telephone: address.phone.replace(/\./g, "-") }
-      : {}),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: [address.address1, address.address2]
-        .filter(Boolean)
-        .join(", "),
-      addressLocality: address.city,
-      addressRegion: address.state,
-      postalCode: address.zip,
-      addressCountry: "US",
-    },
-    areaServed: areaServed.map((name) => ({
-      "@type": "City",
-      name,
-    })),
-    ...businessLocationJsonLd(address),
-  };
 
   const medicalTherapy = {
     "@type": "MedicalTherapy",
@@ -65,7 +41,7 @@ export function ServicePageJsonLd({ pageKey, path }: ServicePageJsonLdProps) {
     name: page.hero.title,
     description: page.meta.description,
     url: pageUrl,
-    provider: { "@id": businessId },
+    provider: { "@id": BUSINESS_ID },
     ...(page.condition
       ? {
           relevantSpecialty: "Psychiatric",
@@ -78,6 +54,7 @@ export function ServicePageJsonLd({ pageKey, path }: ServicePageJsonLdProps) {
     ? {
         "@type": "FAQPage",
         "@id": faqId,
+        inLanguage: locale,
         mainEntity: page.faq.items.map((item) => ({
           "@type": "Question",
           name: item.question,
@@ -98,14 +75,15 @@ export function ServicePageJsonLd({ pageKey, path }: ServicePageJsonLdProps) {
         url: pageUrl,
         name: page.meta.title,
         description: page.meta.description,
-        about: { "@id": businessId },
+        inLanguage: locale,
+        about: { "@id": BUSINESS_ID },
         mainEntity: [
-          { "@id": businessId },
+          { "@id": BUSINESS_ID },
           { "@id": serviceId },
           ...(faqPage ? [{ "@id": faqId }] : []),
         ],
       },
-      medicalBusiness,
+      medicalBusinessJsonLd(address, page.meta.description),
       medicalTherapy,
       ...(faqPage ? [faqPage] : []),
     ],

@@ -17,6 +17,7 @@ import { SCHEDULE_URL } from "@/constants";
 import {
   getServicePagesContent,
   type ServicePageCopy,
+  type ServicePagesContent,
 } from "@/data/servicePages";
 import { testingToolsIcon } from "@/data/serviceIcons";
 import { link } from "@/styles";
@@ -41,6 +42,7 @@ function CheckIcon() {
 }
 
 function ServicePageBody({ page }: { page: ServicePageCopy }) {
+  const { localize } = useLanguage();
   const sections: { key: string; content: React.ReactNode }[] = [];
 
   sections.push({
@@ -108,7 +110,7 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
           <Text variant="text">{page.insurance.cashPay}</Text>
           {page.insurance.feesLink ? (
             <NextLink
-              href="/insurance-fees"
+              href={localize("/insurance-fees")}
               className={`${link.root} self-center`}
             >
               {page.insurance.feesLink}
@@ -181,7 +183,7 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
             <ul className="flex flex-col gap-2">
               {topic.links.map((item) => (
                 <li key={item.href}>
-                  <NextLink href={item.href} className={link.root}>
+                  <NextLink href={localize(item.href)} className={link.root}>
                     {item.label}
                   </NextLink>
                 </li>
@@ -241,7 +243,7 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
           <ul className="flex flex-col gap-2">
             {related.links.map((item) => (
               <li key={item.href}>
-                <NextLink href={item.href} className={link.root}>
+                <NextLink href={localize(item.href)} className={link.root}>
                   {item.label}
                 </NextLink>
               </li>
@@ -358,7 +360,10 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
             </Text>
           ) : null}
           {page.closing.cliniciansLabel && page.closing.cliniciansHref ? (
-            <NextLink href={page.closing.cliniciansHref} className={link.root}>
+            <NextLink
+              href={localize(page.closing.cliniciansHref)}
+              className={link.root}
+            >
               {page.closing.cliniciansLabel}
             </NextLink>
           ) : null}
@@ -368,33 +373,13 @@ function ServicePageBody({ page }: { page: ServicePageCopy }) {
   );
 }
 
-export function TherapyPageContent() {
+export function ServicePageContent({
+  pageKey,
+}: {
+  pageKey: Exclude<keyof ServicePagesContent, "hub">;
+}) {
   const { locale } = useLanguage();
-  const page = getServicePagesContent(locale).therapy;
-  return <ServicePageBody page={page} />;
-}
-
-export function AdhdTestingPageContent() {
-  const { locale } = useLanguage();
-  const page = getServicePagesContent(locale).adhdTesting;
-  return <ServicePageBody page={page} />;
-}
-
-export function AnxietyTreatmentPageContent() {
-  const { locale } = useLanguage();
-  const page = getServicePagesContent(locale).anxietyTreatment;
-  return <ServicePageBody page={page} />;
-}
-
-export function DepressionTreatmentPageContent() {
-  const { locale } = useLanguage();
-  const page = getServicePagesContent(locale).depressionTreatment;
-  return <ServicePageBody page={page} />;
-}
-
-export function MedicationManagementPageContent() {
-  const { locale } = useLanguage();
-  const page = getServicePagesContent(locale).medicationManagement;
+  const page = getServicePagesContent(locale)[pageKey];
   return <ServicePageBody page={page} />;
 }
 

@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import { SCHEDULE_URL } from "@/constants";
 import { nav } from "@/styles";
-import { Button, LanguageToggle } from "@/components/ui";
+import { Button, LanguageSwitch } from "@/components/ui";
 
 type NavItem =
   | { label: string; href: string; kind: "hash" }
@@ -138,14 +138,26 @@ function MoreMenu({ label, items }: { label: string; items: NavItem[] }) {
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { content } = useLanguage();
+  const { content, localize } = useLanguage();
   const primaryItems: NavItem[] = [
-    { label: content.nav.services, href: "/services", kind: "route" },
-    { label: content.nav.clinicians, href: "/#clinicians", kind: "hash" },
-    { label: content.nav.fees, href: "/insurance-fees", kind: "route" },
+    { label: content.nav.services, href: localize("/services"), kind: "route" },
+    {
+      label: content.nav.clinicians,
+      href: localize("/#clinicians"),
+      kind: "hash",
+    },
+    {
+      label: content.nav.fees,
+      href: localize("/insurance-fees"),
+      kind: "route",
+    },
   ];
   const moreItems: NavItem[] = [
-    { label: content.nav.location, href: "/#location", kind: "hash" },
+    {
+      label: content.nav.location,
+      href: localize("/#location"),
+      kind: "hash",
+    },
     {
       label: content.nav.clientPortal,
       href: CLIENT_PORTAL_URL,
@@ -159,11 +171,11 @@ export function Navbar() {
     <header className={nav.bar}>
       <div className="border-b border-body/10">
         <div className="mx-auto flex h-9 max-w-[72rem] items-center justify-end px-6 md:px-8">
-          <LanguageToggle />
+          <LanguageSwitch />
         </div>
       </div>
       <div className={nav.inner}>
-        <NextLink href="/" className={nav.brand}>
+        <NextLink href={localize("/")} className={nav.brand}>
           {content.nav.brand}
         </NextLink>
 

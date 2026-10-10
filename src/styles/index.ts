@@ -83,11 +83,7 @@ export const nav = {
     "block px-4 py-2 uppercase text-body hover:bg-body/10 hover:text-heading font-medium no-underline focus:outline-none focus:bg-body/10",
 } as const;
 
-export const languageToggle = {
-  root:
-    "inline-flex items-center rounded-lg border border-body/25 bg-background p-0.5 text-xs font-bold uppercase tracking-wide text-body transition-colors focus-within:ring-2 focus-within:ring-heading focus-within:ring-offset-2",
-  option:
-    "rounded-md px-2.5 py-1 transition-colors hover:text-heading focus:outline-none",
-  active: "bg-section-green text-heading",
-  inactive: "text-body",
+export const languageSwitch = {
+  link:
+    "inline-flex items-center rounded-lg border border-body/25 bg-background px-3 py-1 text-xs font-bold uppercase tracking-wide text-body no-underline transition-colors hover:bg-section-green hover:text-heading focus:outline-none focus:ring-2 focus:ring-heading focus:ring-offset-2",
 } as const;

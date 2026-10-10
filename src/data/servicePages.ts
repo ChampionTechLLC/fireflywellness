@@ -175,24 +175,24 @@ const concernsItemsEn = [
 ];
 
 const concernsItemsEs = [
-  "Depresion",
-  "Ansiedad y estres",
+  "Depresión",
+  "Ansiedad y estrés",
   "Trauma",
   "TEPT",
   "Intimidad sexual",
   "Cuidado afirmativo LGBTQ+",
   "Dificultades en transiciones de vida",
-  "Problemas de relacion",
-  "TDAH y problemas de atencion",
+  "Problemas de relación",
+  "TDAH y problemas de atención",
   "Problemas escolares",
   "Fobias y miedos",
   "Familia, parejas, matrimonio",
-  "Consejeria prematrimonial",
+  "Consejería prematrimonial",
   "Temas de la mujer",
-  "Regulacion emocional",
+  "Regulación emocional",
   "TOC y conductas obsesivas",
   "Problemas laborales",
-  "Problemas de sueno",
+  "Problemas de sueño",
 ];
 
 const servicePagesContent: Record<Locale, ServicePagesContent> = {
@@ -1077,245 +1077,245 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
     hub: {
       meta: {
         title:
-          "Medicacion Psiquiatrica, Pruebas de TDAH y Terapia en Hinsdale | Firefly Wellness",
+          "Servicios de Salud Mental en Español en Hinsdale | Firefly Wellness",
         description:
-          "Cuidado de salud mental ambulatorio coordinado en Hinsdale para adolescentes hasta adultos—medicacion psiquiatrica, pruebas de TDAH y atencion, y terapia en una sola practica.",
+          "Atención de salud mental en español en Hinsdale, IL: medicación psiquiátrica, evaluación de TDAH y terapia para adolescentes y adultos, coordinadas en una sola práctica. Aceptamos la mayoría de los seguros.",
       },
       hero: {
-        title: "Servicios de Salud Mental en Hinsdale",
+        title: "Servicios de Salud Mental en Español en Hinsdale",
         subtitle:
-          "Medicacion psiquiatrica, pruebas de TDAH y atencion, y terapia en una practica coordinada en Hinsdale, IL—sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
+          "Medicación psiquiátrica, pruebas de TDAH y atención, y terapia en una práctica coordinada en Hinsdale, IL—sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
         cta: "Programar una cita",
       },
       overview: {
-        title: "Cuidado Coordinado en Una Sola Practica",
+        title: "Cuidado Coordinado en Una Sola Práctica",
         paragraphs: [
-          "En Firefly Wellness, adoptamos un enfoque colaborativo del cuidado, reuniendo la experiencia adecuada en un solo lugar. En lugar de coordinar proveedores en distintos consultorios, puede acceder a un apoyo integral dentro de una sola practica, con clinicos que trabajan juntos para mantener su cuidado conectado con sus necesidades, metas y bienestar general.",
-          "Atendemos a adolescentes y adultos, con cuidado disponible en ingles y espanol. Ya sea que este dando su primer paso hacia el apoyo o buscando lo que sigue, lo acompanamos donde se encuentre y le brindamos un cuidado reflexivo y personalizado en cada paso del camino.",
+          "En Firefly Wellness, adoptamos un enfoque colaborativo del cuidado, reuniendo la experiencia adecuada en un solo lugar. En lugar de coordinar proveedores en distintos consultorios, puede acceder a un apoyo integral dentro de una sola práctica, con clínicos que trabajan juntos para mantener su cuidado conectado con sus necesidades, metas y bienestar general.",
+          "Atendemos a adolescentes y adultos, con cuidado disponible en inglés y español. Ya sea que este dando su primer paso hacia el apoyo o buscando lo que sigue, lo acompañamos donde se encuentre y le brindamos un cuidado reflexivo y personalizado en cada paso del camino.",
         ],
       },
       offeringsTitle: "Servicios Principales",
       offerings: [
         {
-          title: "Manejo de Medicacion Psiquiatrica",
+          title: "Manejo de Medicación Psiquiátrica",
           blurb:
-            "Nuestra PMHNP certificada por la junta ofrece evaluacion personalizada de medicacion psiquiatrica y manejo continuo de medicamentos para el TDAH, la ansiedad, la depresion y otras inquietudes de salud mental. El tratamiento se adapta a sus sintomas, historial, metas y necesidades individuales.",
+            "Nuestra PMHNP certificada por la junta ofrece evaluación personalizada de medicación psiquiátrica y manejo continuo de medicamentos para el TDAH, la ansiedad, la depresión y otras inquietudes de salud mental. El tratamiento se adapta a sus síntomas, historial, metas y necesidades individuales.",
           href: "/medication-management",
-          learnMore: "Conozca mas sobre medicacion psiquiatrica",
+          learnMore: "Conozca más sobre medicación psiquiátrica",
         },
         {
-          title: "Pruebas de TDAH y Atencion",
+          title: "Pruebas de TDAH y Atención",
           blurb:
-            "Las pruebas T.O.V.A. por computadora ayudan a evaluar la atencion y el control de impulsos como una parte de una evaluacion completa. Los resultados se revisan con su clinico y se usan junto con su historial y metas.",
+            "Las pruebas T.O.V.A. por computadora ayudan a evaluar la atención y el control de impulsos como una parte de una evaluación completa. Los resultados se revisan con su clínico y se usan junto con su historial y metas.",
           href: "/adhd-testing",
-          learnMore: "Conozca mas sobre pruebas de TDAH",
+          learnMore: "Conozca más sobre pruebas de TDAH",
         },
         {
           title: "Tratamiento de la Ansiedad",
           blurb:
-            "Evaluacion psiquiatrica, manejo de medicamentos cuando es apropiado y terapia para la ansiedad generalizada, el panico y otras inquietudes de ansiedad—coordinados en una sola practica para que se sienta mas tranquilo y con mas control.",
+            "Evaluación psiquiátrica, manejo de medicamentos cuando es apropiado y terapia para la ansiedad generalizada, el pánico y otras inquietudes de ansiedad—coordinados en una sola práctica para que se sienta más tranquilo y con más control.",
           href: "/anxiety-treatment",
-          learnMore: "Conozca mas sobre el tratamiento de la ansiedad",
+          learnMore: "Conozca más sobre el tratamiento de la ansiedad",
         },
         {
-          title: "Tratamiento de la Depresion",
+          title: "Tratamiento de la Depresión",
           blurb:
-            "Evaluacion psiquiatrica, manejo de antidepresivos y terapia para la depresion, con seguimiento regular para observar el progreso y ajustar el cuidado a medida que vuelve a sentirse como usted mismo.",
+            "Evaluación psiquiátrica, manejo de antidepresivos y terapia para la depresión, con seguimiento regular para observar el progreso y ajustar el cuidado a medida que vuelve a sentirse como usted mismo.",
           href: "/depression-treatment",
-          learnMore: "Conozca mas sobre el tratamiento de la depresion",
+          learnMore: "Conozca más sobre el tratamiento de la depresión",
         },
         {
           title: "Terapia",
           blurb:
-            "Consejeria individual para adolescentes, adultos jovenes y adultos—con enfoque en comprension, habilidades de afrontamiento y cambio duradero. Las sesiones ofrecen un espacio estable para trabajar la ansiedad, la depresion, el trauma, las relaciones y las transiciones de vida.",
+            "Consejería individual para adolescentes, adultos jóvenes y adultos—con enfoque en comprensión, habilidades de afrontamiento y cambio duradero. Las sesiones ofrecen un espacio estable para trabajar la ansiedad, la depresión, el trauma, las relaciones y las transiciones de vida.",
           href: "/therapy",
-          learnMore: "Conozca mas sobre terapia",
+          learnMore: "Conozca más sobre terapia",
         },
       ],
       additionalTools: {
         title: "Pruebas y Herramientas Adicionales",
         items: [
           {
-            title: "Pruebas Geneticas Tempus",
+            title: "Pruebas Genéticas Tempus",
             paragraph:
-              "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Los resultados se revisan con usted y se consideran junto con su historial y sintomas, a menudo como parte del cuidado de medicacion psiquiatrica.",
+              "Las pruebas genéticas de Tempus pueden aportar información adicional sobre cómo su cuerpo podría procesar ciertos medicamentos. Los resultados se revisan con usted y se consideran junto con su historial y síntomas, a menudo como parte del cuidado de medicación psiquiátrica.",
           },
           {
-            title: "Revisiones de Memoria y Cognicion",
+            title: "Revisiones de Memoria y Cognición",
             paragraph:
-              "Las evaluaciones BrainCheck ayudan a establecer una referencia inicial y a monitorear cambios en la memoria y el pensamiento con el tiempo. Su clinico revisa los resultados con usted y los considera junto con su historial, sintomas y otra informacion clinica para ayudar a orientar los proximos pasos. Las evaluaciones de seguimiento pueden ayudar a observar cambios entre visitas y aportar informacion adicional para apoyar el cuidado continuo, incluyendo terapia o manejo de medicamentos cuando sea apropiado.",
+              "Las evaluaciones BrainCheck ayudan a establecer una referencia inicial y a monitorear cambios en la memoria y el pensamiento con el tiempo. Su clínico revisa los resultados con usted y los considera junto con su historial, síntomas y otra información clínica para ayudar a orientar los próximos pasos. Las evaluaciones de seguimiento pueden ayudar a observar cambios entre visitas y aportar información adicional para apoyar el cuidado continuo, incluyendo terapia o manejo de medicamentos cuando sea apropiado.",
           },
         ],
       },
       concerns: {
         title: "Temas Con Los Que Ayudamos",
         intro:
-          "Acompanamos a adolescentes hasta adultos con una amplia gama de inquietudes de salud mental—en ingles y espanol—para que el cuidado se adapte a donde usted se encuentra.",
+          "Acompañamos a adolescentes hasta adultos con una amplia gama de inquietudes de salud mental—en inglés y español—para que el cuidado se adapte a donde usted se encuentra.",
         items: concernsItemsEs,
-        note: "Firefly Wellness ofrece cuidado de salud mental ambulatorio y no es un servicio de emergencia o crisis. Si usted o alguien que quiere esta en peligro inmediato, llame al 911 o acuda a la sala de emergencias mas cercana. Para apoyo las 24 horas, llame o envie un mensaje de texto al 988.",
+        note: "Firefly Wellness ofrece cuidado de salud mental ambulatorio y no es un servicio de emergencia o crisis. Si usted o alguien que quiere está en peligro inmediato, llame al 911 o acuda a la sala de emergencias más cercana. Para apoyo las 24 horas, llame o envíe un mensaje de texto al 988.",
       },
       faq: {
         title: "Preguntas Frecuentes",
         items: [
           {
             question:
-              "Ofrecen medicacion y terapia en la misma practica?",
+              "¿Ofrecen medicación y terapia en la misma práctica?",
             answer:
-              "Si. La medicacion, las pruebas de TDAH y atencion, y la terapia estan disponibles en una practica coordinada—nuestros proveedores trabajan juntos para que su cuidado se mantenga alineado con sus metas.",
+              "Sí. La medicación, las pruebas de TDAH y atención, y la terapia están disponibles en una práctica coordinada—nuestros proveedores trabajan juntos para que su cuidado se mantenga alineado con sus metas.",
           },
           {
-            question: "Quien puede recetar medicamentos en Firefly?",
+            question: "¿Quién puede recetar medicamentos en Firefly?",
             answer:
-              "Las visitas de prescripcion y el apoyo continuo con medicamentos los ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo.",
+              "Las visitas de prescripción y el apoyo continuo con medicamentos los ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo.",
           },
           {
             question:
-              "Las pruebas de TDAH son un diagnostico completo por si solas?",
+              "¿Las pruebas de TDAH son un diagnóstico completo por sí solas?",
             answer:
-              "No. La prueba T.O.V.A. es una herramienta clinica. Su clinico coloca los resultados en contexto con su historial, sintomas y metas antes de recomendar los proximos pasos.",
+              "No. La prueba T.O.V.A. es una herramienta clínica. Su clínico coloca los resultados en contexto con su historial, síntomas y metas antes de recomendar los próximos pasos.",
           },
           {
-            question: "Firefly es un servicio de emergencia o crisis?",
+            question: "¿Firefly es un servicio de emergencia o crisis?",
             answer:
-              "No. Ofrecemos cuidado de salud mental ambulatorio. Si usted o alguien que quiere esta en peligro inmediato, llame al 911 o acuda a la sala de emergencias mas cercana. Para apoyo las 24 horas, llame o envie un mensaje de texto al 988.",
+              "No. Ofrecemos cuidado de salud mental ambulatorio. Si usted o alguien que quiere está en peligro inmediato, llame al 911 o acuda a la sala de emergencias más cercana. Para apoyo las 24 horas, llame o envíe un mensaje de texto al 988.",
           },
         ],
       },
       closing: {
-        title: "Listo para Dar el Siguiente Paso?",
+        title: "¿Listo para Dar el Siguiente Paso?",
         paragraph:
-          "Ya sea que explore medicacion psiquiatrica, pruebas de atencion o terapia, estamos aqui para ayudarle a pasar de solo sobrellevar hacia un terreno mas estable.",
+          "Ya sea que explore medicación psiquiátrica, pruebas de atención o terapia, estamos aquí para ayudarle a pasar de solo sobrellevar hacia un terreno más estable.",
         cta: "Programar una cita",
       },
     },
     therapy: {
       slug: "therapy",
       meta: {
-        title: "Terapia en Hinsdale | Firefly Wellness",
+        title: "Terapia en Español en Hinsdale, IL | Firefly Wellness",
         description:
-          "Consejeria basada en evidencia en Hinsdale para adolescentes hasta adultos—ansiedad, depresion, trauma, relaciones y transiciones de vida—coordinada con medicacion psiquiatrica y pruebas de TDAH cuando es util.",
+          "Terapia en español en Hinsdale para adolescentes y adultos—ansiedad, depresión, trauma, relaciones y transiciones de vida—con terapeutas bilingües y coordinada con medicación psiquiátrica y pruebas de TDAH cuando es útil.",
       },
       hero: {
-        title: "Terapia en Hinsdale",
+        title: "Terapia en Español en Hinsdale",
         subtitle:
-          "Consejeria reflexiva y basada en evidencia para adolescentes, adultos jovenes y adultos—para reconectarse con sus fortalezas y avanzar hacia una vida mas estable en Hinsdale, IL, sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
+          "Consejería reflexiva y basada en evidencia para adolescentes, adultos jóvenes y adultos—para reconectarse con sus fortalezas y avanzar hacia una vida más estable en Hinsdale, IL, sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
         cta: "Programar una cita",
       },
       who: {
-        title: "A Quien Puede Ayudar la Terapia",
+        title: "A Quién Puede Ayudar la Terapia",
         intro:
-          "Nuestros clinicos trabajan con diversas edades e inquietudes. Muchos clientes llegan durante periodos de estres, cambio o cuando los patrones habituales dejan de funcionar.",
+          "Nuestros clínicos trabajan con diversas edades e inquietudes. Muchos clientes llegan durante periodos de estrés, cambio o cuando los patrones habituales dejan de funcionar.",
         items: [
-          "Adolescentes, estudiantes universitarios, adultos jovenes y adultos",
-          "Personas que atraviesan ansiedad, estres y abrumo emocional",
-          "Personas que experimentan depresion y animo bajo",
-          "Clientes que trabajan el trauma, el TEPT o efectos duraderos de experiencias dificiles",
-          "Personas con inquietudes de relacion, familia o intimidad",
-          "Personas que atraviesan transiciones de vida, desafios escolares o laborales, y apoyo relacionado con TDAH",
+          "Adolescentes, estudiantes universitarios, adultos jóvenes y adultos",
+          "Personas que atraviesan ansiedad, estrés y agobio emocional",
+          "Personas que experimentan depresión y ánimo bajo",
+          "Clientes que trabajan el trauma, el TEPT o efectos duraderos de experiencias difíciles",
+          "Personas con inquietudes de relación, familia o intimidad",
+          "Personas que atraviesan transiciones de vida, desafíos escolares o laborales, y apoyo relacionado con TDAH",
         ],
       },
       what: {
         title: "Por Que Terapia",
         paragraphs: [
-          "La vida puede sentirse abrumadora. El trauma, el estres cronico, las dificultades en las relaciones o las transiciones importantes pueden dejarle con ansiedad, animo bajo o atrapado en patrones que no ayudan.",
-          "No esta solo. Segun la National Alliance on Mental Illness (NAMI), 1 de cada 5 adultos experimenta desafios de salud mental cada ano. Tener dificultades no significa que este fallando.",
-          "La terapia puede ayudar. En Firefly Wellness, caminamos a su lado mientras se reconecta con sus fortalezas y avanza hacia una vida mas estable y significativa.",
-          "Nuestros clinicos utilizan enfoques como la Terapia Cognitivo-Conductual (CBT), la Terapia de Aceptacion y Compromiso (ACT), trabajo basado en fortalezas y terapias de arte expresivo cuando se ajustan a sus metas y preferencias.",
+          "La vida puede sentirse abrumadora. El trauma, el estrés crónico, las dificultades en las relaciones o las transiciones importantes pueden dejarle con ansiedad, ánimo bajo o atrapado en patrones que no ayudan.",
+          "No está solo. Según la National Alliance on Mental Illness (NAMI), 1 de cada 5 adultos experimenta desafíos de salud mental cada año. Tener dificultades no significa que este fallando.",
+          "La terapia puede ayudar. En Firefly Wellness, caminamos a su lado mientras se reconecta con sus fortalezas y avanza hacia una vida más estable y significativa.",
+          "Nuestros clínicos utilizan enfoques como la Terapia Cognitivo-Conductual (CBT), la Terapia de Aceptación y Compromiso (ACT), trabajo basado en fortalezas y terapias de arte expresivo cuando se ajustan a sus metas y preferencias.",
         ],
       },
       expect: {
         title: "Que Puede Esperar",
         intro:
-          "La terapia en Firefly ofrece un espacio seguro y sin juicio para la reflexion, el crecimiento y el cambio. Las sesiones suelen enfocarse en:",
+          "La terapia en Firefly ofrece un espacio seguro y sin juicio para la reflexión, el crecimiento y el cambio. Las sesiones suelen enfocarse en:",
         steps: [
           "Comprender sus pensamientos, emociones y patrones",
           "Fortalecer habilidades de afrontamiento para usar entre sesiones",
           "Crear cambios emocionales y conductuales sostenibles",
           "Aclarar metas con su terapeuta y dar seguimiento a un progreso significativo",
-          "Colaborar con otros proveedores de Firefly cuando la medicacion psiquiatrica o las pruebas de TDAH puedan ayudar",
+          "Colaborar con otros proveedores de Firefly cuando la medicación psiquiátrica o las pruebas de TDAH puedan ayudar",
         ],
       },
       related: {
         title: "Cuidado Relacionado en Firefly",
         paragraph:
-          "Algunos clientes se benefician de apoyos coordinados junto con la terapia. Cuando es una buena opcion, podemos conectarle con pruebas de TDAH y atencion o medicacion psiquiatrica dentro de la misma practica.",
+          "Algunos clientes se benefician de apoyos coordinados junto con la terapia. Cuando es una buena opción, podemos conectarle con pruebas de TDAH y atención o medicación psiquiátrica dentro de la misma práctica.",
         links: [
           {
-            label: "Pruebas de TDAH y Atencion",
+            label: "Pruebas de TDAH y Atención",
             href: "/adhd-testing",
           },
           {
-            label: "Medicacion Psiquiatrica",
+            label: "Medicación Psiquiátrica",
             href: "/medication-management",
           },
           { label: "Tratamiento de la Ansiedad", href: "/anxiety-treatment" },
-          { label: "Tratamiento de la Depresion", href: "/depression-treatment" },
+          { label: "Tratamiento de la Depresión", href: "/depression-treatment" },
         ],
       },
       closing: {
         title: "Vea Si la Terapia Es Adecuada para Usted",
         paragraph:
-          "Sentirse nervioso al comenzar terapia es completamente normal. Muchos clientes describen ese primer paso como uno de los mas valiosos que han tomado por si mismos.",
-        scheduleLabel: "Reservar en linea ahora",
+          "Sentirse nervioso al comenzar terapia es completamente normal. Muchos clientes describen ese primer paso como uno de los más valiosos que han tomado por sí mismos.",
+        scheduleLabel: "Reservar en línea ahora",
       },
     },
     adhdTesting: {
       slug: "adhd-testing",
       meta: {
-        title: "Evaluacion y Pruebas de TDAH en Hinsdale | Firefly Wellness",
+        title: "Evaluación de TDAH en Español en Hinsdale | Firefly Wellness",
         description:
-          "Evaluacion de TDAH para adultos y adolescentes en Hinsdale con pruebas objetivas T.O.V.A., una evaluacion clinica clara y tratamiento en una sola practica. Aceptamos la mayoria de los seguros principales. Citas a menudo disponibles en pocos dias.",
+          "Evaluación de TDAH en español para adultos y adolescentes en Hinsdale, IL, con pruebas objetivas T.O.V.A., una evaluación clínica clara y tratamiento en una sola práctica. Aceptamos la mayoría de los seguros principales. Citas a menudo disponibles en pocos días.",
       },
       hero: {
-        title: "Evaluacion y Pruebas de TDAH en Hinsdale",
+        title: "Evaluación de TDAH para Adultos y Adolescentes en Español",
         subtitle:
-          "Descubra si el TDAH explica lo que ha estado viviendo—y salga con un plan claro para lo que sigue. Una evaluacion clinica integral con pruebas objetivas T.O.V.A., seguida de tratamiento en la misma practica si lo necesita.",
+          "Descubra si el TDAH explica lo que ha estado viviendo—y salga con un plan claro para lo que sigue. Una evaluación clínica integral con pruebas objetivas T.O.V.A., seguida de tratamiento en la misma práctica si lo necesita.",
         serviceArea:
           "Atendemos Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
         highlights: [
-          "Citas a menudo disponibles en pocos dias",
-          "Aceptamos seguros: Cigna, BCBS, UnitedHealthcare, Medicare y mas",
+          "Citas a menudo disponibles en pocos días",
+          "Aceptamos seguros: Cigna, BCBS, UnitedHealthcare, Medicare y más",
           "Pruebas T.O.V.A. objetivas por computadora",
-          "Evaluacion, medicacion y terapia en una sola practica",
+          "Evaluación, medicación y terapia en una sola práctica",
         ],
-        cta: "Programar una evaluacion de TDAH",
+        cta: "Programar una evaluación de TDAH",
       },
       insurance: {
-        title: "Seguros Aceptados para la Evaluacion de TDAH",
+        title: "Seguros Aceptados para la Evaluación de TDAH",
         paragraph:
-          "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluacion de TDAH y el cuidado de seguimiento.",
-        cashPay: "Tambien aceptamos pago privado y seguros fuera de la red.",
+          "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluación de TDAH y el cuidado de seguimiento.",
+        cashPay: "También aceptamos pago privado y seguros fuera de la red.",
         feesLink: "Ver detalles de seguros y tarifas de pago privado",
       },
       carePath: {
-        title: "Evaluacion y Cuidado Continuo del TDAH en Una Sola Practica",
+        title: "Evaluación y Cuidado Continuo del TDAH en Una Sola Práctica",
         intro:
-          "Muchos proveedores de pruebas terminan con un informe. En Firefly, no tiene que empezar de nuevo en otro lugar—su evaluacion puede llevar directamente al tratamiento con el mismo equipo coordinado.",
+          "Muchos proveedores de pruebas terminan con un informe. En Firefly, no tiene que empezar de nuevo en otro lugar—su evaluación puede llevar directamente al tratamiento con el mismo equipo coordinado.",
         steps: [
           {
-            title: "Evaluacion Clinica",
+            title: "Evaluación Clínica",
             description:
-              "Hable sobre su historial, sintomas y metas con un clinico de Firefly.",
+              "Hable sobre su historial, síntomas y metas con un clínico de Firefly.",
           },
           {
             title: "Prueba Objetiva T.O.V.A.",
             description:
-              "Una prueba estructurada por computadora que mide la atencion y el control de impulsos.",
+              "Una prueba estructurada por computadora que mide la atención y el control de impulsos.",
           },
           {
             title: "Resultados Claros",
             description:
-              "Revise sus hallazgos en un lenguaje claro, junto con todo lo demas que aprendemos sobre usted.",
+              "Revise sus hallazgos en un lenguaje claro, junto con todo lo demás que aprendemos sobre usted.",
           },
           {
-            title: "Evaluacion Psiquiatrica",
+            title: "Evaluación Psiquiátrica",
             description:
-              "Cuando es apropiado, reunase con nuestra PMHNP certificada por la junta para hablar sobre opciones de tratamiento, incluida la medicacion.",
+              "Cuando es apropiado, reúnase con nuestra PMHNP certificada por la junta para hablar sobre opciones de tratamiento, incluida la medicación.",
           },
           {
             title: "Cuidado Continuo",
             description:
-              "Manejo de medicamentos, terapia y estrategias practicas—coordinados bajo un mismo techo.",
+              "Manejo de medicamentos, terapia y estrategias prácticas—coordinados bajo un mismo techo.",
           },
         ],
       },
@@ -1325,22 +1325,22 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
           {
             title: "Sin Traslados Entre Consultorios",
             paragraph:
-              "Las pruebas, la prescripcion y la terapia ocurren dentro de un mismo equipo coordinado, para que su cuidado se mantenga conectado desde la primera visita.",
+              "Las pruebas, la prescripción y la terapia ocurren dentro de un mismo equipo coordinado, para que su cuidado se mantenga conectado desde la primera visita.",
           },
           {
             title: "PMHNP Certificada en Nuestro Equipo",
             paragraph:
-              "Si la medicacion puede ayudar, puede ser evaluado por nuestra propia Psychiatric-Mental Health Nurse Practitioner—sin necesidad de una referencia externa.",
+              "Si la medicación puede ayudar, puede ser evaluado por nuestra propia Psychiatric-Mental Health Nurse Practitioner—sin necesidad de una referencia externa.",
           },
           {
             title: "Datos Objetivos, No Solo un Cuestionario",
             paragraph:
-              "La prueba T.O.V.A. agrega informacion medible sobre la atencion y el control de impulsos junto con su entrevista clinica.",
+              "La prueba T.O.V.A. agrega información medible sobre la atención y el control de impulsos junto con su entrevista clínica.",
           },
           {
-            title: "Acceso Rapido",
+            title: "Acceso Rápido",
             paragraph:
-              "Las citas de evaluacion suelen estar disponibles en pocos dias, para que no tenga que esperar meses por respuestas.",
+              "Las citas de evaluación suelen estar disponibles en pocos días, para que no tenga que esperar meses por respuestas.",
           },
           {
             title: "Aceptamos Seguros",
@@ -1348,139 +1348,139 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
               "Trabajamos con Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare.",
           },
           {
-            title: "Cuidado en Ingles y Espanol",
+            title: "Cuidado en Inglés y Español",
             paragraph:
-              "La evaluacion y el cuidado continuo estan disponibles en ambos idiomas.",
+              "La evaluación y el cuidado continuo están disponibles en ambos idiomas.",
           },
         ],
       },
       who: {
-        title: "Evaluacion de TDAH en Adultos",
+        title: "Evaluación de TDAH en Adultos",
         intro:
-          "El TDAH no siempre se ve como la gente espera. Sus sintomas pueden coincidir con los de la ansiedad, la depresion, los problemas de sueno y otras inquietudes, por lo que a veces pasa desapercibido o se confunde con otra condicion. Muchos adultos pasan anos sin respuestas, o con un diagnostico que nunca encajo del todo. Una evaluacion puede ser util si se identifica con lo siguiente:",
+          "El TDAH no siempre se ve como la gente espera. Sus síntomas pueden coincidir con los de la ansiedad, la depresión, los problemas de sueño y otras inquietudes, por lo que a veces pasa desapercibido o se confunde con otra condición. Muchos adultos pasan años sin respuestas, o con un diagnóstico que nunca encajó del todo. Una evaluación puede ser útil si se identifica con lo siguiente:",
         items: [
-          "No cumplir con fechas limite o dejar proyectos sin terminar en el trabajo",
+          "No cumplir con fechas límite o dejar proyectos sin terminar en el trabajo",
           "Perder el control de tareas, cuentas o citas",
           "Empezar con fuerza pero tener dificultades para dar seguimiento",
           "Sentirse disperso o abrumado a pesar de un esfuerzo real",
-          "Preguntarse durante anos si el TDAH explica su experiencia",
-          "Haber sido diagnosticado de nino y querer una evaluacion actualizada como adulto",
+          "Preguntarse durante años si el TDAH explica su experiencia",
+          "Haber sido diagnosticado de niño y querer una evaluación actualizada como adulto",
         ],
         closing:
-          "Tambien evaluamos a adolescentes y estudiantes cuya concentracion, organizacion o rendimiento escolar es motivo de preocupacion.",
+          "También evaluamos a adolescentes y estudiantes cuya concentración, organización o rendimiento escolar es motivo de preocupación.",
       },
       what: {
-        title: "Que Incluye Su Evaluacion",
+        title: "Qué Incluye Su Evaluación",
         paragraphs: [
-          "Su evaluacion de TDAH combina una evaluacion clinica de su historial y sintomas con pruebas objetivas de atencion. Revisara los resultados con su clinico en un lenguaje claro y saldra con recomendaciones personalizadas—que pueden incluir tratamiento dentro de Firefly.",
-          "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atencion y el control de impulsos. Es una de las herramientas que usamos al evaluar el TDAH y otras inquietudes relacionadas con la atencion.",
-          "Los resultados de la prueba nunca son toda la historia por si solos—su clinico los coloca en contexto con su historial, sintomas y metas antes de recomendar los proximos pasos.",
+          "Su evaluación de TDAH combina una evaluación clínica de su historial y síntomas con pruebas objetivas de atención. Revisará los resultados con su clínico en un lenguaje claro y saldrá con recomendaciones personalizadas—que pueden incluir tratamiento dentro de Firefly.",
+          "T.O.V.A. (Test of Variables of Attention) es una prueba sencilla por computadora que usa un dispositivo especial para observar la atención y el control de impulsos. Es una de las herramientas que usamos al evaluar el TDAH y otras inquietudes relacionadas con la atención.",
+          "Los resultados de la prueba nunca son toda la historia por si solos—su clínico los coloca en contexto con su historial, síntomas y metas antes de recomendar los próximos pasos.",
         ],
       },
       faq: {
         title: "Preguntas Frecuentes",
         items: [
           {
-            question: "Aceptan mi seguro para las pruebas de TDAH?",
+            question: "¿Aceptan mi seguro para las pruebas de TDAH?",
             answer:
-              "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluacion de TDAH y el cuidado de seguimiento. Tambien aceptamos pago privado y seguros fuera de la red.",
+              "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluación de TDAH y el cuidado de seguimiento. También aceptamos pago privado y seguros fuera de la red.",
           },
           {
-            question: "Que tan pronto me pueden atender?",
+            question: "¿Qué tan pronto me pueden atender?",
             answer:
-              "Las citas de evaluacion de TDAH suelen estar disponibles en pocos dias. Programe en linea o comuniquese con nuestra oficina para encontrar el proximo horario disponible.",
+              "Las citas de evaluación de TDAH suelen estar disponibles en pocos días. Programe en línea o comuníquese con nuestra oficina para encontrar el próximo horario disponible.",
           },
           {
-            question: "La prueba T.O.V.A. es un diagnostico por si sola?",
+            question: "¿La prueba T.O.V.A. es un diagnóstico por sí sola?",
             answer:
-              "No. T.O.V.A. es una herramienta clinica. Su clinico combina los resultados con su historial y sintomas como parte de una evaluacion integral antes de hacer cualquier diagnostico o recomendacion.",
+              "No. T.O.V.A. es una herramienta clínica. Su clínico combina los resultados con su historial y síntomas como parte de una evaluación integral antes de hacer cualquier diagnóstico o recomendación.",
           },
           {
             question:
-              "Puedo recibir medicacion para el TDAH en Firefly despues de mi evaluacion?",
+              "¿Puedo recibir medicación para el TDAH en Firefly después de mi evaluación?",
             answer:
-              "Cuando es apropiado, si. Nuestra PMHNP certificada por la junta ofrece evaluacion psiquiatrica y manejo continuo de medicamentos, coordinados con terapia y estrategias conductuales cuando es util.",
+              "Cuando es apropiado, sí. Nuestra PMHNP certificada por la junta ofrece evaluación psiquiátrica y manejo continuo de medicamentos, coordinados con terapia y estrategias conductuales cuando es útil.",
           },
           {
-            question: "Evaluan a adolescentes?",
+            question: "¿Evalúan a adolescentes?",
             answer:
-              "Si. Evaluamos a adolescentes y adultos, y el cuidado esta disponible en ingles y espanol.",
+              "Sí. Evaluamos a adolescentes y adultos, y el cuidado está disponible en inglés y español.",
           },
         ],
       },
       closing: {
-        title: "Obtenga Respuestas Sobre Su Atencion y Enfoque",
+        title: "Obtenga Respuestas Sobre Su Atención y Enfoque",
         paragraph:
-          "Si el enfoque, la organizacion o el seguimiento le han estado afectando, una evaluacion clara es un primer paso practico—y tendra un equipo listo para ayudarle con lo que siga.",
-        cta: "Programar una evaluacion de TDAH",
-        scheduleLabel: "Reservar en linea ahora",
+          "Si el enfoque, la organización o el seguimiento le han estado afectando, una evaluación clara es un primer paso práctico—y tendrá un equipo listo para ayudarle con lo que siga.",
+        cta: "Programar una evaluación de TDAH",
+        scheduleLabel: "Reservar en línea ahora",
       },
     },
     medicationManagement: {
       slug: "medication-management",
       meta: {
-        title: "Manejo de Medicacion Psiquiatrica en Hinsdale | Firefly Wellness",
+        title: "Medicación Psiquiátrica en Español en Hinsdale | Firefly Wellness",
         description:
-          "Medicacion psiquiatrica ambulatoria en Hinsdale con nuestra PMHNP certificada por la junta—para adolescentes hasta adultos, coordinada con terapia y pruebas, incluyendo Tempus y BrainCheck cuando forman parte de su cuidado.",
+          "Atención psiquiátrica en español en Hinsdale con nuestra PMHNP certificada por la junta: evaluación y manejo de medicamentos para adolescentes y adultos, coordinados con terapia y pruebas como Tempus y BrainCheck.",
       },
       hero: {
-        title: "Manejo de Medicacion Psiquiatrica en Hinsdale",
+        title: "Manejo de Medicación Psiquiátrica en Español en Hinsdale",
         subtitle:
-          "Visitas de prescripcion y apoyo continuo con medicamentos con nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP)—coordinado con terapia y pruebas de TDAH en Hinsdale, IL, sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
+          "Visitas de prescripción y apoyo continuo con medicamentos con nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP)—coordinado con terapia y pruebas de TDAH en Hinsdale, IL, sirviendo Oak Brook, Clarendon Hills, Western Springs, Westmont y suburbios occidentales cercanos.",
         availabilityNote:
-          "Las citas nuevas de medicacion suelen estar disponibles con tiempos de espera cortos.",
+          "Las citas nuevas de medicación suelen estar disponibles con tiempos de espera cortos.",
         cta: "Programar una cita",
       },
       who: {
-        title: "A Quien Puede Ayudar la Medicacion Psiquiatrica",
+        title: "A Quién Puede Ayudar la Medicación Psiquiátrica",
         intro:
-          "La medicina no es adecuada para todos, y nunca reemplaza la conexion ni el desarrollo de habilidades. Para algunas personas, crea suficiente alivio para dormir, concentrarse y beneficiarse mas plenamente de la terapia.",
+          "La medicina no es adecuada para todos, y nunca reemplaza la conexión ni el desarrollo de habilidades. Para algunas personas, crea suficiente alivio para dormir, concentrarse y beneficiarse más plenamente de la terapia.",
         items: [
-          "Adolescentes y adultos que atraviesan depresion, ansiedad, dificultades de atencion o problemas relacionados con el sueno",
-          "Personas que aun se sienten muy decaidas, ansiosas o tensas aunque la terapia vaya bien",
-          "Personas cuyos sintomas dificultan funcionar en la escuela, el trabajo o la vida diaria",
-          "Clientes que ya toman medicacion psiquiatrica y necesitan un apoyo continuo y reflexivo con la prescripcion",
+          "Adolescentes y adultos que atraviesan depresión, ansiedad, dificultades de atención o problemas relacionados con el sueño",
+          "Personas que aún se sienten muy decaídas, ansiosas o tensas aunque la terapia vaya bien",
+          "Personas cuyos síntomas dificultan funcionar en la escuela, el trabajo o la vida diaria",
+          "Clientes que ya toman medicación psiquiátrica y necesitan un apoyo continuo y reflexivo con la prescripción",
         ],
       },
       what: {
-        title: "Como Abordamos la Medicacion",
+        title: "Cómo Abordamos la Medicación",
         paragraphs: [
-          "Nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo ofrece visitas de prescripcion y apoyo continuo con medicamentos como parte del modelo coordinado de salud conductual de Firefly.",
-          "Su clinico considera sus sintomas, historial, preferencias y metas—y puede colaborar con su terapeuta para que el cuidado se mantenga alineado.",
-          "Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos. Los resultados se revisan con usted y se usan junto con—no en lugar de—su historial y sintomas.",
+          "Nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo ofrece visitas de prescripción y apoyo continuo con medicamentos como parte del modelo coordinado de salud conductual de Firefly.",
+          "Su clínico considera sus síntomas, historial, preferencias y metas—y puede colaborar con su terapeuta para que el cuidado se mantenga alineado.",
+          "Las pruebas genéticas de Tempus pueden aportar información adicional sobre cómo su cuerpo podría procesar ciertos medicamentos. Los resultados se revisan con usted y se usan junto con—no en lugar de—su historial y síntomas.",
         ],
       },
       expect: {
         title: "Que Puede Esperar",
         intro:
-          "El cuidado con medicamentos en Firefly comienza por comprender sus necesidades y avanza a un ritmo reflexivo—sin prisas. Un recorrido tipico se ve asi:",
+          "El cuidado con medicamentos en Firefly comienza por comprender sus necesidades y avanza a un ritmo reflexivo—sin prisas. Un recorrido típico se ve así:",
         steps: [
-          "Compartir sus inquietudes, historial y metas en una visita enfocada en evaluacion",
-          "Hablar sobre si la medicacion es una buena opcion y revisar alternativas, beneficios y consideraciones",
-          "Iniciar o ajustar un plan de medicacion cuando usted y su clinico acuerden que tiene sentido",
-          "Asistir a visitas de seguimiento para monitorear la respuesta, los efectos secundarios y los proximos pasos",
-          "Coordinar con terapia o pruebas de TDAH y atencion dentro de Firefly cuando eso apoye su cuidado",
+          "Compartir sus inquietudes, historial y metas en una visita enfocada en evaluación",
+          "Hablar sobre si la medicación es una buena opción y revisar alternativas, beneficios y consideraciones",
+          "Iniciar o ajustar un plan de medicación cuando usted y su clínico acuerden que tiene sentido",
+          "Asistir a visitas de seguimiento para monitorear la respuesta, los efectos secundarios y los próximos pasos",
+          "Coordinar con terapia o pruebas de TDAH y atención dentro de Firefly cuando eso apoye su cuidado",
         ],
       },
       related: {
         title: "Cuidado Relacionado en Firefly",
         paragraph:
-          "La medicacion suele funcionar mejor junto con la terapia. Las pruebas de TDAH y atencion tambien pueden ayudar a aclarar lo que esta pasando cuando el enfoque y el control de impulsos forman parte de lo que esta atravesando.",
+          "La medicación suele funcionar mejor junto con la terapia. Las pruebas de TDAH y atención también pueden ayudar a aclarar lo que está pasando cuando el enfoque y el control de impulsos forman parte de lo que está atravesando.",
         links: [
           { label: "Terapia", href: "/therapy" },
           {
-            label: "Pruebas de TDAH y Atencion",
+            label: "Pruebas de TDAH y Atención",
             href: "/adhd-testing",
           },
           { label: "Tratamiento de la Ansiedad", href: "/anxiety-treatment" },
-          { label: "Tratamiento de la Depresion", href: "/depression-treatment" },
+          { label: "Tratamiento de la Depresión", href: "/depression-treatment" },
         ],
       },
       closing: {
         title: "Explore Si el Apoyo con Medicamentos Es Adecuado para Usted",
         paragraph:
-          "Si tiene curiosidad sobre la medicacion como una parte de su cuidado, podemos ayudarle a sopesar opciones con cuidado y mantenerse apoyado mientras avanza.",
-        scheduleLabel: "Reservar en linea ahora",
+          "Si tiene curiosidad sobre la medicación como una parte de su cuidado, podemos ayudarle a sopesar opciones con cuidado y mantenerse apoyado mientras avanza.",
+        scheduleLabel: "Reservar en línea ahora",
       },
     },
     anxietyTreatment: {
@@ -1488,55 +1488,55 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       condition: "Anxiety",
       meta: {
         title:
-          "Tratamiento de la Ansiedad en Hinsdale | Cuidado Psiquiatrico y Terapia | Firefly Wellness",
+          "Tratamiento de Ansiedad en Español en Hinsdale | Firefly Wellness",
         description:
-          "Tratamiento de la ansiedad en Hinsdale para adolescentes y adultos—evaluacion psiquiatrica, manejo de medicamentos cuando es apropiado y terapia en una sola practica. Aceptamos la mayoria de los seguros principales. Citas a menudo disponibles en pocos dias.",
+          "Tratamiento de ansiedad en español en Hinsdale, IL, para adolescentes y adultos—evaluación psiquiátrica, manejo de medicamentos cuando es apropiado y terapia en una sola práctica. Aceptamos la mayoría de los seguros principales. Citas a menudo disponibles en pocos días.",
       },
       hero: {
-        title: "Tratamiento de la Ansiedad en Hinsdale",
+        title: "Tratamiento de Ansiedad en Español en Hinsdale",
         subtitle:
-          "Sientase mas tranquilo, duerma mejor y recupere las partes de su vida que la ansiedad ha ido desplazando. Firefly ofrece evaluacion psiquiatrica, manejo de medicamentos cuando es la opcion adecuada y terapia—todo coordinado dentro de una sola practica.",
+          "Siéntase más tranquilo, duerma mejor y recupere las partes de su vida que la ansiedad ha ido desplazando. Firefly ofrece evaluación psiquiátrica, manejo de medicamentos cuando es la opción adecuada y terapia—todo coordinado dentro de una sola práctica.",
         serviceArea:
           "Atendemos Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
         highlights: [
-          "Citas a menudo disponibles en pocos dias",
-          "Aceptamos seguros: Cigna, BCBS, UnitedHealthcare, Medicare y mas",
+          "Citas a menudo disponibles en pocos días",
+          "Aceptamos seguros: Cigna, BCBS, UnitedHealthcare, Medicare y más",
           "PMHNP certificada por la junta en nuestro equipo",
-          "Medicacion y terapia en una sola practica",
+          "Medicación y terapia en una sola práctica",
         ],
-        cta: "Programar una evaluacion de ansiedad",
+        cta: "Programar una evaluación de ansiedad",
       },
       insurance: {
         title: "Seguros Aceptados para el Tratamiento de la Ansiedad",
         paragraph:
-          "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluacion psiquiatrica, el manejo de medicamentos y la terapia.",
-        cashPay: "Tambien aceptamos pago privado y seguros fuera de la red.",
+          "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluación psiquiátrica, el manejo de medicamentos y la terapia.",
+        cashPay: "También aceptamos pago privado y seguros fuera de la red.",
         feesLink: "Ver detalles de seguros y tarifas de pago privado",
       },
       carePath: {
-        title: "Como Funciona el Tratamiento de la Ansiedad en Firefly",
+        title: "Cómo Funciona el Tratamiento de la Ansiedad en Firefly",
         intro:
-          "No necesita tener todo resuelto antes de su primera visita. Empezamos por comprender lo que esta viviendo, luego creamos un plan con usted—y lo ajustamos a medida que mejora.",
+          "No necesita tener todo resuelto antes de su primera visita. Empezamos por comprender lo que está viviendo, luego creamos un plan con usted—y lo ajustamos a medida que mejora.",
         steps: [
           {
-            title: "Evaluacion Psiquiatrica",
+            title: "Evaluación Psiquiátrica",
             description:
-              "Una conversacion detallada sobre sus sintomas, historial, salud y metas.",
+              "Una conversación detallada sobre sus síntomas, historial, salud y metas.",
           },
           {
             title: "Plan Personalizado",
             description:
-              "Recomendaciones claras que se ajustan a sus sintomas, preferencias y vida diaria.",
+              "Recomendaciones claras que se ajustan a sus síntomas, preferencias y vida diaria.",
           },
           {
             title: "Terapia y Habilidades de Afrontamiento",
             description:
-              "Herramientas practicas para la preocupacion, el panico y la evitacion con un terapeuta de Firefly.",
+              "Herramientas prácticas para la preocupación, el pánico y la evitación con un terapeuta de Firefly.",
           },
           {
-            title: "Medicacion, Si Es Apropiada",
+            title: "Medicación, Si Es Apropiada",
             description:
-              "Cuando la medicacion puede ayudar, hablamos juntos de opciones, beneficios y efectos secundarios.",
+              "Cuando la medicación puede ayudar, hablamos juntos de opciones, beneficios y efectos secundarios.",
           },
           {
             title: "Seguimiento y Ajustes",
@@ -1549,24 +1549,24 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
         title: "Por Que Elegir Firefly para el Cuidado de la Ansiedad",
         items: [
           {
-            title: "Medicacion y Terapia, Coordinadas",
+            title: "Medicación y Terapia, Coordinadas",
             paragraph:
-              "Su prescriptora y su terapeuta trabajan en la misma practica, para que las decisiones de tratamiento se tomen con el panorama completo.",
+              "Su prescriptora y su terapeuta trabajan en la misma práctica, para que las decisiones de tratamiento se tomen con el panorama completo.",
           },
           {
-            title: "Una Evaluacion Sin Prisas",
+            title: "Una Evaluación Sin Prisas",
             paragraph:
-              "La ansiedad puede coincidir con problemas de sueno, depresion, TDAH e inquietudes de salud fisica. Observamos el panorama completo antes de recomendar un tratamiento.",
+              "La ansiedad puede coincidir con problemas de sueño, depresión, TDAH e inquietudes de salud física. Observamos el panorama completo antes de recomendar un tratamiento.",
           },
           {
-            title: "La Medicacion Es una Opcion, No una Regla",
+            title: "La Medicación Es una Opción, No una Regla",
             paragraph:
-              "Muchas personas mejoran solo con terapia. Cuando la medicacion puede ayudar, le explicamos por que y decidimos juntos.",
+              "Muchas personas mejoran solo con terapia. Cuando la medicación puede ayudar, le explicamos por que y decidimos juntos.",
           },
           {
-            title: "Acceso Rapido",
+            title: "Acceso Rápido",
             paragraph:
-              "Las citas nuevas suelen estar disponibles en pocos dias, para que no tenga que manejar la ansiedad solo durante meses.",
+              "Las citas nuevas suelen estar disponibles en pocos días, para que no tenga que manejar la ansiedad solo durante meses.",
           },
           {
             title: "Aceptamos Seguros",
@@ -1574,22 +1574,22 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
               "Trabajamos con Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare.",
           },
           {
-            title: "Adolescentes y Adultos, en Ingles y Espanol",
+            title: "Adolescentes y Adultos, en Inglés y Español",
             paragraph:
               "Atendemos a adolescentes, estudiantes universitarios y adultos, con cuidado disponible en ambos idiomas.",
           },
         ],
       },
       who: {
-        title: "Senales de Que Puede Ser Momento de Buscar Ayuda para la Ansiedad",
+        title: "Señales de Que Puede Ser Momento de Buscar Ayuda para la Ansiedad",
         intro:
-          "Cierta preocupacion es parte normal de la vida. Puede ser momento de hablar con un profesional cuando la ansiedad es frecuente, dificil de controlar o empieza a influir en sus decisiones. Las senales comunes incluyen:",
+          "Cierta preocupación es parte normal de la vida. Puede ser momento de hablar con un profesional cuando la ansiedad es frecuente, difícil de controlar o empieza a influir en sus decisiones. Las señales comunes incluyen:",
         items: [
-          "Preocupacion constante o dificil de apagar, incluso cuando las cosas van bien",
-          "Inquietud, irritabilidad o sentirse tenso la mayoria de los dias",
-          "Dificultad para conciliar o mantener el sueno porque su mente no se calma",
-          "Evitar situaciones, personas o tareas por como le hacen sentir",
-          "Sintomas fisicos como corazon acelerado, opresion en el pecho, malestar estomacal o tension muscular",
+          "Preocupación constante o difícil de apagar, incluso cuando las cosas van bien",
+          "Inquietud, irritabilidad o sentirse tenso la mayoría de los días",
+          "Dificultad para conciliar o mantener el sueño porque su mente no se calma",
+          "Evitar situaciones, personas o tareas por cómo le hacen sentir",
+          "Síntomas físicos como corazón acelerado, opresión en el pecho, malestar estomacal o tensión muscular",
           "Ansiedad que interfiere con el trabajo, la escuela, las relaciones o la rutina diaria",
         ],
         closing:
@@ -1598,130 +1598,130 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       topics: [
         {
           id: "types-of-anxiety",
-          title: "Ansiedad Generalizada, Panico y Otras Formas de Ansiedad",
+          title: "Ansiedad Generalizada, Pánico y Otras Formas de Ansiedad",
           intro:
-            "La ansiedad no es igual para todos. Parte de su evaluacion consiste en comprender que patrones se ajustan a su experiencia, porque eso orienta el tratamiento mas eficaz.",
+            "La ansiedad no es igual para todos. Parte de su evaluación consiste en comprender que patrones se ajustan a su experiencia, porque eso orienta el tratamiento más eficaz.",
           bullets: [
-            "Ansiedad generalizada: preocupacion persistente y amplia sobre el trabajo, la salud, la familia o asuntos cotidianos que es dificil de controlar",
-            "Ataques de panico: oleadas repentinas de miedo intenso con sintomas como palpitaciones, falta de aire, mareo o sensacion de desconexion",
+            "Ansiedad generalizada: preocupación persistente y amplia sobre el trabajo, la salud, la familia o asuntos cotidianos que es difícil de controlar",
+            "Ataques de pánico: oleadas repentinas de miedo intenso con síntomas como palpitaciones, falta de aire, mareo o sensación de desconexión",
             "Ansiedad social: timidez intensa o miedo a ser juzgado que lleva a evitar situaciones sociales o laborales",
-            "Preocupacion por la salud: miedo continuo a una enfermedad que persiste a pesar de las aclaraciones",
-            "Ansiedad junto con otras inquietudes, como depresion, TDAH, trauma o problemas de sueno",
+            "Preocupación por la salud: miedo continuo a una enfermedad que persiste a pesar de las aclaraciones",
+            "Ansiedad junto con otras inquietudes, como depresión, TDAH, trauma o problemas de sueño",
           ],
         },
         {
           id: "psychiatric-care",
-          title: "Cuidado Psiquiatrico para la Ansiedad en Hinsdale",
+          title: "Cuidado Psiquiátrico para la Ansiedad en Hinsdale",
           paragraphs: [
-            "El cuidado psiquiatrico para la ansiedad en Firefly lo ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo. Nuestra PMHNP esta capacitada para diagnosticar condiciones de salud mental, recetar medicamentos y manejar el tratamiento con el tiempo.",
-            "Como nuestra prescriptora trabaja junto a nuestros terapeutas en la misma practica de Hinsdale, su plan de medicacion y su terapia pueden coordinarse en lugar de manejarse en consultorios separados.",
+            "El cuidado psiquiátrico para la ansiedad en Firefly lo ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo. Nuestra PMHNP está capacitada para diagnosticar condiciones de salud mental, recetar medicamentos y manejar el tratamiento con el tiempo.",
+            "Como nuestra prescriptora trabaja junto a nuestros terapeutas en la misma práctica de Hinsdale, su plan de medicación y su terapia pueden coordinarse en lugar de manejarse en consultorios separados.",
           ],
         },
         {
           id: "medication-management",
           title: "Manejo de Medicamentos para la Ansiedad",
           paragraphs: [
-            "La medicacion puede ser una parte util del tratamiento de la ansiedad, especialmente cuando los sintomas son persistentes, intensos o dificultan beneficiarse de la terapia. Los medicamentos que se usan con frecuencia para la ansiedad incluyen ciertos antidepresivos, como los ISRS y los IRSN, junto con otras opciones que su clinico puede comentar segun su situacion.",
-            "La medicacion no siempre es el primer paso. Puede no recomendarse cuando los sintomas son leves, cuando usted prefiere comenzar con terapia o cuando la ansiedad se explica mejor por otra causa—como una condicion medica, el uso de sustancias o una situacion estresante que probablemente pasara.",
-            "Si comienza un medicamento, su clinico le explicara que esperar, cuanto tiempo puede tardar en notar una diferencia y los posibles efectos secundarios. Tambien se pueden considerar las pruebas geneticas de Tempus para aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos.",
+            "La medicación puede ser una parte útil del tratamiento de la ansiedad, especialmente cuando los síntomas son persistentes, intensos o dificultan beneficiarse de la terapia. Los medicamentos que se usan con frecuencia para la ansiedad incluyen ciertos antidepresivos, como los ISRS y los IRSN, junto con otras opciones que su clínico puede comentar según su situación.",
+            "La medicación no siempre es el primer paso. Puede no recomendarse cuando los síntomas son leves, cuando usted prefiere comenzar con terapia o cuando la ansiedad se explica mejor por otra causa—como una condición médica, el uso de sustancias o una situación estresante que probablemente pasará.",
+            "Si comienza un medicamento, su clínico le explicará qué esperar, cuánto tiempo puede tardar en notar una diferencia y los posibles efectos secundarios. También se pueden considerar las pruebas genéticas de Tempus para aportar información adicional sobre cómo su cuerpo podría procesar ciertos medicamentos.",
           ],
         },
         {
           id: "initial-evaluation",
-          title: "Que Esperar en Su Evaluacion Psiquiatrica Inicial",
+          title: "Qué Esperar en Su Evaluación Psiquiátrica Inicial",
           intro:
-            "Su primera visita es una conversacion, no un examen. Normalmente incluye:",
+            "Su primera visita es una conversación, no un examen. Normalmente incluye:",
           bullets: [
-            "Sus sintomas actuales, cuando comenzaron y como afectan su vida diaria",
+            "Sus síntomas actuales, cuándo comenzaron y cómo afectan su vida diaria",
             "Su historial de salud mental, incluido cualquier tratamiento o medicamento previo",
-            "Historial medico relevante, medicamentos actuales, sueno y uso de sustancias",
+            "Historial médico relevante, medicamentos actuales, sueño y uso de sustancias",
             "Sus metas y preferencias de tratamiento",
-            "Una conversacion sobre los hallazgos y los proximos pasos recomendados antes de irse",
+            "Una conversación sobre los hallazgos y los próximos pasos recomendados antes de irse",
           ],
           paragraphs: [
-            "Es util traer una lista de sus medicamentos actuales y cualquier registro previo de salud mental que tenga. Saldra con una comprension clara de lo que recomendamos y por que.",
+            "Es útil traer una lista de sus medicamentos actuales y cualquier registro previo de salud mental que tenga. Saldrá con una comprensión clara de lo que recomendamos y por que.",
           ],
         },
         {
           id: "ongoing-care",
           title: "Tratamiento Continuo y Seguimiento",
           paragraphs: [
-            "El tratamiento de la ansiedad funciona mejor con un seguimiento constante. Si comienza un medicamento, las visitas de seguimiento suelen ser mas frecuentes al principio para que su clinico revise como responde, observe efectos secundarios y ajuste la dosis cuando sea necesario.",
-            "A medida que los sintomas mejoran, las visitas suelen espaciarse. Con el tiempo, usted y su clinico decidiran juntos cuanto tiempo continuar el tratamiento y cuando puede tener sentido reducirlo o cambiar de rumbo.",
+            "El tratamiento de la ansiedad funciona mejor con un seguimiento constante. Si comienza un medicamento, las visitas de seguimiento suelen ser más frecuentes al principio para que su clínico revise cómo responde, observe efectos secundarios y ajuste la dosis cuando sea necesario.",
+            "A medida que los síntomas mejoran, las visitas suelen espaciarse. Con el tiempo, usted y su clínico decidirán juntos cuánto tiempo continuar el tratamiento y cuando puede tener sentido reducirlo o cambiar de rumbo.",
           ],
         },
         {
           id: "therapy",
           title: "Terapia para la Ansiedad",
           paragraphs: [
-            "La terapia le ayuda a comprender que impulsa su ansiedad y le da habilidades para responder de otra manera. Nuestros clinicos utilizan enfoques como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptacion y Compromiso (ACT) para abordar la preocupacion, el panico y la evitacion.",
-            "Algunas personas mejoran solo con terapia; otras se benefician de la terapia combinada con medicacion. En Firefly, ambas estan disponibles en una sola practica.",
+            "La terapia le ayuda a comprender que impulsa su ansiedad y le da habilidades para responder de otra manera. Nuestros clínicos utilizan enfoques como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptación y Compromiso (ACT) para abordar la preocupación, el pánico y la evitación.",
+            "Algunas personas mejoran solo con terapia; otras se benefician de la terapia combinada con medicación. En Firefly, ambas están disponibles en una sola práctica.",
           ],
           links: [
-            { label: "Conozca mas sobre la terapia en Firefly", href: "/therapy" },
+            { label: "Conozca más sobre la terapia en Firefly", href: "/therapy" },
           ],
         },
       ],
       related: {
         title: "Cuidado Relacionado en Firefly",
         paragraph:
-          "La ansiedad a menudo coincide con otras inquietudes. Cuando es util, podemos coordinar el cuidado entre servicios dentro de la misma practica.",
+          "La ansiedad a menudo coincide con otras inquietudes. Cuando es útil, podemos coordinar el cuidado entre servicios dentro de la misma práctica.",
         links: [
           {
-            label: "Manejo de Medicacion Psiquiatrica",
+            label: "Manejo de Medicación Psiquiátrica",
             href: "/medication-management",
           },
-          { label: "Tratamiento de la Depresion", href: "/depression-treatment" },
-          { label: "Pruebas de TDAH y Atencion", href: "/adhd-testing" },
+          { label: "Tratamiento de la Depresión", href: "/depression-treatment" },
+          { label: "Pruebas de TDAH y Atención", href: "/adhd-testing" },
         ],
       },
-      note: "Firefly Wellness ofrece cuidado de salud mental ambulatorio y no es un servicio de emergencia o crisis. Si usted o alguien que quiere esta en peligro inmediato, llame al 911 o acuda a la sala de emergencias mas cercana. Para apoyo las 24 horas, llame o envie un mensaje de texto al 988.",
+      note: "Firefly Wellness ofrece cuidado de salud mental ambulatorio y no es un servicio de emergencia o crisis. Si usted o alguien que quiere está en peligro inmediato, llame al 911 o acuda a la sala de emergencias más cercana. Para apoyo las 24 horas, llame o envíe un mensaje de texto al 988.",
       faq: {
         title: "Preguntas Frecuentes Sobre el Tratamiento de la Ansiedad",
         items: [
           {
-            question: "Necesito un psiquiatra para la ansiedad?",
+            question: "¿Necesito un psiquiatra para la ansiedad?",
             answer:
-              "No necesariamente. En Firefly, la evaluacion psiquiatrica y el manejo de medicamentos los ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP), quien puede diagnosticar la ansiedad, recetar medicamentos y manejar su tratamiento con el tiempo.",
+              "No necesariamente. En Firefly, la evaluación psiquiátrica y el manejo de medicamentos los ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP), quien puede diagnosticar la ansiedad, recetar medicamentos y manejar su tratamiento con el tiempo.",
           },
           {
-            question: "Tengo que tomar medicamentos para la ansiedad?",
+            question: "¿Tengo que tomar medicamentos para la ansiedad?",
             answer:
-              "No. La medicacion es una opcion, no un requisito. Su clinico le explicara si podria ayudar en su situacion, y la decision siempre se toma junto con usted.",
+              "No. La medicación es una opción, no un requisito. Su clínico le explicará si podría ayudar en su situación, y la decisión siempre se toma junto con usted.",
           },
           {
-            question: "Cuanto tardan en funcionar los medicamentos para la ansiedad?",
+            question: "¿Cuánto tardan en funcionar los medicamentos para la ansiedad?",
             answer:
-              "Varia segun el medicamento y la persona. Muchos medicamentos comunes para la ansiedad tardan varias semanas en alcanzar su efecto completo, por eso el seguimiento regular es parte del tratamiento.",
+              "Varía según el medicamento y la persona. Muchos medicamentos comunes para la ansiedad tardan varias semanas en alcanzar su efecto completo, por eso el seguimiento regular es parte del tratamiento.",
           },
           {
-            question: "Puedo recibir solo terapia?",
+            question: "¿Puedo recibir solo terapia?",
             answer:
-              "Si. Muchas personas tratan la ansiedad solo con terapia. Si mas adelante vale la pena considerar la medicacion, nuestra prescriptora esta en la misma practica.",
+              "Sí. Muchas personas tratan la ansiedad solo con terapia. Si más adelante vale la pena considerar la medicación, nuestra prescriptora está en la misma práctica.",
           },
           {
-            question: "Aceptan mi seguro?",
+            question: "¿Aceptan mi seguro?",
             answer:
-              "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare. Tambien aceptamos pago privado y seguros fuera de la red.",
+              "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare. También aceptamos pago privado y seguros fuera de la red.",
           },
           {
-            question: "Que tan pronto me pueden atender?",
+            question: "¿Qué tan pronto me pueden atender?",
             answer:
-              "Las citas nuevas suelen estar disponibles en pocos dias. Programe en linea o comuniquese con nuestra oficina para encontrar el proximo horario disponible.",
+              "Las citas nuevas suelen estar disponibles en pocos días. Programe en línea o comuníquese con nuestra oficina para encontrar el próximo horario disponible.",
           },
           {
-            question: "Tratan la ansiedad en adolescentes?",
+            question: "¿Tratan la ansiedad en adolescentes?",
             answer:
-              "Si. Trabajamos con adolescentes y adultos, e involucramos a padres o tutores cuando corresponde.",
+              "Sí. Trabajamos con adolescentes y adultos, e involucramos a padres o tutores cuando corresponde.",
           },
         ],
       },
       closing: {
-        title: "De el Primer Paso Hacia Sentirse Mas Tranquilo",
+        title: "De el Primer Paso Hacia Sentirse Más Tranquilo",
         paragraph:
-          "La ansiedad es muy tratable. Una sola evaluacion puede darle claridad sobre lo que esta pasando y un plan practico para empezar a sentirse mejor.",
-        cta: "Programar una evaluacion de ansiedad",
-        scheduleLabel: "Reservar en linea ahora",
+          "La ansiedad es muy tratable. Una sola evaluación puede darle claridad sobre lo que está pasando y un plan práctico para empezar a sentirse mejor.",
+        cta: "Programar una evaluación de ansiedad",
+        scheduleLabel: "Reservar en línea ahora",
       },
     },
     depressionTreatment: {
@@ -1729,85 +1729,85 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
       condition: "Depression",
       meta: {
         title:
-          "Tratamiento de la Depresion en Hinsdale | Cuidado Psiquiatrico y Terapia | Firefly Wellness",
+          "Tratamiento de Depresión en Español en Hinsdale | Firefly Wellness",
         description:
-          "Tratamiento de la depresion en Hinsdale para adolescentes y adultos—evaluacion psiquiatrica, manejo de antidepresivos y terapia en una sola practica. Aceptamos la mayoria de los seguros principales. Citas a menudo disponibles en pocos dias.",
+          "Tratamiento de depresión en español en Hinsdale, IL, para adolescentes y adultos—evaluación psiquiátrica, manejo de antidepresivos y terapia en una sola práctica. Aceptamos la mayoría de los seguros principales. Citas a menudo disponibles en pocos días.",
       },
       hero: {
-        title: "Tratamiento de la Depresion en Hinsdale",
+        title: "Tratamiento de Depresión en Español en Hinsdale",
         subtitle:
-          "Recupere su energia, su interes y su sentido de si mismo. Firefly ofrece evaluacion psiquiatrica, manejo de medicamentos y terapia para la depresion en una practica coordinada—con un plan creado en torno a usted.",
+          "Recupere su energía, su interés y su sentido de sí mismo. Firefly ofrece evaluación psiquiátrica, manejo de medicamentos y terapia para la depresión en una práctica coordinada—con un plan creado en torno a usted.",
         serviceArea:
           "Atendemos Hinsdale, Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
         highlights: [
-          "Citas nuevas a menudo disponibles en pocos dias",
-          "Aceptamos la mayoria de los seguros principales, incluido Medicare",
+          "Citas nuevas a menudo disponibles en pocos días",
+          "Aceptamos la mayoría de los seguros principales, incluido Medicare",
           "PMHNP certificada por la junta en nuestro equipo",
-          "Cuidado psiquiatrico y terapia bajo un mismo techo",
+          "Cuidado psiquiátrico y terapia bajo un mismo techo",
         ],
-        cta: "Programar una evaluacion de depresion",
+        cta: "Programar una evaluación de depresión",
       },
       insurance: {
-        title: "Seguros Aceptados para el Tratamiento de la Depresion",
+        title: "Seguros Aceptados para el Tratamiento de la Depresión",
         paragraph:
-          "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluacion psiquiatrica, el manejo de medicamentos y la terapia.",
-        cashPay: "Tambien aceptamos pago privado y seguros fuera de la red.",
+          "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para la evaluación psiquiátrica, el manejo de medicamentos y la terapia.",
+        cashPay: "También aceptamos pago privado y seguros fuera de la red.",
         feesLink: "Ver detalles de seguros y tarifas de pago privado",
       },
       carePath: {
-        title: "Su Camino en el Tratamiento de la Depresion",
+        title: "Su Camino en el Tratamiento de la Depresión",
         intro:
-          "La depresion puede hacer que incluso los pasos pequenos se sientan pesados. Mantenemos el proceso sencillo y le acompanamos mientras el tratamiento hace efecto.",
+          "La depresión puede hacer que incluso los pasos pequeños se sientan pesados. Mantenemos el proceso sencillo y le acompañamos mientras el tratamiento hace efecto.",
         steps: [
           {
-            title: "Evaluacion Psiquiatrica",
+            title: "Evaluación Psiquiátrica",
             description:
-              "Conocemos sus sintomas, historial, salud y lo que quiere cambiar.",
+              "Conocemos sus síntomas, historial, salud y lo que quiere cambiar.",
           },
           {
             title: "Un Plan de Tratamiento Claro",
             description:
-              "Recomendaciones que pueden incluir medicacion, terapia o ambas.",
+              "Recomendaciones que pueden incluir medicación, terapia o ambas.",
           },
           {
             title: "Inicio del Tratamiento",
             description:
-              "Si la medicacion forma parte de su plan, comenzamos con cuidado y le explicamos que esperar.",
+              "Si la medicación forma parte de su plan, comenzamos con cuidado y le explicamos qué esperar.",
           },
           {
-            title: "Medicion del Progreso",
+            title: "Medición del Progreso",
             description:
-              "Seguimiento regular para observar el animo, el sueno, la energia y los efectos secundarios.",
+              "Seguimiento regular para observar el ánimo, el sueño, la energía y los efectos secundarios.",
           },
           {
             title: "Apoyo a Largo Plazo",
             description:
-              "Cuidado continuo para ayudarle a mantenerse bien y prevenir recaidas.",
+              "Cuidado continuo para ayudarle a mantenerse bien y prevenir recaídas.",
           },
         ],
       },
       whyFirefly: {
-        title: "Por Que Elegir Firefly para el Cuidado de la Depresion",
+        title: "Por Que Elegir Firefly para el Cuidado de la Depresión",
         items: [
           {
-            title: "Un Solo Equipo para Medicacion y Terapia",
+            title: "Un Solo Equipo para Medicación y Terapia",
             paragraph:
-              "Su prescriptora y su terapeuta trabajan juntos en una sola practica, para que su tratamiento se mantenga alineado a medida que las cosas cambian.",
+              "Su prescriptora y su terapeuta trabajan juntos en una sola práctica, para que su tratamiento se mantenga alineado a medida que las cosas cambian.",
           },
           {
             title: "Ayuda Cuando Su Tratamiento Actual No Funciona",
             paragraph:
-              "Si ha probado medicamentos sin suficiente alivio, revisamos con cuidado lo que ha ayudado y lo que no antes de recomendar los proximos pasos.",
+              "Si ha probado medicamentos sin suficiente alivio, revisamos con cuidado lo que ha ayudado y lo que no antes de recomendar los próximos pasos.",
           },
           {
             title: "Un Progreso Que Puede Ver",
             paragraph:
-              "Damos seguimiento a como se siente con el tiempo—no solo en su primera visita—y ajustamos el tratamiento segun como se siente realmente.",
+              "Damos seguimiento a cómo se siente con el tiempo—no solo en su primera visita—y ajustamos el tratamiento según cómo se siente realmente.",
           },
           {
-            title: "Atencion en Dias, No en Meses",
+            title: "Atención en Días, No en Meses",
             paragraph:
-              "Las citas nuevas suelen estar disponibles en pocos dias, para que pueda comenzar el tratamiento antes.",
+              "Las citas nuevas suelen estar disponibles en pocos días, para que pueda comenzar el tratamiento antes.",
           },
           {
             title: "Aceptamos Seguros",
@@ -1815,150 +1815,150 @@ const servicePagesContent: Record<Locale, ServicePagesContent> = {
               "Trabajamos con Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare.",
           },
           {
-            title: "Cuidado para Adolescentes y Adultos, en Ingles y Espanol",
+            title: "Cuidado para Adolescentes y Adultos, en Inglés y Español",
             paragraph:
               "Tratamos a adolescentes y adultos, con cuidado disponible en ambos idiomas.",
           },
         ],
       },
       who: {
-        title: "Senales de Que el Tratamiento Profesional Puede Ser Apropiado",
+        title: "Señales de Que el Tratamiento Profesional Puede Ser Apropiado",
         intro:
-          "Todos tenemos dias dificiles. La depresion es diferente: persiste y afecta como piensa, siente y funciona. Considere una evaluacion si varias de estas senales han durado dos semanas o mas:",
+          "Todos tenemos días difíciles. La depresión es diferente: persiste y afecta cómo piensa, siente y funciona. Considere una evaluación si varias de estas señales han durado dos semanas o más:",
         items: [
-          "Tristeza, vacio o animo bajo persistente la mayor parte del dia",
-          "Perdida de interes o disfrute en cosas que antes le importaban",
-          "Cambios en el sueno—dormir mucho mas o mucho menos de lo habitual",
+          "Tristeza, vacío o ánimo bajo persistente la mayor parte del día",
+          "Pérdida de interés o disfrute en cosas que antes le importaban",
+          "Cambios en el sueño—dormir mucho más o mucho menos de lo habitual",
           "Cambios en el apetito o el peso",
-          "Cansancio o poca energia que hace mas dificiles las tareas diarias",
+          "Cansancio o poca energía que hace más difíciles las tareas diarias",
           "Sentimientos de inutilidad, culpa o desesperanza",
           "Dificultad para concentrarse o tomar decisiones en el trabajo, la escuela o el hogar",
         ],
         closing:
-          "Si tiene pensamientos de hacerse dano o de que la vida no vale la pena, busque ayuda ahora: llame o envie un mensaje de texto al 988 para apoyo las 24 horas, o llame al 911 en una emergencia.",
+          "Si tiene pensamientos de hacerse daño o de que la vida no vale la pena, busque ayuda ahora: llame o envíe un mensaje de texto al 988 para apoyo las 24 horas, o llame al 911 en una emergencia.",
       },
       topics: [
         {
           id: "treatment",
-          title: "Tratamiento de la Depresion en Hinsdale",
+          title: "Tratamiento de la Depresión en Hinsdale",
           paragraphs: [
-            "La depresion es una de las condiciones de salud mental mas tratables. Un tratamiento eficaz suele incluir medicacion, terapia o una combinacion de ambas, junto con cambios practicos que apoyan el sueno, la actividad y la conexion.",
-            "En Firefly, su tratamiento se coordina dentro de una sola practica en Hinsdale. Eso significa que su prescriptora y su terapeuta pueden compartir un panorama claro de como esta y ajustar el cuidado juntos.",
+            "La depresión es una de las condiciones de salud mental más tratables. Un tratamiento eficaz suele incluir medicación, terapia o una combinación de ambas, junto con cambios prácticos que apoyan el sueño, la actividad y la conexión.",
+            "En Firefly, su tratamiento se coordina dentro de una sola práctica en Hinsdale. Eso significa que su prescriptora y su terapeuta pueden compartir un panorama claro de cómo está y ajustar el cuidado juntos.",
           ],
         },
         {
           id: "psychiatric-care",
-          title: "Cuidado Psiquiatrico para la Depresion",
+          title: "Cuidado Psiquiátrico para la Depresión",
           paragraphs: [
-            "El cuidado psiquiatrico para la depresion en Firefly lo ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo, quien evalua los sintomas, diagnostica la depresion y condiciones relacionadas, receta medicamentos y maneja el tratamiento con el tiempo.",
-            "Tambien buscamos factores que pueden imitar o empeorar la depresion—como problemas de sueno, ansiedad, TDAH, condiciones medicas o efectos secundarios de medicamentos—para que su tratamiento aborde el panorama completo.",
+            "El cuidado psiquiátrico para la depresión en Firefly lo ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP) del equipo, quien evalúa los síntomas, diagnostica la depresión y condiciones relacionadas, receta medicamentos y maneja el tratamiento con el tiempo.",
+            "También buscamos factores que pueden imitar o empeorar la depresión—como problemas de sueño, ansiedad, TDAH, condiciones médicas o efectos secundarios de medicamentos—para que su tratamiento aborde el panorama completo.",
           ],
         },
         {
           id: "medication-management",
-          title: "Opciones y Manejo de Medicamentos para la Depresion",
+          title: "Opciones y Manejo de Medicamentos para la Depresión",
           paragraphs: [
-            "Los medicamentos antidepresivos pueden reducir los sintomas de la depresion y ayudar a recuperar la energia, la motivacion y la concentracion. Las opciones comunes incluyen los ISRS, los IRSN y otros antidepresivos. Su clinico considerara sus sintomas, historial, otras condiciones de salud y preferencias al hablar de las opciones.",
-            "Encontrar el medicamento y la dosis adecuados puede tomar tiempo. La mayoria de los antidepresivos tardan varias semanas en alcanzar su efecto completo, y algunas personas necesitan un ajuste o un medicamento diferente antes de encontrar el mejor. Las pruebas geneticas de Tempus pueden aportar informacion adicional sobre como su cuerpo podria procesar ciertos medicamentos.",
-            "La medicacion no siempre es el primer paso adecuado. Para una depresion mas leve, o cuando prefiere comenzar con terapia, su clinico puede recomendar empezar por ahi. Siempre le explicaremos el razonamiento y decidiremos juntos.",
+            "Los medicamentos antidepresivos pueden reducir los síntomas de la depresión y ayudar a recuperar la energía, la motivación y la concentración. Las opciones comunes incluyen los ISRS, los IRSN y otros antidepresivos. Su clínico considerará sus síntomas, historial, otras condiciones de salud y preferencias al hablar de las opciones.",
+            "Encontrar el medicamento y la dosis adecuados puede tomar tiempo. La mayoría de los antidepresivos tardan varias semanas en alcanzar su efecto completo, y algunas personas necesitan un ajuste o un medicamento diferente antes de encontrar el mejor. Las pruebas genéticas de Tempus pueden aportar información adicional sobre cómo su cuerpo podría procesar ciertos medicamentos.",
+            "La medicación no siempre es el primer paso adecuado. Para una depresión más leve, o cuando prefiere comenzar con terapia, su clínico puede recomendar empezar por ahí. Siempre le explicaremos el razonamiento y decidiremos juntos.",
           ],
         },
         {
           id: "initial-evaluation",
-          title: "Que Esperar en Su Evaluacion Psiquiatrica Inicial",
+          title: "Qué Esperar en Su Evaluación Psiquiátrica Inicial",
           intro:
             "Su primera cita se enfoca en comprenderle. Hablaremos sobre:",
           bullets: [
-            "Como se ha sentido y cuanto tiempo han estado presentes los sintomas",
-            "El sueno, el apetito, la energia, la concentracion y el funcionamiento diario",
-            "Episodios previos de depresion y cualquier tratamiento o medicamento anterior",
-            "Historial medico, medicamentos actuales y uso de sustancias",
+            "Cómo se ha sentido y cuánto tiempo han estado presentes los síntomas",
+            "El sueño, el apetito, la energía, la concentración y el funcionamiento diario",
+            "Episodios previos de depresión y cualquier tratamiento o medicamento anterior",
+            "Historial médico, medicamentos actuales y uso de sustancias",
             "Su seguridad, su red de apoyo y sus metas de tratamiento",
           ],
           paragraphs: [
-            "Antes de irse, su clinico le compartira sus impresiones y los proximos pasos recomendados. Si tiene registros de tratamientos anteriores o una lista de medicamentos que ha probado, traigalos.",
+            "Antes de irse, su clínico le compartirá sus impresiones y los próximos pasos recomendados. Si tiene registros de tratamientos anteriores o una lista de medicamentos que ha probado, tráigalos.",
           ],
         },
         {
           id: "ongoing-care",
           title: "Cuidado Continuo y Seguimiento",
           paragraphs: [
-            "Las visitas de seguimiento son una parte importante del tratamiento de la depresion. Al principio suelen ser mas frecuentes para que su clinico observe su respuesta, revise efectos secundarios y ajuste su plan.",
-            "Una vez que se siente mejor, continuar el tratamiento por un tiempo puede ayudar a evitar que los sintomas regresen. Cuando y como cambiar o suspender un medicamento es una decision que usted y su clinico toman juntos—nunca de forma repentina ni por su cuenta.",
+            "Las visitas de seguimiento son una parte importante del tratamiento de la depresión. Al principio suelen ser más frecuentes para que su clínico observe su respuesta, revise efectos secundarios y ajuste su plan.",
+            "Una vez que se siente mejor, continuar el tratamiento por un tiempo puede ayudar a evitar que los síntomas regresen. Cuándo y cómo cambiar o suspender un medicamento es una decisión que usted y su clínico toman juntos—nunca de forma repentina ni por su cuenta.",
           ],
         },
         {
           id: "therapy",
-          title: "Terapia para la Depresion",
+          title: "Terapia para la Depresión",
           paragraphs: [
-            "La terapia le ayuda a comprender los patrones que mantienen la depresion y a desarrollar habilidades para cambiarlos. Nuestros clinicos utilizan enfoques como la Terapia Cognitivo-Conductual (CBT), la Terapia de Aceptacion y Compromiso (ACT) y el trabajo basado en fortalezas, adaptados a sus metas.",
-            "Para muchas personas, la terapia combinada con medicacion funciona mejor que cualquiera de las dos por separado. En Firefly, ambas estan disponibles en la misma practica.",
+            "La terapia le ayuda a comprender los patrones que mantienen la depresión y a desarrollar habilidades para cambiarlos. Nuestros clínicos utilizan enfoques como la Terapia Cognitivo-Conductual (CBT), la Terapia de Aceptación y Compromiso (ACT) y el trabajo basado en fortalezas, adaptados a sus metas.",
+            "Para muchas personas, la terapia combinada con medicación funciona mejor que cualquiera de las dos por separado. En Firefly, ambas están disponibles en la misma práctica.",
           ],
           links: [
-            { label: "Conozca mas sobre la terapia en Firefly", href: "/therapy" },
+            { label: "Conozca más sobre la terapia en Firefly", href: "/therapy" },
           ],
         },
       ],
       related: {
         title: "Cuidado Relacionado en Firefly",
         paragraph:
-          "La depresion a menudo coincide con la ansiedad, las inquietudes de atencion y los problemas de sueno. Cuando ayuda, coordinamos el cuidado entre servicios dentro de una sola practica.",
+          "La depresión a menudo coincide con la ansiedad, las inquietudes de atención y los problemas de sueño. Cuando ayuda, coordinamos el cuidado entre servicios dentro de una sola práctica.",
         links: [
           {
-            label: "Manejo de Medicacion Psiquiatrica",
+            label: "Manejo de Medicación Psiquiátrica",
             href: "/medication-management",
           },
           { label: "Tratamiento de la Ansiedad", href: "/anxiety-treatment" },
-          { label: "Pruebas de TDAH y Atencion", href: "/adhd-testing" },
+          { label: "Pruebas de TDAH y Atención", href: "/adhd-testing" },
         ],
       },
-      note: "Firefly Wellness ofrece cuidado de salud mental ambulatorio y no es un servicio de emergencia o crisis. Si esta pensando en hacerse dano o esta en peligro inmediato, llame al 911 o acuda a la sala de emergencias mas cercana. Para apoyo las 24 horas, llame o envie un mensaje de texto al 988 (Linea de Prevencion del Suicidio y Crisis).",
+      note: "Firefly Wellness ofrece cuidado de salud mental ambulatorio y no es un servicio de emergencia o crisis. Si está pensando en hacerse daño o está en peligro inmediato, llame al 911 o acuda a la sala de emergencias más cercana. Para apoyo las 24 horas, llame o envíe un mensaje de texto al 988 (Línea de Prevención del Suicidio y Crisis).",
       faq: {
-        title: "Preguntas Frecuentes Sobre el Tratamiento de la Depresion",
+        title: "Preguntas Frecuentes Sobre el Tratamiento de la Depresión",
         items: [
           {
-            question: "Necesito un psiquiatra para la depresion?",
+            question: "¿Necesito un psiquiatra para la depresión?",
             answer:
-              "No necesariamente. En Firefly, la evaluacion psiquiatrica y el manejo de medicamentos los ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP), quien puede diagnosticar la depresion, recetar medicamentos y manejar su cuidado con el tiempo.",
+              "No necesariamente. En Firefly, la evaluación psiquiátrica y el manejo de medicamentos los ofrece nuestra Psychiatric-Mental Health Nurse Practitioner certificada por la junta (PMHNP), quien puede diagnosticar la depresión, recetar medicamentos y manejar su cuidado con el tiempo.",
           },
           {
-            question: "Como se si es depresion o solo una mala racha?",
+            question: "¿Cómo sé si es depresión o solo una mala racha?",
             answer:
-              "Una mala racha suele mejorar cuando cambian las circunstancias. La depresion tiende a durar dos semanas o mas y afecta el sueno, la energia, el interes y el funcionamiento diario. Si no esta seguro, una evaluacion puede ayudar a aclarar lo que esta pasando.",
+              "Una mala racha suele mejorar cuando cambian las circunstancias. La depresión tiende a durar dos semanas o más y afecta el sueño, la energía, el interés y el funcionamiento diario. Si no está seguro, una evaluación puede ayudar a aclarar lo que está pasando.",
           },
           {
-            question: "Cuanto tardan en funcionar los antidepresivos?",
+            question: "¿Cuánto tardan en funcionar los antidepresivos?",
             answer:
-              "Algunas personas notan cambios en el sueno o la energia en las primeras semanas, pero la mayoria de los antidepresivos tardan varias semanas en alcanzar su efecto completo. El seguimiento regular ayuda a asegurar que el tratamiento va por buen camino.",
+              "Algunas personas notan cambios en el sueño o la energía en las primeras semanas, pero la mayoría de los antidepresivos tardan varias semanas en alcanzar su efecto completo. El seguimiento regular ayuda a asegurar que el tratamiento va por buen camino.",
           },
           {
-            question: "Que pasa si mi medicamento actual no funciona?",
+            question: "¿Qué pasa si mi medicamento actual no funciona?",
             answer:
-              "Es una razon comun por la que las personas llegan a Firefly. Revisamos su historial, lo que ha probado y sus sintomas actuales, y luego hablamos de opciones como ajustar la dosis, cambiar de medicamento, agregar terapia o realizar una evaluacion adicional.",
+              "Es una razón común por la que las personas llegan a Firefly. Revisamos su historial, lo que ha probado y sus síntomas actuales, y luego hablamos de opciones como ajustar la dosis, cambiar de medicamento, agregar terapia o realizar una evaluación adicional.",
           },
           {
-            question: "Aceptan mi seguro?",
+            question: "¿Aceptan mi seguro?",
             answer:
-              "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare. Tambien aceptamos pago privado y seguros fuera de la red.",
+              "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare. También aceptamos pago privado y seguros fuera de la red.",
           },
           {
-            question: "Que tan pronto me pueden atender?",
+            question: "¿Qué tan pronto me pueden atender?",
             answer:
-              "Las citas nuevas suelen estar disponibles en pocos dias. Programe en linea o comuniquese con nuestra oficina para encontrar el proximo horario disponible.",
+              "Las citas nuevas suelen estar disponibles en pocos días. Programe en línea o comuníquese con nuestra oficina para encontrar el próximo horario disponible.",
           },
           {
-            question: "Tratan la depresion en adolescentes?",
+            question: "¿Tratan la depresión en adolescentes?",
             answer:
-              "Si. Tratamos a adolescentes y adultos, e involucramos a padres o tutores cuando corresponde.",
+              "Sí. Tratamos a adolescentes y adultos, e involucramos a padres o tutores cuando corresponde.",
           },
         ],
       },
       closing: {
         title: "No Tiene Que Esperar para Sentirse Mejor",
         paragraph:
-          "La depresion puede hacer que pedir ayuda se sienta dificil. Programar una evaluacion es un primer paso significativo, y nuestro equipo le ayudara con lo que siga.",
-        cta: "Programar una evaluacion de depresion",
-        scheduleLabel: "Reservar en linea ahora",
+          "La depresión puede hacer que pedir ayuda se sienta difícil. Programar una evaluación es un primer paso significativo, y nuestro equipo le ayudará con lo que siga.",
+        cta: "Programar una evaluación de depresión",
+        scheduleLabel: "Reservar en línea ahora",
       },
     },
   },

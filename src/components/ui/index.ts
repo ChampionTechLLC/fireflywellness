@@ -9,7 +9,7 @@ export { Image } from "./Image";
 export { Navbar } from "./Navbar";
 export { TherapistCard } from "./TherapistCard";
 export { Expandable } from "./Expandable";
-export { LanguageToggle } from "./LanguageToggle";
+export { LanguageSwitch } from "./LanguageSwitch";
 export { LinkedText } from "./LinkedText";
 export { InsuranceLogos } from "./InsuranceLogos";
 export { ServiceIcon, ServiceListItem } from "./ServiceListItem";

@@ -1,56 +1,21 @@
-import { HERO_LOGO_URL, SITE_URL } from "@/constants";
+import { SITE_URL } from "@/constants";
 import { locationData } from "@/data/location";
 import { getServicePagesContent } from "@/data/servicePages";
-import { businessLocationJsonLd } from "@/lib/businessJsonLd";
+import type { Locale } from "@/data/siteContent";
+import { BUSINESS_ID, medicalBusinessJsonLd } from "@/lib/businessJsonLd";
+import { localizedPath } from "@/lib/routes";
 
-const areaServed = [
-  "Hinsdale, IL",
-  "Oak Brook, IL",
-  "Clarendon Hills, IL",
-  "Western Springs, IL",
-  "Westmont, IL",
-];
-
-export function ServicesHubJsonLd() {
+export function ServicesHubJsonLd({ locale }: { locale: Locale }) {
   const address = locationData[0];
   if (!address) return null;
 
-  const hub = getServicePagesContent("en").hub;
-  const logoUrl = new URL(HERO_LOGO_URL, SITE_URL).toString();
-  const servicesUrl = new URL("/services", SITE_URL).toString();
-  const businessId = `${SITE_URL}/#medicalbusiness`;
-
+  const hub = getServicePagesContent(locale).hub;
+  const servicesUrl = new URL(
+    localizedPath("/services", locale),
+    SITE_URL,
+  ).toString();
   const serviceListId = `${servicesUrl}#servicelist`;
   const faqId = `${servicesUrl}#faq`;
-
-  const medicalBusiness = {
-    "@type": "MedicalBusiness",
-    "@id": businessId,
-    name: "Firefly Wellness, PLLC",
-    alternateName: "Firefly Counseling",
-    url: SITE_URL,
-    image: logoUrl,
-    logo: logoUrl,
-    description: hub.meta.description,
-    ...(address.phone
-      ? { telephone: address.phone.replace(/\./g, "-") }
-      : {}),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: [address.address1, address.address2]
-        .filter(Boolean)
-        .join(", "),
-      addressLocality: address.city,
-      addressRegion: address.state,
-      postalCode: address.zip,
-      addressCountry: "US",
-    },
-    areaServed: areaServed.map((name) => ({
-      "@type": "City",
-      name,
-    })),
-    ...businessLocationJsonLd(address),
-  };
 
   const serviceList = {
     "@type": "ItemList",
@@ -63,8 +28,8 @@ export function ServicesHubJsonLd() {
         "@type": "MedicalTherapy",
         name: offering.title,
         description: offering.blurb,
-        url: new URL(offering.href, SITE_URL).toString(),
-        provider: { "@id": businessId },
+        url: new URL(localizedPath(offering.href, locale), SITE_URL).toString(),
+        provider: { "@id": BUSINESS_ID },
       },
     })),
   };
@@ -72,6 +37,7 @@ export function ServicesHubJsonLd() {
   const faqPage = {
     "@type": "FAQPage",
     "@id": faqId,
+    inLanguage: locale,
     mainEntity: hub.faq.items.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -91,14 +57,15 @@ export function ServicesHubJsonLd() {
         url: servicesUrl,
         name: hub.meta.title,
         description: hub.meta.description,
-        about: { "@id": businessId },
+        inLanguage: locale,
+        about: { "@id": BUSINESS_ID },
         mainEntity: [
-          { "@id": businessId },
+          { "@id": BUSINESS_ID },
           { "@id": serviceListId },
           { "@id": faqId },
         ],
       },
-      medicalBusiness,
+      medicalBusinessJsonLd(address, hub.meta.description),
       serviceList,
       faqPage,
     ],

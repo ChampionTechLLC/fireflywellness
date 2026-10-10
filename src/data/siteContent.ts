@@ -9,10 +9,10 @@ export type TherapistContent = {
 };
 
 export type SiteContent = {
-  language: {
-    toggleLabel: string;
-    english: string;
-    spanish: string;
+  /** Link to the same page in the other language. */
+  languageSwitch: {
+    label: string;
+    ariaLabel: string;
   };
   nav: {
     brand: string;
@@ -29,6 +29,10 @@ export type SiteContent = {
     mainLabel: string;
   };
   home: {
+    meta: {
+      title: string;
+      description: string;
+    };
     mobileSchedule: string;
     heroLogoAlt: string;
     intro: {
@@ -91,10 +95,9 @@ export type SiteContent = {
 
 export const siteContent: Record<Locale, SiteContent> = {
   en: {
-    language: {
-      toggleLabel: "Switch language",
-      english: "English",
-      spanish: "Spanish",
+    languageSwitch: {
+      label: "Español",
+      ariaLabel: "Ver esta página en español",
     },
     nav: {
       brand: "Firefly Wellness, PLLC",
@@ -111,6 +114,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       mainLabel: "Main",
     },
     home: {
+      meta: {
+        title: "Psychiatric Care & Therapy in Hinsdale | Firefly Wellness",
+        description:
+          "Firefly Wellness offers therapy, ADHD testing, and psychiatric medication in Hinsdale, IL—serving Oak Brook, Clarendon Hills, Western Springs, Westmont, and nearby western suburbs.",
+      },
       mobileSchedule: "Schedule an Appointment",
       heroLogoAlt: "Firefly Wellness logo",
       intro: {
@@ -260,148 +268,153 @@ export const siteContent: Record<Locale, SiteContent> = {
     },
   },
   es: {
-    language: {
-      toggleLabel: "Cambiar idioma",
-      english: "Ingles",
-      spanish: "Espanol",
+    languageSwitch: {
+      label: "English",
+      ariaLabel: "View this page in English",
     },
     nav: {
       brand: "Firefly Wellness, PLLC",
       schedule: "Programar una cita",
-      clinicians: "Clinicos",
+      clinicians: "Clínicos",
       services: "Servicios",
       fees: "Seguros y tarifas",
-      location: "Ubicacion",
-      careers: "Carreras",
+      location: "Ubicación",
+      careers: "Empleo",
       clientPortal: "Portal del cliente",
-      more: "Mas",
-      openMenu: "Abrir menu",
-      closeMenu: "Cerrar menu",
+      more: "Más",
+      openMenu: "Abrir menú",
+      closeMenu: "Cerrar menú",
       mainLabel: "Principal",
     },
     home: {
+      meta: {
+        title:
+          "Atención Psiquiátrica y Terapia en Español en Hinsdale | Firefly Wellness",
+        description:
+          "Firefly Wellness ofrece terapia, evaluación de TDAH y medicación psiquiátrica en español en Hinsdale, IL—atendiendo Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
+      },
       mobileSchedule: "Programar una cita",
       heroLogoAlt: "Logotipo de Firefly Wellness",
       intro: {
-        title: "Atencion Psiquiatrica y Terapia en Hinsdale",
+        title: "Atención Psiquiátrica y Terapia en Español en Hinsdale",
         subtitle: "Firefly Wellness, PLLC",
         paragraphs: [
-          "Bienvenidos a Firefly Wellness. Nuestro equipo aporta casi dos decadas de experiencia en salud mental para brindar un cuidado reflexivo y personalizado a adolescentes y adultos. Ayudamos a las personas a manejar el TDAH, la ansiedad, la depresion, el trauma, los desafios en las relaciones y las transiciones de vida mediante atencion psiquiatrica, manejo de medicamentos, evaluacion de TDAH y terapia.",
+          "Bienvenidos a Firefly Wellness. Nuestro equipo aporta casi dos décadas de experiencia en salud mental para brindar un cuidado reflexivo y personalizado a adolescentes y adultos. Ayudamos a las personas a manejar el TDAH, la ansiedad, la depresión, el trauma, los desafíos en las relaciones y las transiciones de vida mediante atención psiquiátrica, manejo de medicamentos, evaluación de TDAH y terapia.",
           "En Firefly Wellness, creemos que un cuidado significativo comienza por comprender a la persona en su totalidad. Nos tomamos el tiempo para escuchar, comprender sus inquietudes y crear un enfoque de tratamiento colaborativo, de apoyo y adaptado a sus necesidades.",
           "Ubicados en Hinsdale, atendemos a personas y familias en Oak Brook, Clarendon Hills, Western Springs, Westmont y los suburbios del oeste cercanos.",
         ],
-        scheduleLink: "Reservar en linea ahora",
+        scheduleLink: "Reservar en línea ahora",
       },
       servicesOverview: {
         title: "Nuestros servicios en Hinsdale",
         items: [
           {
-            title: "Medicacion psiquiatrica",
+            title: "Medicación psiquiátrica",
             blurb:
-              "Visitas de prescripcion y apoyo continuo con nuestra PMHNP del equipo, incluyendo herramientas que orientan decisiones de medicacion reflexivas.",
+              "Visitas de prescripción y apoyo continuo con nuestra PMHNP del equipo, incluyendo herramientas que orientan decisiones de medicación reflexivas.",
             href: "/medication-management",
-            learnMore: "Conozca mas sobre medicacion psiquiatrica",
+            learnMore: "Conozca más sobre medicación psiquiátrica",
           },
           {
-            title: "Pruebas de TDAH y atencion",
+            title: "Pruebas de TDAH y atención",
             blurb:
-              "Pruebas T.O.V.A. por computadora para ayudar a evaluar la atencion y el control de impulsos como una parte de una evaluacion completa.",
+              "Pruebas T.O.V.A. por computadora para ayudar a evaluar la atención y el control de impulsos como una parte de una evaluación completa.",
             href: "/adhd-testing",
-            learnMore: "Conozca mas sobre pruebas de TDAH",
+            learnMore: "Conozca más sobre pruebas de TDAH",
           },
           {
             title: "Tratamiento de la ansiedad",
             blurb:
-              "Evaluacion psiquiatrica, medicacion cuando es apropiada y terapia para la preocupacion, el panico y otras inquietudes de ansiedad—coordinados en una sola practica.",
+              "Evaluación psiquiátrica, medicación cuando es apropiada y terapia para la preocupación, el pánico y otras inquietudes de ansiedad—coordinados en una sola práctica.",
             href: "/anxiety-treatment",
-            learnMore: "Conozca mas sobre el tratamiento de la ansiedad",
+            learnMore: "Conozca más sobre el tratamiento de la ansiedad",
           },
           {
-            title: "Tratamiento de la depresion",
+            title: "Tratamiento de la depresión",
             blurb:
-              "Evaluacion psiquiatrica, manejo de antidepresivos y terapia, con seguimiento regular a medida que vuelve a sentirse como usted mismo.",
+              "Evaluación psiquiátrica, manejo de antidepresivos y terapia, con seguimiento regular a medida que vuelve a sentirse como usted mismo.",
             href: "/depression-treatment",
-            learnMore: "Conozca mas sobre el tratamiento de la depresion",
+            learnMore: "Conozca más sobre el tratamiento de la depresión",
           },
           {
             title: "Terapia",
             blurb:
-              "Consejeria individual para adolescentes, adultos jovenes y adultos—con enfoque en comprension, habilidades de afrontamiento y cambio duradero.",
+              "Consejería individual para adolescentes, adultos jóvenes y adultos—con enfoque en comprensión, habilidades de afrontamiento y cambio duradero.",
             href: "/therapy",
-            learnMore: "Conozca mas sobre terapia",
+            learnMore: "Conozca más sobre terapia",
           },
         ],
         supportingNoteTitle: "Pruebas y Herramientas Adicionales",
         supportingNote:
-          "Cuando es clinicamente util, BrainCheck y Tempus pueden apoyar el monitoreo de la memoria y decisiones personalizadas de medicacion junto con su cuidado.",
+          "Cuando es clínicamente útil, BrainCheck y Tempus pueden apoyar el monitoreo de la memoria y decisiones personalizadas de medicación junto con su cuidado.",
         viewAllCta: "Ver todos los servicios",
       },
       whyFirefly: {
-        title: "Por que Firefly Wellness",
+        title: "Por qué Firefly Wellness",
         intro:
-          "Trabajamos con adolescentes y adultos que atraviesan ansiedad, depresion, trauma, inquietudes de relacion y transiciones de vida.",
+          "Trabajamos con adolescentes y adultos que atraviesan ansiedad, depresión, trauma, inquietudes de relación y transiciones de vida.",
         items: [
-          "Atencion basada en evidencia",
+          "Atención basada en evidencia",
           "Relaciones calidas y colaborativas",
           "Respeto por su individualidad",
-          "Practica clinica etica y reflexiva",
-          "Servicios en ingles y espanol",
+          "Práctica clínica ética y reflexiva",
+          "Servicios en inglés y español",
         ],
         closing:
-          "En Firefly Wellness, nuestra mision es ayudarle a pasar de simplemente sobrellevar la vida a realmente prosperar.",
-        cliniciansLink: "Conozca a nuestros clinicos",
+          "En Firefly Wellness, nuestra misión es ayudarle a pasar de simplemente sobrellevar la vida a realmente prosperar.",
+        cliniciansLink: "Conozca a nuestros clínicos",
       },
       hiringTeaser: {
-        text: "Estamos ampliando nuestro equipo clinico en Hinsdale.",
+        text: "Estamos ampliando nuestro equipo clínico en Hinsdale.",
         linkLabel: "Ver vacantes",
         href: "/careers",
       },
       clinicians: {
-        title: "Conozca a Sus Clinicos",
-        aboutTitle: "Sobre mi",
-        seeMore: "Ver mas",
+        title: "Conozca a Sus Clínicos",
+        aboutTitle: "Sobre mí",
+        seeMore: "Ver más",
         seeLess: "Ver menos",
         scheduleWith: (firstName) => `Programar con ${firstName}`,
         profiles: {
           "1": {
-            subtitle: "Fundadora, terapeuta bilingue",
+            subtitle: "Fundadora, terapeuta bilingüe",
             aboutMe: [
-              "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiatrica, consejera profesional clinica licenciada y fundadora de Firefly Wellness. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 decadas. Soy mexicoamericana bilingue, bicultural y birracial.",
-              "A lo largo de los anos, he trabajado con una variedad de clientes, lo que me ha permitido reconocer que trabajo mejor con personas de 11 anos hasta sus 30s. Al refinar mis habilidades, he llegado a disfrutar mucho el uso de terapias de arte expresivo, asi como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptacion y Compromiso (ACT).",
-              "Ademas de mi trabajo como LCPC, complete mi Maestria en Ciencias de Enfermeria (MSN) y soy enfermera practicante de salud mental psiquiatrica certificada (PMHNP). Brindo atencion de medicacion psiquiatrica en Firefly Wellness junto con la terapia, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
+              "Mi nombre es Jeannette Sziler. Soy enfermera practicante de salud mental psiquiátrica, consejera profesional clínica licenciada y fundadora de Firefly Wellness. He trabajado en el campo de la salud mental de una forma u otra durante casi 2 décadas. Soy mexicoamericana bilingüe, bicultural y birracial.",
+              "A lo largo de los años, he trabajado con una variedad de clientes, lo que me ha permitido reconocer que trabajo mejor con personas de 11 años hasta sus 30s. Al refinar mis habilidades, he llegado a disfrutar mucho el uso de terapias de arte expresivo, así como la Terapia Cognitivo-Conductual (CBT) y la Terapia de Aceptación y Compromiso (ACT).",
+              "Además de mi trabajo como LCPC, completé mi Maestría en Ciencias de Enfermería (MSN) y soy enfermera practicante de salud mental psiquiátrica certificada (PMHNP). Brindo atención de medicación psiquiátrica en Firefly Wellness junto con la terapia, ampliando las formas en que podemos apoyar las necesidades de salud mental de nuestros clientes.",
             ],
             aboutMeBullets: [
-              "Mis quince minutos de fama fueron cuando apareci en un periodico local despues de que una amiga y yo completamos 100 horas de voluntariado en un hospital local cuando teniamos 13 anos.",
-              "Dobby de Harry Potter es mi criatura magica favorita. En segundo lugar estarian los gatos lobo, que no reciben tanto carino como sus contrapartes hombres lobo.",
-              "Si mi personalidad fuera un perro, seria un chihuahua: con caracter, siempre con frio, lleno de energia y probablemente usando un sueter.",
+              "Mis quince minutos de fama fueron cuando aparecí en un periódico local después de que una amiga y yo completamos 100 horas de voluntariado en un hospital local cuando teníamos 13 años.",
+              "Dobby de Harry Potter es mi criatura mágica favorita. En segundo lugar estarían los gatos lobo, que no reciben tanto cariño como sus contrapartes hombres lobo.",
+              "Si mi personalidad fuera un perro, sería un chihuahua: con carácter, siempre con frío, lleno de energía y probablemente usando un suéter.",
               "Estar afuera es uno de mis lugares favoritos, siempre que el clima coopere.",
-              "Mi snack favorito suele ser popcorn con salsa Tapatio o Valentina y Tajin. Tambien nunca rechazo chips con salsa.",
+              "Mi snack favorito suele ser popcorn con salsa Tapatío o Valentina y Tajín. También nunca rechazo chips con salsa.",
             ],
           },
           "2": {
             subtitle: "Terapeuta del equipo",
             aboutMe: [
-              "Mi nombre es Meghan Tortorici. Soy consejera profesional clinica licenciada. He trabajado en el campo de la psicologia por mas de seis anos y seguimos contando. Con mis habilidades crecientes en el tratamiento de la salud mental, he desarrollado un amor por la arteterapia para ayudar a los clientes a navegar sus dificultades.",
-              "Este medio es extremadamente beneficioso al trabajar con la poblacion con la que trabajo mejor: adultos jovenes de 18 a 25 anos y personas con autismo. Tambien trabajo bien con la poblacion de mayor edad, 65 anos o mas. A lo largo de los anos, mientras he refinado mis habilidades y aprendido con mis clientes, ha sido y sigue siendo un regalo verlos aceptar el cambio.",
+              "Mi nombre es Meghan Tortorici. Soy consejera profesional clínica licenciada. He trabajado en el campo de la psicología por más de seis años y seguimos contando. Con mis habilidades crecientes en el tratamiento de la salud mental, he desarrollado un amor por la arteterapia para ayudar a los clientes a navegar sus dificultades.",
+              "Este medio es extremadamente beneficioso al trabajar con la población con la que trabajo mejor: adultos jóvenes de 18 a 25 años y personas con autismo. También trabajo bien con la población de mayor edad, 65 años o más. A lo largo de los años, mientras he refinado mis habilidades y aprendido con mis clientes, ha sido y sigue siendo un regalo verlos aceptar el cambio.",
             ],
             aboutMeBullets: [
               "Mis quince minutos de fama fueron romper el record de lanzamiento de disco de mi escuela secundaria.",
-              "Algunos de mis snacks favoritos tienen esa bondad salada y crujiente. Tambien me encanta la crema de cacahuate y el chocolate oscuro.",
-              "Las criaturas de fuego suelen ser mis criaturas mitologicas favoritas; el fenix y los dragones.",
-              "Disfruto el yoga aereo y caminar por senderos locales cuando siento la necesidad de moverme.",
-              "What Dreams May Come y Donnie Darko son dos peliculas que me encantaria ver otra vez por primera vez si pudiera; fueron muy transformadoras durante mi adolescencia.",
+              "Algunos de mis snacks favoritos tienen esa bondad salada y crujiente. También me encanta la crema de cacahuate y el chocolate oscuro.",
+              "Las criaturas de fuego suelen ser mis criaturas mitológicas favoritas; el fénix y los dragones.",
+              "Disfruto el yoga aéreo y caminar por senderos locales cuando siento la necesidad de moverme.",
+              "What Dreams May Come y Donnie Darko son dos películas que me encantaría ver otra vez por primera vez si pudiera; fueron muy transformadoras durante mi adolescencia.",
             ],
           },
           "3": {
             subtitle: "Terapeuta del equipo",
             aboutMe: [
-              "Hola. Mi nombre es Patricia Opperman, pero me llaman Tricia. Soy trabajadora social clinica licenciada y llevo bastante tiempo en este campo. Estar en esta profesion me ha permitido disfrutar las conexiones que establezco con las personas en general, y con mis clientes en particular.",
-              "A lo largo de mis muchos anos como trabajadora social clinica, he aprendido que trabajo mejor con adultos en sus 30s hasta la poblacion de mayor edad, 65 anos o mas. Disfruto usar una perspectiva basada en fortalezas con enfoque en lo que actualmente funciona; estas conexiones significativas y genuinas me permiten aprender maneras mas efectivas de trabajar con ellos.",
+              "Hola. Mi nombre es Patricia Opperman, pero me llaman Tricia. Soy trabajadora social clínica licenciada y llevo bastante tiempo en este campo. Estar en esta profesión me ha permitido disfrutar las conexiones que establezco con las personas en general, y con mis clientes en particular.",
+              "A lo largo de mis muchos años como trabajadora social clínica, he aprendido que trabajo mejor con adultos en sus 30s hasta la población de mayor edad, 65 años o más. Disfruto usar una perspectiva basada en fortalezas con enfoque en lo que actualmente funciona; estas conexiones significativas y genuinas me permiten aprender maneras más efectivas de trabajar con ellos.",
             ],
             aboutMeBullets: [
               "Mis quince minutos de fama fueron participar en una competencia de fisicoculturismo en mis 50s.",
               "Soy una ciclista entusiasta.",
-              "Mi cafeteria favorita es 318 Coffee House en Geneva.",
+              "Mi cafetería favorita es 318 Coffee House en Geneva.",
               "Me encantan las plantas, especialmente la lavanda.",
               "Cheetos y, naturalmente, cualquier cosa dulce son mis snacks favoritos.",
             ],
@@ -411,20 +424,20 @@ export const siteContent: Record<Locale, SiteContent> = {
       insurance: {
         title: "Seguros Que Aceptamos",
         cashPay:
-          "Tambien aceptamos pago privado y seguros fuera de la red.",
+          "También aceptamos pago privado y seguros fuera de la red.",
         feesLink: "Ver detalles de seguros y tarifas de pago privado",
       },
       contact: {
         title: "Hablemos.",
         subtitle: "Programe su cita hoy.",
         scheduleWith: (firstName) => `Programar con ${firstName}`,
-        address: "Direccion",
-        phone: "Telefono",
+        address: "Dirección",
+        phone: "Teléfono",
         fax: "Fax",
         hoursLabel: "Horario comercial",
         hours:
-          "Solo con cita. Cada clinico establece su propio horario: reserve en linea para ver disponibilidad.",
-        mapTitle: "Ubicacion de la oficina",
+          "Solo con cita. Cada clínico establece su propio horario: reserve en línea para ver disponibilidad.",
+        mapTitle: "Ubicación de la oficina",
         follow: "siga a firefly",
       },
     },

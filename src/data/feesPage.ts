@@ -197,33 +197,33 @@ const feesPageContent: Record<Locale, FeesPageCopy> = {
   },
   es: {
     meta: {
-      title: "Seguros y Tarifas de Pago Privado | Firefly Wellness, Hinsdale",
+      title: "Seguros Aceptados y Tarifas en Hinsdale | Firefly Wellness",
       description:
-        "Seguros aceptados en Firefly Wellness en Hinsdale—Cigna, BCBS, Curative, Lyra, Medicare, TriWest y UnitedHealthcare—ademas de tarifas de pago privado para evaluacion psiquiatrica, manejo de medicamentos, terapia y pruebas de TDAH.",
+        "Seguros aceptados en Firefly Wellness en Hinsdale—Cigna, BCBS, Curative, Lyra, Medicare, TriWest y UnitedHealthcare—además de tarifas de pago privado para evaluación psiquiátrica, manejo de medicamentos, terapia y pruebas de TDAH.",
     },
     hero: {
       title: "Seguros y Tarifas",
       subtitle:
-        "Informacion clara sobre los seguros que aceptamos y el costo del cuidado si decide pagar por su cuenta—para que pueda enfocarse en recibir el apoyo que necesita.",
+        "Información clara sobre los seguros que aceptamos y el costo del cuidado si decide pagar por su cuenta—para que pueda enfocarse en recibir el apoyo que necesita.",
       cta: "Programar una cita",
     },
     insurance: {
       title: "Seguros Que Aceptamos",
       paragraph:
-        "Firefly Wellness esta dentro de la red de Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para evaluacion psiquiatrica, manejo de medicamentos, terapia y evaluacion de TDAH.",
+        "Firefly Wellness está dentro de la red de Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare para evaluación psiquiátrica, manejo de medicamentos, terapia y evaluación de TDAH.",
       verify:
-        "La cobertura, los copagos y los deducibles varian segun el plan. Con gusto le ayudamos a revisar sus beneficios antes de su primera visita.",
+        "La cobertura, los copagos y los deducibles varían según el plan. Con gusto le ayudamos a revisar sus beneficios antes de su primera visita.",
     },
     selfPay: {
       title: "Tarifas de Pago Privado",
       intro:
-        "Si no tiene seguro, su plan esta fuera de la red o prefiere no usar su seguro, estas son nuestras tarifas estandar de pago privado.",
+        "Si no tiene seguro, su plan está fuera de la red o prefiere no usar su seguro, estas son nuestras tarifas estándar de pago privado.",
       priceLabel: "Tarifa",
       items: [
         {
-          service: "Evaluacion Psiquiatrica Inicial",
+          service: "Evaluación Psiquiátrica Inicial",
           details:
-            "Evaluacion integral de 60 minutos con nuestra PMHNP certificada por la junta, incluyendo diagnostico y recomendaciones de tratamiento",
+            "Evaluación integral de 60 minutos con nuestra PMHNP certificada por la junta, incluyendo diagnóstico y recomendaciones de tratamiento",
           price: "$300",
         },
         {
@@ -233,102 +233,102 @@ const feesPageContent: Record<Locale, FeesPageCopy> = {
           price: "$175",
         },
         {
-          service: "Evaluacion Inicial de Terapia",
+          service: "Evaluación Inicial de Terapia",
           details:
-            "Primera sesion de 60 minutos con un terapeuta de Firefly para comprender su historial, inquietudes y metas",
+            "Primera sesión de 60 minutos con un terapeuta de Firefly para comprender su historial, inquietudes y metas",
           price: "$200",
         },
         {
-          service: "Sesion de Terapia Individual",
-          details: "Sesion de terapia continua de 53 a 60 minutos",
+          service: "Sesión de Terapia Individual",
+          details: "Sesión de terapia continua de 53 a 60 minutos",
           price: "$160",
         },
         {
-          service: "Evaluacion de TDAH con Prueba T.O.V.A.",
+          service: "Evaluación de TDAH con Prueba T.O.V.A.",
           details:
-            "Prueba de atencion por computadora, interpretacion clinica y revision de resultados con su clinico",
+            "Prueba de atención por computadora, interpretación clínica y revisión de resultados con su clínico",
           price: "$300",
         },
         {
-          service: "Evaluacion Cognitiva BrainCheck",
+          service: "Evaluación Cognitiva BrainCheck",
           details:
-            "Revision de memoria y cognicion, con resultados revisados por su clinico",
+            "Revisión de memoria y cognición, con resultados revisados por su clínico",
           price: "$125",
         },
         {
-          service: "Pruebas Geneticas Tempus",
+          service: "Pruebas Genéticas Tempus",
           details:
-            "Las pruebas farmacogenomicas son procesadas y facturadas directamente por Tempus. Le ayudaremos a comprender su costo esperado y cualquier cobertura antes de la prueba.",
+            "Las pruebas farmacogenómicas son procesadas y facturadas directamente por Tempus. Le ayudaremos a comprender su costo esperado y cualquier cobertura antes de la prueba.",
           price: "Facturado por Tempus",
         },
       ],
-      note: "Las tarifas estan sujetas a cambios. Si paga de forma privada o no usa su seguro, recibira un Presupuesto de Buena Fe de sus costos esperados antes de su visita.",
+      note: "Las tarifas están sujetas a cambios. Si paga de forma privada o no usa su seguro, recibirá un Presupuesto de Buena Fe de sus costos esperados antes de su visita.",
     },
     payment: {
-      title: "Informacion de Pago",
+      title: "Información de Pago",
       items: [
         {
           title: "Pago al Momento del Servicio",
           paragraph:
-            "Los copagos y las tarifas de pago privado se pagan al momento de su cita. Aceptamos las principales tarjetas de credito y debito, incluidas tarjetas HSA y FSA.",
+            "Los copagos y las tarifas de pago privado se pagan al momento de su cita. Aceptamos las principales tarjetas de crédito y débito, incluidas tarjetas HSA y FSA.",
         },
         {
           title: "Beneficios Fuera de la Red",
           paragraph:
-            "Si su plan no aparece en la lista, es posible que pueda usar sus beneficios fuera de la red. Podemos proporcionarle un recibo detallado (superbill) para que lo presente a su compania de seguros y solicite un posible reembolso.",
+            "Si su plan no aparece en la lista, es posible que pueda usar sus beneficios fuera de la red. Podemos proporcionarle un recibo detallado (superbill) para que lo presente a su compañía de seguros y solicite un posible reembolso.",
         },
         {
           title: "Preguntas Sobre Su Factura",
           paragraph:
-            "Si tiene preguntas sobre cobertura, cargos o un estado de cuenta, comuniquese con nuestra oficina y con gusto le ayudaremos.",
+            "Si tiene preguntas sobre cobertura, cargos o un estado de cuenta, comuníquese con nuestra oficina y con gusto le ayudaremos.",
         },
       ],
     },
     goodFaith: {
       title: "Su Derecho a un Presupuesto de Buena Fe",
       intro:
-        "Usted tiene derecho a recibir un “Presupuesto de Buena Fe” que explique cuanto costara su atencion medica. Segun la ley, los proveedores de atencion medica deben entregar a los pacientes que no tienen seguro o que no usan su seguro un estimado de la factura de los articulos y servicios medicos.",
+        "Usted tiene derecho a recibir un “Presupuesto de Buena Fe” que explique cuánto costará su atención médica. Según la ley, los proveedores de atención médica deben entregar a los pacientes que no tienen seguro o que no usan su seguro un estimado de la factura de los artículos y servicios médicos.",
       items: [
-        "Usted tiene derecho a recibir un Presupuesto de Buena Fe por el costo total esperado de cualquier articulo o servicio que no sea de emergencia. Esto incluye costos relacionados como pruebas medicas, medicamentos recetados, equipo y cargos de hospital.",
-        "Asegurese de que su proveedor de atencion medica le entregue un Presupuesto de Buena Fe por escrito al menos 1 dia habil antes de su servicio o articulo medico. Tambien puede pedir a su proveedor de atencion medica, y a cualquier otro proveedor que elija, un Presupuesto de Buena Fe antes de programar un articulo o servicio.",
+        "Usted tiene derecho a recibir un Presupuesto de Buena Fe por el costo total esperado de cualquier artículo o servicio que no sea de emergencia. Esto incluye costos relacionados como pruebas médicas, medicamentos recetados, equipo y cargos de hospital.",
+        "Asegúrese de que su proveedor de atención médica le entregue un Presupuesto de Buena Fe por escrito al menos 1 día hábil antes de su servicio o artículo médico. También puede pedir a su proveedor de atención médica, y a cualquier otro proveedor que elija, un Presupuesto de Buena Fe antes de programar un artículo o servicio.",
         "Si recibe una factura que es al menos $400 mayor que su Presupuesto de Buena Fe, puede disputar la factura.",
-        "Asegurese de guardar una copia o foto de su Presupuesto de Buena Fe.",
+        "Asegúrese de guardar una copia o foto de su Presupuesto de Buena Fe.",
       ],
       contact:
-        "Si tiene preguntas o desea mas informacion sobre su derecho a un Presupuesto de Buena Fe, visite www.cms.gov/nosurprises o llame al 1-800-985-3059.",
+        "Si tiene preguntas o desea más información sobre su derecho a un Presupuesto de Buena Fe, visite www.cms.gov/nosurprises o llame al 1-800-985-3059.",
     },
     faq: {
       title: "Preguntas Frecuentes Sobre Seguros y Tarifas",
       items: [
         {
-          question: "Que seguros aceptan?",
+          question: "¿Qué seguros aceptan?",
           answer:
             "Aceptamos Cigna, Blue Cross Blue Shield, Curative, Lyra, Medicare, TriWest y UnitedHealthcare.",
         },
         {
-          question: "Que pasa si mi seguro no aparece en la lista?",
+          question: "¿Qué pasa si mi seguro no aparece en la lista?",
           answer:
-            "Puede elegir pagar de forma privada o usar sus beneficios fuera de la red. Podemos proporcionarle un recibo detallado (superbill) para presentar a su compania de seguros y solicitar un posible reembolso.",
+            "Puede elegir pagar de forma privada o usar sus beneficios fuera de la red. Podemos proporcionarle un recibo detallado (superbill) para presentar a su compañía de seguros y solicitar un posible reembolso.",
         },
         {
-          question: "Cuanto cuesta una evaluacion psiquiatrica sin seguro?",
+          question: "¿Cuánto cuesta una evaluación psiquiátrica sin seguro?",
           answer:
-            "Nuestra tarifa de pago privado para una evaluacion psiquiatrica inicial de 60 minutos es de $300. Las visitas de seguimiento de manejo de medicamentos cuestan $175.",
+            "Nuestra tarifa de pago privado para una evaluación psiquiátrica inicial de 60 minutos es de $300. Las visitas de seguimiento de manejo de medicamentos cuestan $175.",
         },
         {
-          question: "Cuanto cuesta una prueba de TDAH sin seguro?",
+          question: "¿Cuánto cuesta una prueba de TDAH sin seguro?",
           answer:
-            "Nuestra tarifa de pago privado para una evaluacion de TDAH con prueba T.O.V.A., incluyendo interpretacion y revision de resultados, es de $300.",
+            "Nuestra tarifa de pago privado para una evaluación de TDAH con prueba T.O.V.A., incluyendo interpretación y revisión de resultados, es de $300.",
         },
         {
-          question: "El seguro cubre las pruebas geneticas Tempus?",
+          question: "¿El seguro cubre las pruebas genéticas Tempus?",
           answer:
-            "La cobertura varia segun el plan. Tempus factura la prueba directamente, y le ayudaremos a comprender su costo esperado antes de la prueba.",
+            "La cobertura varía según el plan. Tempus factura la prueba directamente, y le ayudaremos a comprender su costo esperado antes de la prueba.",
         },
       ],
     },
     closing: {
-      title: "Listo para Comenzar?",
+      title: "¿Listo para Comenzar?",
       paragraph:
         "Ya sea que use su seguro o pague por su cuenta, le ayudaremos a comprender sus costos antes de su primera visita.",
       cta: "Programar una cita",

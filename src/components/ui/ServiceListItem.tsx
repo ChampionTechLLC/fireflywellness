@@ -1,4 +1,7 @@
+"use client";
+
 import NextLink from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
 import { serviceIcons } from "@/data/serviceIcons";
 import { link } from "@/styles";
 import { Text } from "./Text";
@@ -20,6 +23,7 @@ export function ServiceIcon({ src }: { src: string }) {
 type ServiceListItemProps = {
   title: string;
   blurb: React.ReactNode;
+  /** English internal path; localized for the current language when rendered. */
   href?: string;
   learnMore?: string;
   icon?: string;
@@ -32,6 +36,7 @@ export function ServiceListItem({
   learnMore,
   icon,
 }: ServiceListItemProps) {
+  const { localize } = useLanguage();
   const iconSrc = icon ?? (href ? serviceIcons[href] : undefined);
 
   return (
@@ -41,7 +46,7 @@ export function ServiceListItem({
         <Text variant="h3">{title}</Text>
         <Text variant="text">{blurb}</Text>
         {href && learnMore ? (
-          <NextLink href={href} className={`${link.root} self-start`}>
+          <NextLink href={localize(href)} className={`${link.root} self-start`}>
             {learnMore}
           </NextLink>
         ) : null}

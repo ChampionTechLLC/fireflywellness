@@ -23,7 +23,7 @@ import { socialLinks } from "@/data/social";
 import { link, socialIcon } from "@/styles";
 
 export function HomePageContent() {
-  const { content } = useLanguage();
+  const { content, localize } = useLanguage();
   const home = content.home;
   const [isScheduleCompact, setIsScheduleCompact] = useState(false);
   const scheduleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -144,7 +144,7 @@ export function HomePageContent() {
             icon={testingToolsIcon}
           />
           <div className="flex justify-center">
-            <Button href="/services" variant="primary">
+            <Button href={localize("/services")} variant="primary">
               {home.servicesOverview.viewAllCta}
             </Button>
           </div>
@@ -159,7 +159,10 @@ export function HomePageContent() {
           <Text variant="text">{home.whyFirefly.intro}</Text>
           <BulletList items={home.whyFirefly.items} />
           <Text variant="text">{home.whyFirefly.closing}</Text>
-          <NextLink href="/#clinicians" className={`${link.root} self-start`}>
+          <NextLink
+            href={localize("/#clinicians")}
+            className={`${link.root} self-start`}
+          >
             {home.whyFirefly.cliniciansLink}
           </NextLink>
           <Text variant="text">
@@ -209,7 +212,7 @@ export function HomePageContent() {
             {home.insurance.cashPay}
           </Text>
           <NextLink
-            href="/insurance-fees"
+            href={localize("/insurance-fees")}
             className={`${link.root} self-center`}
           >
             {home.insurance.feesLink}

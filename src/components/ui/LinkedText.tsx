@@ -1,4 +1,7 @@
+"use client";
+
 import NextLink from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
 import { BRAINCHECK_URL, TEMPUS_URL, TOVA_URL } from "@/constants";
 
 const externalLabels = {
@@ -24,17 +27,17 @@ type LinkedTextProps = {
 };
 
 export function LinkedText({ children }: LinkedTextProps) {
+  const { localize } = useLanguage();
   const parts = children.split(linkedTextPattern);
-  let providerLinked = false;
+  const firstProviderIndex = parts.findIndex((part) => providerLabels.has(part));
 
   return parts.map((part, i) => {
     if (providerLabels.has(part)) {
-      if (providerLinked) return part;
-      providerLinked = true;
+      if (i !== firstProviderIndex) return part;
       return (
         <NextLink
           key={`${part}-${i}`}
-          href={PROVIDER_HREF}
+          href={localize(PROVIDER_HREF)}
           className={linkClassName}
         >
           {part}

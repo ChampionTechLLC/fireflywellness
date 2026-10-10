@@ -7,6 +7,7 @@ export const metadata: Metadata = buildPageMetadata({
   title: "Careers | Firefly Wellness",
   description: lcpcListing.intro[0],
   path: "/careers",
+  locale: "en",
 });
 
 export default function CareersPage() {

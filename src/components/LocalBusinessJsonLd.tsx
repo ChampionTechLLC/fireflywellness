@@ -1,50 +1,17 @@
-import { HERO_LOGO_URL, SITE_URL } from "@/constants";
 import { locationData } from "@/data/location";
-import { businessLocationJsonLd } from "@/lib/businessJsonLd";
+import { getSiteContent, type Locale } from "@/data/siteContent";
+import { medicalBusinessJsonLd } from "@/lib/businessJsonLd";
 
-const areaServed = [
-  "Hinsdale, IL",
-  "Oak Brook, IL",
-  "Clarendon Hills, IL",
-  "Western Springs, IL",
-  "Westmont, IL",
-];
-
-export function LocalBusinessJsonLd() {
+export function LocalBusinessJsonLd({ locale }: { locale: Locale }) {
   const address = locationData[0];
   if (!address) return null;
 
-  const logoUrl = new URL(HERO_LOGO_URL, SITE_URL).toString();
-
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "@id": `${SITE_URL}/#medicalbusiness`,
-    name: "Firefly Wellness, PLLC",
-    alternateName: "Firefly Counseling",
-    url: SITE_URL,
-    image: logoUrl,
-    logo: logoUrl,
-    description:
-      "Firefly Wellness offers therapy, ADHD testing, and psychiatric medication in Hinsdale, IL and nearby western suburbs.",
-    ...(address.phone
-      ? { telephone: address.phone.replace(/\./g, "-") }
-      : {}),
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: [address.address1, address.address2]
-        .filter(Boolean)
-        .join(", "),
-      addressLocality: address.city,
-      addressRegion: address.state,
-      postalCode: address.zip,
-      addressCountry: "US",
-    },
-    areaServed: areaServed.map((name) => ({
-      "@type": "City",
-      name,
-    })),
-    ...businessLocationJsonLd(address),
+    ...medicalBusinessJsonLd(
+      address,
+      getSiteContent(locale).home.meta.description,
+    ),
   };
 
   return (

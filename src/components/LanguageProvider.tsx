@@ -1,59 +1,33 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useMemo, type ReactNode } from "react";
 import { getSiteContent, type Locale } from "@/data/siteContent";
+import { localizedPath } from "@/lib/routes";
 
 type LanguageContextValue = {
   locale: Locale;
-  setLocale: (locale: Locale) => void;
-  toggleLocale: () => void;
   content: ReturnType<typeof getSiteContent>;
+  /** Maps an English internal href to the current locale's route. */
+  localize: (href: string) => string;
 };
-
-const LANGUAGE_STORAGE_KEY = "fireflywellness-language";
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function isLocale(value: string | null): value is Locale {
-  return value === "en" || value === "es";
-}
-
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
-
-  useEffect(() => {
-    const storedLocale = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-
-    if (isLocale(storedLocale)) {
-      queueMicrotask(() => setLocaleState(storedLocale));
-    }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.lang = locale;
-    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, locale);
-  }, [locale]);
-
-  const value = useMemo<LanguageContextValue>(() => {
-    const setLocale = (nextLocale: Locale) => setLocaleState(nextLocale);
-
-    return {
+export function LanguageProvider({
+  locale,
+  children,
+}: {
+  locale: Locale;
+  children: ReactNode;
+}) {
+  const value = useMemo<LanguageContextValue>(
+    () => ({
       locale,
-      setLocale,
-      toggleLocale: () =>
-        setLocaleState((currentLocale) =>
-          currentLocale === "en" ? "es" : "en",
-        ),
       content: getSiteContent(locale),
-    };
-  }, [locale]);
+      localize: (href) => localizedPath(href, locale),
+    }),
+    [locale],
+  );
 
   return (
     <LanguageContext.Provider value={value}>
