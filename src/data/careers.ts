@@ -26,17 +26,15 @@ export type CareersListing = {
 };
 
 export const lcpcListing: CareersListing = {
-  title: "Licensed Clinical Professional Counselor / Social Worker (LCPC, LCSW)",
+  title: "Licensed Therapist (LCPC, LPC, LCSW)",
   meta: {
     location: "Location: Hinsdale, IL (Hybrid)",
     employmentType:
-      "Employment Type: Full-Time W-2, typical caseload of 25 sessions per week",
+      "Employment Type: W-2 or 1099",
     compensation:
       "Compensation: Competitive compensation and benefits structure based on experience",
   },
-  intro: [
-    "Firefly Wellness is seeking a full-time LCPC or LCSW to join our growing Hinsdale practice. Since 2017, Firefly has provided high-quality counseling to individuals and families throughout Chicago’s western suburbs.",
-  ],
+  intro: ["Firefly Wellness is seeking an LPC, LCPC or LCSW to join our growing Hinsdale practice. Since 2017, Firefly has provided high-quality mental health services to individuals and families throughout Chicago's western suburbs. We offer integrated behavioral health services, including therapy, psychiatric medication services, ADHD evaluations, and cognitive testing—all within one coordinated practice."],
   whyJoin: {
     heading: "Why Join Firefly",
     items: [
@@ -44,8 +42,8 @@ export const lcpcListing: CareersListing = {
       "Consistent referral stream and administrative support",
       "Flexible scheduling and hybrid work model",
       "Integrated behavioral health services, including therapy, psychiatric medication management, ADHD evaluations, and cognitive testing—all within one coordinated practice",
-      "PTO, technology credit & continuing education support",
-      "Healthcare stipend provided until health insurance benefits begin in 2027",
+      "PTO, technology credit & continuing education support for W-2 employees",
+      "Monthly healthcare stipend provided for W-2 employees",
       "Quarterly team outings",
       "Additional compensation for Polish- or Spanish-speaking clinicians",
     ],
@@ -63,8 +61,8 @@ export const lcpcListing: CareersListing = {
   qualifications: {
     heading: "Qualifications",
     items: [
-      "LCPC or LCSW required",
-      "Experience working with adolescents, college students, and young adults",
+      "LCPC, LPC, or LCSW required",
+      "Experience providing therapy to clients ages 13 and older",
       "Comfortable treating anxiety, depression, ADHD, trauma, relationship concerns, and life transitions",
       "Strong foundation in CBT and evidence-based treatment approaches",
     ],
