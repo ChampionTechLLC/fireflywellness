@@ -1,5 +1,6 @@
 "use client";
 
+import { Button, BulletList, Section, Text } from "@/components/ui";
 import { lcpcListing } from "@/data/careers";
 import {
   CAREERS_APPLY_EMAIL,
@@ -11,75 +12,136 @@ const listing = lcpcListing;
 
 const applyMailto = `mailto:${CAREERS_APPLY_EMAIL}?subject=${encodeURIComponent(CAREERS_APPLY_SUBJECT)}`;
 
-function ListingBlock({
-  heading,
-  children,
-}: {
-  heading: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="space-y-2">
-      <h2 className="text-sm font-semibold text-heading">{heading}</h2>
-      {children}
-    </section>
-  );
-}
-
-function PlainList({ items }: { items: string[] }) {
-  return (
-    <ul className="list-disc space-y-1 pl-5 text-base leading-snug text-body">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
-  );
-}
+const contentColumn = "mx-auto flex max-w-2xl flex-col gap-6 text-left";
 
 export function CareersPageContent() {
-  const { meta } = listing;
+  const { meta, benefits } = listing;
 
   return (
-    <main className="min-h-screen bg-background pt-20 md:pt-0">
-      <article className="mx-auto max-w-2xl px-6 py-10 md:px-8 md:py-14">
-        <header className="space-y-3 border-b border-body/15 pb-6">
-          <h1 className="text-xl font-medium text-heading md:text-2xl">
-            {listing.title}
-          </h1>
-          <ul className="space-y-0.5 text-sm text-muted">
-            <li>{meta.location}</li>
-            <li>{meta.employmentType}</li>
-            <li>{meta.compensation}</li>
-          </ul>
-        </header>
-
-        <div className="mt-6 space-y-6 text-base leading-relaxed text-body">
-          {listing.intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-
-          <ListingBlock heading={listing.whyJoin.heading}>
-            <PlainList items={listing.whyJoin.items} />
-          </ListingBlock>
-
-          <ListingBlock heading={listing.responsibilities.heading}>
-            <PlainList items={listing.responsibilities.items} />
-          </ListingBlock>
-
-          <ListingBlock heading={listing.qualifications.heading}>
-            <PlainList items={listing.qualifications.items} />
-          </ListingBlock>
-
-          <ListingBlock heading={listing.apply.heading}>
-            <p>{listing.apply.paragraph}</p>
-            <p>
-              <a href={applyMailto} className={link.root}>
-                {CAREERS_APPLY_EMAIL}
-              </a>
-            </p>
-          </ListingBlock>
+    <main className="min-h-screen pt-20 md:pt-0">
+      <Section variant="white">
+        <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-4 text-center">
+          <Text variant="h1">{listing.pageTitle}</Text>
+          <Text variant="subtitle">{listing.pageSubtitle}</Text>
+          <div className="pt-2">
+            <Button href={applyMailto} variant="primary">
+              {listing.apply.ctaLabel}
+            </Button>
+          </div>
         </div>
-      </article>
+      </Section>
+
+      <Section variant="green">
+        <div className={contentColumn}>
+          {listing.intro.map((paragraph) => (
+            <Text key={paragraph} variant="text">
+              {paragraph}
+            </Text>
+          ))}
+        </div>
+      </Section>
+
+      <Section variant="white">
+        <div className={contentColumn}>
+          <div className="space-y-2">
+            <Text variant="h2">{listing.openRoleHeading}</Text>
+            <Text variant="h3">{listing.title}</Text>
+            <ul className="space-y-1 text-sm text-muted">
+              <li>{meta.location}</li>
+              <li>{meta.employmentType}</li>
+              <li>{meta.compensation}</li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <Text variant="h3">{listing.whyJoin.heading}</Text>
+            <BulletList items={listing.whyJoin.items} />
+          </div>
+
+          <div className="space-y-3">
+            <Text variant="h3">{benefits.heading}</Text>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[20rem] border-collapse text-left">
+                <thead>
+                  <tr className="border-b border-body/25">
+                    <th
+                      scope="col"
+                      className="py-3 pr-4 text-sm font-semibold text-heading"
+                    >
+                      {benefits.benefitLabel}
+                    </th>
+                    <th
+                      scope="col"
+                      className="py-3 text-right text-sm font-semibold text-heading"
+                    >
+                      {benefits.amountLabel}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {benefits.items.map((item) => (
+                    <tr
+                      key={item.name}
+                      className="border-b border-body/15"
+                    >
+                      <td className="py-3 pr-4 text-base text-body">
+                        {item.name}
+                      </td>
+                      <td className="py-3 text-right text-base tabular-nums text-heading">
+                        <span className="font-semibold">{item.amount}</span>
+                        <span className="ml-1 font-normal text-muted">
+                          {item.frequency}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+                <tfoot>
+                  <tr className="border-t border-body/25">
+                    <th
+                      scope="row"
+                      className="py-3 pr-4 text-left text-base font-semibold text-heading"
+                    >
+                      {benefits.totalLabel}
+                    </th>
+                    <td className="py-3 text-right text-base font-semibold tabular-nums text-heading">
+                      {benefits.totalAmount}
+                      <span className="ml-1 font-normal text-muted">
+                        annually
+                      </span>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <Text variant="h3">{listing.responsibilities.heading}</Text>
+            <BulletList items={listing.responsibilities.items} />
+          </div>
+
+          <div className="space-y-3">
+            <Text variant="h3">{listing.qualifications.heading}</Text>
+            <BulletList items={listing.qualifications.items} />
+          </div>
+        </div>
+      </Section>
+
+      <Section variant="green">
+        <div className={`${contentColumn} items-start`}>
+          <Text variant="h2">{listing.apply.heading}</Text>
+          <Text variant="text">{listing.apply.paragraph}</Text>
+          <p>
+            <a href={applyMailto} className={link.root}>
+              {CAREERS_APPLY_EMAIL}
+            </a>
+          </p>
+          <Button href={applyMailto} variant="secondary">
+            {listing.apply.ctaLabel}
+          </Button>
+        </div>
+      </Section>
     </main>
   );
 }

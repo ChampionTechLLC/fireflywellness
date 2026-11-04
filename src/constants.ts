@@ -11,6 +11,6 @@ export const BRAINCHECK_URL = "https://braincheck.com/";
 export const TEMPUS_URL = "https://www.tempus.com/";
 export const CAREERS_APPLY_EMAIL = "clientrelations@fireflycounseling.net";
 export const CAREERS_APPLY_SUBJECT =
-  "LCPC / LCSW Application – Firefly Wellness";
+  "LPC / LCPC / LCSW Application – Firefly Wellness";
 export const SCHEDULE_URL =
   "https://practice.mbpractice.com/OnlineBooking/Index?subdomainName=firefly-counseling";
