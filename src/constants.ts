@@ -12,5 +12,7 @@ export const TEMPUS_URL = "https://www.tempus.com/";
 export const CAREERS_APPLY_EMAIL = "clientrelations@fireflycounseling.net";
 export const CAREERS_APPLY_SUBJECT =
   "LPC / LCPC / LCSW Application – Firefly Wellness";
+export const CAREERS_APPLY_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSf8Lmy3pORICwJCYpKbavvkEkK0dgMIfpX4JIOzKvCQppQ0YQ/viewform?usp=preview";
 export const SCHEDULE_URL =
   "https://practice.mbpractice.com/OnlineBooking/Index?subdomainName=firefly-counseling";

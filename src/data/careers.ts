@@ -38,7 +38,8 @@ export type CareersListing = {
   apply: {
     heading: string;
     paragraph: string;
-    ctaLabel: string;
+    formCtaLabel: string;
+    emailCtaLabel: string;
   };
 };
 
@@ -125,7 +126,8 @@ export const lcpcListing: CareersListing = {
   apply: {
     heading: "Apply",
     paragraph:
-      "Please submit your resume and a brief cover letter outlining your clinical experience, populations of interest, and preferred schedule to our hiring team.",
-    ctaLabel: "Apply by email",
+      "Apply directly through our online form, or email your resume and a brief cover letter outlining your clinical experience, populations of interest, and preferred schedule to our hiring team.",
+    formCtaLabel: "Apply online",
+    emailCtaLabel: "Apply by email",
   },
 };

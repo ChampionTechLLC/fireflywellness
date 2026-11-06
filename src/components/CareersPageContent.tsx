@@ -5,6 +5,7 @@ import { lcpcListing } from "@/data/careers";
 import {
   CAREERS_APPLY_EMAIL,
   CAREERS_APPLY_SUBJECT,
+  CAREERS_APPLY_URL,
 } from "@/constants";
 import { link } from "@/styles";
 
@@ -23,10 +24,25 @@ export function CareersPageContent() {
         <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-4 text-center">
           <Text variant="h1">{listing.pageTitle}</Text>
           <Text variant="subtitle">{listing.pageSubtitle}</Text>
-          <div className="pt-2">
-            <Button href={applyMailto} variant="primary">
-              {listing.apply.ctaLabel}
-            </Button>
+          <div className="flex justify-center pt-2">
+            <div className="inline-flex flex-col items-stretch gap-3">
+              <Button
+                href={CAREERS_APPLY_URL}
+                variant="primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="!w-full min-w-[14rem] !self-auto"
+              >
+                {listing.apply.formCtaLabel}
+              </Button>
+              <Button
+                href={applyMailto}
+                variant="secondary"
+                className="!w-full min-w-[14rem] !self-auto"
+              >
+                {listing.apply.emailCtaLabel}
+              </Button>
+            </div>
           </div>
         </div>
       </Section>
@@ -129,17 +145,34 @@ export function CareersPageContent() {
       </Section>
 
       <Section variant="green">
-        <div className={`${contentColumn} items-start`}>
+        <div className={`${contentColumn} items-center text-center`}>
           <Text variant="h2">{listing.apply.heading}</Text>
           <Text variant="text">{listing.apply.paragraph}</Text>
+          <div className="flex justify-center">
+            <div className="inline-flex flex-col items-stretch gap-3">
+              <Button
+                href={CAREERS_APPLY_URL}
+                variant="primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="!w-full min-w-[14rem] !self-auto"
+              >
+                {listing.apply.formCtaLabel}
+              </Button>
+              <Button
+                href={applyMailto}
+                variant="secondary"
+                className="!w-full min-w-[14rem] !self-auto"
+              >
+                {listing.apply.emailCtaLabel}
+              </Button>
+            </div>
+          </div>
           <p>
             <a href={applyMailto} className={link.root}>
               {CAREERS_APPLY_EMAIL}
             </a>
           </p>
-          <Button href={applyMailto} variant="secondary">
-            {listing.apply.ctaLabel}
-          </Button>
         </div>
       </Section>
     </main>

@@ -8,6 +8,8 @@ type ButtonProps = {
   href?: string;
   type?: "button" | "submit" | "reset";
   className?: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  rel?: string;
   onClick?: React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
 };
 
@@ -22,12 +24,20 @@ export function Button({
   href,
   type = "button",
   className = "",
+  target,
+  rel,
   onClick,
 }: ButtonProps) {
   const classNames = `${button.base} ${variantClass[variant]} ${className}`.trim();
   if (href) {
     return (
-      <a href={href} className={classNames} onClick={onClick}>
+      <a
+        href={href}
+        className={classNames}
+        target={target}
+        rel={rel}
+        onClick={onClick}
+      >
         {children}
       </a>
     );
